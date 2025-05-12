@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Almadina Global (Debug)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_almadina_global.dart",
+            "args": [
+                "--flavor",
+                "almadinaGlobal", // Changed to match camelCase convention
+                "--dart-define=flavor=almadinaGlobal", // Added for runtime flavor detection
+                // "--release"
+            ]
+        },
+        {
+            "name": "School (Debug)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "school",
+                "--dart-define=flavor=school",
+                // "--release"
+            ]
+        },
+    ],
+}
