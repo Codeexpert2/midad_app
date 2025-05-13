@@ -8,7 +8,7 @@
             "name": "Almadina Global (Debug)",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main_almadina_global.dart",
+            "program": "lib/main.dart",
             "args": [
                 "--flavor",
                 "almadinaGlobal", // Changed to match camelCase convention

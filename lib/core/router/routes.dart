@@ -5,8 +5,9 @@ import 'package:midad/features/auth/pages/login_screen.dart';
 import 'package:midad/features/auth/pages/password_reset_screen.dart';
 import 'package:midad/features/auth/pages/register_screen.dart';
 import 'package:midad/features/category/category_screen.dart';
+import 'package:midad/features/example/screens/user_list_screen.dart';
 import 'package:midad/features/help/pages/help_screen.dart';
-import 'package:midad/features/home/home.dart';
+import 'package:midad/features/home/pages/home.dart';
 import 'package:midad/features/notification/notification_screen.dart';
 import 'package:midad/features/onboarding/onboarding_screen.dart';
 import 'package:midad/features/profile/pages/change_password_screen.dart';
@@ -18,7 +19,9 @@ import 'package:midad/features/splash/splash_screen.dart';
 import 'package:midad/features/statics/about.dart';
 import 'package:midad/features/statics/privacy_policy.dart';
 import 'package:midad/features/statics/terms_conditions.dart';
-import 'package:midad/features/example/screens/user_list_screen.dart';
+
+import '../../features/article/pages/article_details.dart';
+import '../../features/home/pages/youtube_player_screen.dart';
 
 List<RouteBase> routes = <RouteBase>[
   GoRoute(
@@ -167,5 +170,21 @@ List<RouteBase> routes = <RouteBase>[
         ],
       ),
     ],
+  ),
+  GoRoute(
+    path: AppRoutes.youtubePlayer.path,
+    name: AppRoutes.youtubePlayer.name,
+    builder: (context, state) {
+      final videoId = state.uri.queryParameters['id']!;
+      return YoutubePlayerScreen(videoId: videoId);
+    },
+  ),
+   GoRoute(
+    path: AppRoutes.articleDetails.path,
+    name: AppRoutes.articleDetails.name,
+    builder: (context, state) {
+      final articleID = int.parse(state.pathParameters['id']!);
+      return ArticleDetailsScreen(articleId: articleID);
+    },
   ),
 ];
