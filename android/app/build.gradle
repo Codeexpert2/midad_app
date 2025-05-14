@@ -65,6 +65,23 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    
+    flavorDimensions "default"
+
+    productFlavors {
+        almadinaGlobal { // 👈 This name must exactly match the CLI argument
+            dimension "default"
+            applicationIdSuffix ".almadinaglobal"
+            versionNameSuffix "-almadina"
+        }
+
+        school {
+            dimension "default"
+            applicationIdSuffix ".school"
+            versionNameSuffix "-school"
+        }
+    }
 }
 
 flutter {

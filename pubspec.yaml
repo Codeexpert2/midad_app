@@ -42,7 +42,11 @@ dependencies:
   # Image
   image_picker: ^1.1.2
   cached_network_image: ^3.4.1
+  carousel_slider: ^5.0.0
 
+  # Video
+  youtube_player_flutter: ^9.1.1
+  
   # File
   path_provider: ^2.1.5
 

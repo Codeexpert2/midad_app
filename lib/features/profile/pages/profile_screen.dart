@@ -6,7 +6,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/features/profile/widgets/profile_item.dart';
-import 'package:midad/core/locale/generated/l10n.dart';
+import 'package:midad/locale/generated/l10n.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -150,7 +150,8 @@ class ProfileScreen extends ConsumerWidget {
                   //       builder: (ctx) => CustomAlertDialog(
                   //         title: 'Confirm Delete Account',
                   //         description:
-                  //             'Are you sure you want to permanently delete your account? This action cannot be undone.',
+                  //             'Are you sure you want to permanently delete
+                  // your account? This action cannot be undone.',
                   //         acceptText: 'Delete',
                   //         cancelText: 'Cancel',
                   //         type: AlertDialogType.error, // Type is Error

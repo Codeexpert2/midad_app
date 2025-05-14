@@ -20,7 +20,6 @@ class OnboardingPage extends StatelessWidget {
         children: [
           Image.asset(
             pageData.imagePath,
-            // pageData.imagePath,
             height: 250,
           ),
           const SizedBox(height: 32),

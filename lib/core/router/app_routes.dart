@@ -25,7 +25,9 @@ enum AppRoutes {
   notifications('/notifications', 'notifications'),
   settings('/settings', 'settings'),
   category('/category', 'category'),
-  search('/search', 'search');
+  search('/search', 'search'),
+  youtubePlayer('/youtubePlayer', 'youtubePlayer'),
+  articleDetails('/article-details/:id', 'articleDetails');
 
   final String path;
   final String name;
