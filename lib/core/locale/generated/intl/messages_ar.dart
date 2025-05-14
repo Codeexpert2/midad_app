@@ -122,7 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "deleteAccountWarning3": MessageLookupByLibrary.simpleMessage(
             "هذا الإجراء غير قابل للإلغاء"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
-        "devlopedBy": MessageLookupByLibrary.simpleMessage("Devloped By"),
+        "devlopedBy": MessageLookupByLibrary.simpleMessage("تم التطوير بواسطة"),
         "dirNotExist":
             MessageLookupByLibrary.simpleMessage("الدليل غير موجود."),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
@@ -136,7 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailOrPhoneNumber":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني*"),
         "empowerEducation":
-            MessageLookupByLibrary.simpleMessage("Empower Education"),
+            MessageLookupByLibrary.simpleMessage("تمكين التعليم"),
         "enterEmail":
             MessageLookupByLibrary.simpleMessage("ادخل البريد الإلكتروني"),
         "enterEmailOrPhone":
@@ -165,7 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("خطأ"),
         "exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons":
             MessageLookupByLibrary.simpleMessage(
-                "Explore rich cultural and awareness articles designed to broaden horizons."),
+                "اكتشف مقالات ثقافية وتوعوية توسع مداركك وتنمّي معرفتك."),
         "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "fileNotExist":
             MessageLookupByLibrary.simpleMessage("الملف غير موجود."),
@@ -182,7 +182,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hour": m1,
         "hoursAgo": m2,
         "info": MessageLookupByLibrary.simpleMessage("معلومة"),
-        "inspireMinds": MessageLookupByLibrary.simpleMessage("Inspire Minds"),
+        "inspireMinds": MessageLookupByLibrary.simpleMessage("إلهام العقول"),
         "internalServerError":
             MessageLookupByLibrary.simpleMessage("خطأ داخلي في الخادم"),
         "invalidCredentials":
@@ -191,7 +191,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "مشكلة في تشغيل الصوت/الفيديو:"),
         "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation":
             MessageLookupByLibrary.simpleMessage(
-                "Join our journey to promote inclusive, innovative, and quality education for all."),
+                "انضم إلينا لدعم تعليم شامل ومبتكر وذي جودة للجميع."),
         "justNow": MessageLookupByLibrary.simpleMessage("الآن"),
         "lastViewed": MessageLookupByLibrary.simpleMessage("آخر استماعاتك"),
         "latest": MessageLookupByLibrary.simpleMessage("أُضيف حديثاً"),
@@ -342,8 +342,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendVerificationEmail":
             MessageLookupByLibrary.simpleMessage("ارسل بريد التحقق"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
-        "shapeTheFuture":
-            MessageLookupByLibrary.simpleMessage("Shape the Future"),
+        "shapeTheFuture": MessageLookupByLibrary.simpleMessage("نصنع المستقبل"),
         "showLess": MessageLookupByLibrary.simpleMessage("أظهر القليل"),
         "signInWith":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام"),
@@ -358,7 +357,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "success": MessageLookupByLibrary.simpleMessage("نجاح"),
         "supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA":
             MessageLookupByLibrary.simpleMessage(
-                "Support students, schools, and universities with resources that make a difference."),
+                "ندعم الطلاب والمدارس والجامعات بموارد تصنع الفرق."),
         "techSupport": MessageLookupByLibrary.simpleMessage("الدعم الفني"),
         "termsConditions":
             MessageLookupByLibrary.simpleMessage("سياسة الاستخدام"),
@@ -385,8 +384,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "weeksAgo": m7,
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("أهلاً وسهلاً بعودتكم!"),
-        "welcomeToTheHomeScreen":
-            MessageLookupByLibrary.simpleMessage("Welcome to the Home Screen!"),
+        "welcomeToTheHomeScreen": MessageLookupByLibrary.simpleMessage(
+            "مرحبًا بك في الشاشة الرئيسية!"),
         "writeComment": MessageLookupByLibrary.simpleMessage("كتابة تعليق"),
         "wrongUrl": MessageLookupByLibrary.simpleMessage("رابط غير صحيح"),
         "yearsAgo": m8

@@ -2281,80 +2281,80 @@ class S {
     );
   }
 
-  /// `Welcome to the Home Screen!`
+  /// `مرحبًا بك في الشاشة الرئيسية!`
   String get welcomeToTheHomeScreen {
     return Intl.message(
-      'Welcome to the Home Screen!',
+      'مرحبًا بك في الشاشة الرئيسية!',
       name: 'welcomeToTheHomeScreen',
       desc: '',
       args: [],
     );
   }
 
-  /// `Devloped By`
+  /// `تم التطوير بواسطة`
   String get devlopedBy {
     return Intl.message(
-      'Devloped By',
+      'تم التطوير بواسطة',
       name: 'devlopedBy',
       desc: '',
       args: [],
     );
   }
 
-  /// `Empower Education`
+  /// `تمكين التعليم`
   String get empowerEducation {
     return Intl.message(
-      'Empower Education',
+      'تمكين التعليم',
       name: 'empowerEducation',
       desc: '',
       args: [],
     );
   }
 
-  /// `Support students, schools, and universities with resources that make a difference.`
+  /// `ندعم الطلاب والمدارس والجامعات بموارد تصنع الفرق.`
   String get supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA {
     return Intl.message(
-      'Support students, schools, and universities with resources that make a difference.',
+      'ندعم الطلاب والمدارس والجامعات بموارد تصنع الفرق.',
       name: 'supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA',
       desc: '',
       args: [],
     );
   }
 
-  /// `Explore rich cultural and awareness articles designed to broaden horizons.`
+  /// `اكتشف مقالات ثقافية وتوعوية توسع مداركك وتنمّي معرفتك.`
   String get exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons {
     return Intl.message(
-      'Explore rich cultural and awareness articles designed to broaden horizons.',
+      'اكتشف مقالات ثقافية وتوعوية توسع مداركك وتنمّي معرفتك.',
       name: 'exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons',
       desc: '',
       args: [],
     );
   }
 
-  /// `Inspire Minds`
+  /// `إلهام العقول`
   String get inspireMinds {
     return Intl.message(
-      'Inspire Minds',
+      'إلهام العقول',
       name: 'inspireMinds',
       desc: '',
       args: [],
     );
   }
 
-  /// `Shape the Future`
+  /// `نصنع المستقبل`
   String get shapeTheFuture {
     return Intl.message(
-      'Shape the Future',
+      'نصنع المستقبل',
       name: 'shapeTheFuture',
       desc: '',
       args: [],
     );
   }
 
-  /// `Join our journey to promote inclusive, innovative, and quality education for all.`
+  /// `انضم إلينا لدعم تعليم شامل ومبتكر وذي جودة للجميع.`
   String get joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation {
     return Intl.message(
-      'Join our journey to promote inclusive, innovative, and quality education for all.',
+      'انضم إلينا لدعم تعليم شامل ومبتكر وذي جودة للجميع.',
       name: 'joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation',
       desc: '',
       args: [],
