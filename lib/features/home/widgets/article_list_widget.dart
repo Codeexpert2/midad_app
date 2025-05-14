@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:midad/core/extensions/extensions.dart';
 
+import '../../../core/router/app_routes.dart';
 import '../../../core/themes/app_colors.dart';
-import '../models/article_model.dart';
+import '../../article/models/article_model.dart';
 
 class ArticleListWidget extends StatelessWidget {
   const ArticleListWidget({super.key, required this.articleList});
@@ -22,10 +23,10 @@ class ArticleListWidget extends StatelessWidget {
           final article = articleList[index];
           return InkWell(
             onTap: () {
-              // context.pushNamed(
-              //   AppRoutes.articleDetails.name,
-              //    extra: article.id.toString(),
-              // );
+              context.pushNamed(
+                AppRoutes.articleDetails.name,
+                pathParameters: {'id': article.id.toString()},
+              );
             },
             child: SizedBox(
               width: context.width * 0.6,
@@ -67,7 +68,7 @@ class ArticleListWidget extends StatelessWidget {
                             Text(
                               article.description,
                               style: const TextStyle(fontSize: 12),
-                              maxLines: 2,
+                              maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
                           ],

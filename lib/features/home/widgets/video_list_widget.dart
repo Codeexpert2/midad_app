@@ -21,7 +21,7 @@ class VideoListWidget extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 16 / 14,
+        childAspectRatio: 16 / 15,
         crossAxisSpacing: 12,
         mainAxisSpacing: 12,
       ),

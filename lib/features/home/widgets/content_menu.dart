@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../core/router/app_routes.dart';
 import '../../../core/themes/app_colors.dart';
 import '../../../locale/generated/l10n.dart';
 import '../constant/content_list.dart';
@@ -55,10 +56,12 @@ class ContentMenu extends ConsumerWidget {
                       return ListTile(
                           title: Text(subItem.title),
                           onTap: () {
-                            // context.pushNamed(
-                            //   AppRoutes.articleDetails.name,
-                            //   extra: subItem.articleId.toString(),
-                            // );
+                            context.pushNamed(
+                              AppRoutes.articleDetails.name,
+                              pathParameters: {
+                                'id': subItem.articleId.toString()
+                              },
+                            );
                             contentProvider.collapseDropDown;
                           });
                     }).toList(),

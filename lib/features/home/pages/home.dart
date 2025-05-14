@@ -49,7 +49,7 @@ class HomeScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 12),
               ArticleListWidget(articleList: articleList),
-              const SizedBox(height: 12),
+              const SizedBox(height: 14),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(S.of(context).latestNews,
@@ -60,7 +60,7 @@ class HomeScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 12),
               LatestNewsWidget(newsList: newsList),
-              const SizedBox(height: 12),
+              const SizedBox(height: 14),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(S.of(context).midadPartners,
@@ -71,7 +71,7 @@ class HomeScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 12),
               PartnerListWidget(logos: partnerLogos),
-              const SizedBox(height: 12),
+              const SizedBox(height: 14),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(S.of(context).videoGallery,
