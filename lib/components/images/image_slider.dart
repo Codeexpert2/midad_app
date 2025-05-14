@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 
+import 'package:midad/components/images/cached_image.dart';
 import 'package:midad/core/extensions/extensions.dart';
 
 class ImageSlider extends StatefulWidget {
@@ -17,12 +18,11 @@ class _ImageSliderState extends State<ImageSlider> {
 
   @override
   Widget build(BuildContext context) {
-   
     return Column(
       children: [
         CarouselSlider(
           options: CarouselOptions(
-            height: context.width * 0.5, 
+            height: context.width * 0.5,
             autoPlay: true,
             enlargeCenterPage: true,
             viewportFraction: 0.9,
@@ -33,11 +33,14 @@ class _ImageSliderState extends State<ImageSlider> {
           items: widget.imageUrls.map((url) {
             return ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.network(
-                url,
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
+              // child: Image.network(
+              //   url,
+              //   width: double.infinity,
+              //   fit: BoxFit.cover,
+              // ),
+              child: CachedImage(
+                  imageUrl: url,
+                  width: double.infinity),
             );
           }).toList(),
         ),

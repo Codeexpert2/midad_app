@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
+import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/features/home/constant/article_list.dart';
 
 import '../../../components/images/image_slider.dart';
@@ -26,6 +27,14 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       appBar: MainAppBar(
         title: S.of(context).homeScreen,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings_outlined),
+            onPressed: () => context.pushNamed(
+              AppRoutes.settings.name,
+            ),
+          ),
+        ],
       ),
       drawer: const MainDrawer(),
       body: SingleChildScrollView(
