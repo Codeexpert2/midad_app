@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'package:device_preview/device_preview.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/app.dart';
@@ -17,12 +19,21 @@ void main() async {
       await initializeApp();
 
       runApp(
-        ProviderScope(
-          observers: [
-            RiverpodObserver(),
-          ],
-          child: const App(),
+        DevicePreview(
+          enabled: kDebugMode,
+          builder: (BuildContext context) => ProviderScope(
+            observers: <ProviderObserver>[
+              RiverpodObserver(),
+            ],
+            child: const App(),
+          ),
         ),
+        // ProviderScope(
+        //   observers: [
+        //     RiverpodObserver(),
+        //   ],
+        //   child: const App(),
+        // ),
       );
     },
     (error, stackTrace) {
