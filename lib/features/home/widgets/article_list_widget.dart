@@ -67,10 +67,10 @@ class ArticleListWidget extends StatelessWidget {
                               article.title,
                               style: const TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.w600),
-                              maxLines: 1,
+                              maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                             ),
-                            const SizedBox(height: 5),
+                            const SizedBox(height: 7),
                             Text(
                               article.description,
                               style: const TextStyle(fontSize: 12),

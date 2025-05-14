@@ -60,16 +60,6 @@ class S {
     );
   }
 
-  /// `الرئيسية`
-  String get home {
-    return Intl.message(
-      'الرئيسية',
-      name: 'home',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `الملف الشخصي`
   String get profile {
     return Intl.message(
@@ -100,10 +90,10 @@ class S {
     );
   }
 
-  /// `تسجيل خروج`
+  /// `تسجيل الخروج`
   String get logout {
     return Intl.message(
-      'تسجيل خروج',
+      'تسجيل الخروج',
       name: 'logout',
       desc: '',
       args: [],
@@ -2272,10 +2262,10 @@ class S {
   }
 
   /// `الرئيسية`
-  String get homeScreen {
+  String get home {
     return Intl.message(
       'الرئيسية',
-      name: 'homeScreen',
+      name: 'home',
       desc: '',
       args: [],
     );
@@ -2526,6 +2516,16 @@ class S {
     return Intl.message(
       'معرض الفيديو',
       name: 'videoGallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مساعدة`
+  String get help {
+    return Intl.message(
+      'مساعدة',
+      name: 'help',
       desc: '',
       args: [],
     );

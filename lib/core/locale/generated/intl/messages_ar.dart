@@ -187,8 +187,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromCamera": MessageLookupByLibrary.simpleMessage("التقاط صورة"),
         "fromGallery":
             MessageLookupByLibrary.simpleMessage("اختيار صورة من الاستوديو"),
+        "help": MessageLookupByLibrary.simpleMessage("مساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
-        "homeScreen": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "hour": m1,
         "hoursAgo": m2,
         "info": MessageLookupByLibrary.simpleMessage("معلومة"),
@@ -216,7 +216,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginFailed": MessageLookupByLibrary.simpleMessage(
             "فشلت عملية تسجيل الدخول، حاول مرة أخرى لاحقًا."),
-        "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "message": MessageLookupByLibrary.simpleMessage("الرسالة"),
         "messageText": MessageLookupByLibrary.simpleMessage("نص الرسالة"),
         "messageTextShort":

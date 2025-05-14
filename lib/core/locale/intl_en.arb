@@ -8,6 +8,7 @@
   "inspireMinds": "Inspire Minds",
   "shapeTheFuture": "Shape the Future",
   "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation": "Join our journey to promote inclusive, innovative, and quality education for all.",
+  "home": "Home",
   "select":"Select",
   "youth": "Youth",
   "children": "Children",
@@ -24,5 +25,6 @@
   "articles" : "Articles",
   "midadPartners": "MIDAD Partners",
   "videoPlayer": "Video Player",
-  "videoGallery": "Video Gallery"
+  "videoGallery": "Video Gallery",
+  "help": "Help"
 }

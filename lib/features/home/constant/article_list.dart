@@ -2,7 +2,7 @@ import '../../article/models/article_model.dart';
 
 final List<Article> articleList = [
   Article(
-    title: 'الشباب علم وعمل',
+    title: ' مستقبل الشباب في سوق العمل , الشباب علم وعمل',
     imageUrl:
         'https://allonehealth.com/wp-content/uploads/2022/07/iStock-1358014313-scaled-1.jpg',
     id: 101,

@@ -14,7 +14,6 @@ import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
 import '../constant/video_list.dart';
 import '../widgets/article_list_widget.dart';
-import '../widgets/content_menu.dart';
 import '../widgets/latest_news_widget.dart';
 import '../widgets/partner_list_widget.dart';
 import '../widgets/video_list_widget.dart';
@@ -26,7 +25,7 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: MainAppBar(
-        title: S.of(context).homeScreen,
+        title: S.of(context).home,
         actions: [
           IconButton(
             icon: const Icon(Icons.settings_outlined),
@@ -44,8 +43,7 @@ class HomeScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ContentMenu(),
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
               ImageSlider(imageUrls: sliderImages),
               const SizedBox(height: 24),
               Padding(

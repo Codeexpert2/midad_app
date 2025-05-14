@@ -13,11 +13,6 @@ class HomeNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  void collapseDropDown() {
-    isExpanded = false;
-    notifyListeners();
-  }
-
   void initVideoPLayer(String videoId) {
     videoController = YoutubePlayerController(
       initialVideoId: videoId,

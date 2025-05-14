@@ -1,11 +1,10 @@
 {
   "@@locale": "ar",
   "appName": "الدرس",
-  "home": "الرئيسية",
   "profile": "الملف الشخصي",
   "termsConditions": "سياسة الاستخدام",
   "privacyPolicy": "سياسة الخصوصية",
-  "logout": "تسجيل خروج",
+  "logout": "تسجيل الخروج",
   "playlist": "قائمة التشغيل",
   "about": "حول",
   "settings": "الإعدادات",
@@ -220,7 +219,7 @@
   "downloadingFailed": "فشل التحميل",
   "refresh": "تحديث",
   "test": "امتحان",
-  "homeScreen": "الرئيسية",
+  "home": "الرئيسية",
   "welcomeToTheHomeScreen": "مرحبًا بك في الشاشة الرئيسية!",
   "devlopedBy": "تم التطوير بواسطة",
   "empowerEducation": "تمكين التعليم",
@@ -245,5 +244,6 @@
   "articles" : "المقالات",
   "midadPartners": "شركاء مداد",
   "videoPlayer": "عارض الفيديو",
-  "videoGallery": "معرض الفيديو"
+  "videoGallery": "معرض الفيديو",
+  "help": "مساعدة"
 }
