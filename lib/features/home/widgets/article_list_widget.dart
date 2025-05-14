@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:midad/components/images/cached_image.dart';
 import 'package:midad/core/extensions/extensions.dart';
 
 import '../../../core/themes/app_colors.dart';
@@ -43,11 +44,16 @@ class ArticleListWidget extends StatelessWidget {
                         topLeft: Radius.circular(12),
                         topRight: Radius.circular(12),
                       ),
-                      child: Image.network(
-                        article.imageUrl,
-                        width: context.width * 0.6,
+                      // child: Image.network(
+                      //   article.imageUrl,
+                      //   width: context.width * 0.6,
+                      //   height: context.height * 0.15,
+                      //   fit: BoxFit.cover,
+                      // ),
+                      child: CachedImage(
+                        imageUrl: article.imageUrl,
                         height: context.height * 0.15,
-                        fit: BoxFit.cover,
+                        width: context.width * 0.6,
                       ),
                     ),
                     const SizedBox(height: 8),
