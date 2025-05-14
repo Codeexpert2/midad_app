@@ -6,11 +6,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/core/extensions/extensions.dart';
 import 'package:midad/core/keys/keys.dart';
+import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_router.dart';
 import 'package:midad/core/themes/app_themes.dart';
 import 'package:midad/features/settings/providers/locale_provider.dart';
 import 'package:midad/features/settings/providers/theme_notifier.dart';
-import 'package:midad/locale/generated/l10n.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});

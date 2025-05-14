@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../locale/generated/l10n.dart';
+import 'package:midad/core/locale/generated/l10n.dart';
+
 import '../models/content_model.dart';
 
 List<OrganizationContent> organizationContentList(BuildContext context) {

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:midad/components/loading/loading_widget.dart';
 import 'package:midad/core/constants/images.dart';
 import 'package:midad/core/extensions/context_ext.dart';
+import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
-import 'package:midad/locale/generated/l10n.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
