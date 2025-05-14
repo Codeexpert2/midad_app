@@ -5,6 +5,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:midad/components/images/cached_image.dart';
 import 'package:midad/core/extensions/extensions.dart';
 
+import '../../core/themes/app_colors.dart';
+
 class ImageSlider extends StatefulWidget {
   const ImageSlider({super.key, required this.imageUrls});
   final List<String> imageUrls;
@@ -33,14 +35,7 @@ class _ImageSliderState extends State<ImageSlider> {
           items: widget.imageUrls.map((url) {
             return ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              // child: Image.network(
-              //   url,
-              //   width: double.infinity,
-              //   fit: BoxFit.cover,
-              // ),
-              child: CachedImage(
-                  imageUrl: url,
-                  width: double.infinity),
+              child: CachedImage(imageUrl: url, width: double.infinity),
             );
           }).toList(),
         ),
@@ -55,8 +50,8 @@ class _ImageSliderState extends State<ImageSlider> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: _currentIndex == entry.key
-                    ? Colors.blueAccent
-                    : Colors.grey,
+                    ? AppColors.primaryColor
+                    : AppColors.gray400,
               ),
             );
           }).toList(),

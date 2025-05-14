@@ -9,7 +9,7 @@
   "shapeTheFuture": "Shape the Future",
   "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation": "Join our journey to promote inclusive, innovative, and quality education for all.",
   "home": "Home",
-  "select":"Select",
+  "select": "Select",
   "youth": "Youth",
   "children": "Children",
   "organizationInterests": "Organization Interests",
@@ -22,9 +22,13 @@
   "developingQualityEducation": "Developing the Quality of Education",
   "infrastructureSupport": "Infrastructure support",
   "latestNews": "Latest News",
-  "articles" : "Articles",
+  "articles": "Articles",
   "midadPartners": "MIDAD Partners",
   "videoPlayer": "Video Player",
   "videoGallery": "Video Gallery",
-  "help": "Help"
+  "help": "Help",
+  "showMoreArticle": "Show More Article",
+  "showMore": "Show More",
+  "noMoreArticles": "No More Articles",
+  "noArticlesAvailable": "No Articles Available"
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:midad/core/extensions/extensions.dart';
 import 'package:midad/features/home/models/news_model.dart';
 
+import '../../../components/images/cached_image.dart';
 import '../../../core/themes/app_colors.dart';
 
 class LatestNewsWidget extends StatelessWidget {
@@ -34,11 +35,10 @@ class LatestNewsWidget extends StatelessWidget {
                     borderRadius: const BorderRadius.all(
                       Radius.circular(12),
                     ),
-                    child: Image.network(
-                      news.imageUrl,
-                      width: context.width * 0.6,
+                    child: CachedImage(
+                      imageUrl: news.imageUrl,
                       height: context.height * 0.20,
-                      fit: BoxFit.cover,
+                      width: context.width * 0.6,
                     ),
                   ),
                   Positioned(

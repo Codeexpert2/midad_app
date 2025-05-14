@@ -228,7 +228,7 @@
   "inspireMinds": "إلهام العقول",
   "shapeTheFuture": "نصنع المستقبل",
   "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation": "انضم إلينا لدعم تعليم شامل ومبتكر وذي جودة للجميع.",
-  "select":"اختر",
+  "select": "اختر",
   "youth": "برنامج الشباب",
   "children": "برنامج الألطفال",
   "organizationInterests": "اهتمامات المؤسسة",
@@ -241,9 +241,13 @@
   "developingQualityEducation": "تطوير جودة التعليم",
   "infrastructureSupport": "دعم البنية التحتية",
   "latestNews": "اخر الاخبار",
-  "articles" : "المقالات",
+  "articles": "المقالات",
   "midadPartners": "شركاء مداد",
   "videoPlayer": "عارض الفيديو",
   "videoGallery": "معرض الفيديو",
-  "help": "مساعدة"
+  "help": "مساعدة",
+  "showMoreArticle": "عرض المزيد من المقالات",
+  "showMore": "عرض المزيد",
+  "noMoreArticles": "لا توجد مقالات أخرى",
+  "noArticlesAvailable": "لا توجد مقالات متاحة"
 }

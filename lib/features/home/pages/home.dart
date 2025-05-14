@@ -47,23 +47,48 @@ class HomeScreen extends ConsumerWidget {
               ImageSlider(imageUrls: sliderImages),
               const SizedBox(height: 24),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).articles,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      S.of(context).articles,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium
+                          ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        context.pushNamed(
+                          AppRoutes.articles.name,
+                        );
+                      },
+                      child: Text(S.of(context).showMoreArticle),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 12),
-              ArticleListWidget(articleList: articleList),
+              ArticleListWidget(
+                articleList: articleList,
+                limit: 4,
+              ),
               const SizedBox(height: 14),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).latestNews,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(S.of(context).latestNews,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            fontSize: 18, fontWeight: FontWeight.bold)),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(S.of(context).showMore),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 12),
               LatestNewsWidget(newsList: newsList),
@@ -81,11 +106,18 @@ class HomeScreen extends ConsumerWidget {
               const SizedBox(height: 14),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).videoGallery,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(S.of(context).videoGallery,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            fontSize: 18, fontWeight: FontWeight.bold)),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(S.of(context).showMore),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 12),
               VideoListWidget(videos: videoList),

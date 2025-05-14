@@ -49,6 +49,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Join our journey to promote inclusive, innovative, and quality education for all."),
         "latestNews": MessageLookupByLibrary.simpleMessage("Latest News"),
         "midadPartners": MessageLookupByLibrary.simpleMessage("MIDAD Partners"),
+        "noArticlesAvailable":
+            MessageLookupByLibrary.simpleMessage("No Articles Available"),
+        "noMoreArticles":
+            MessageLookupByLibrary.simpleMessage("No More Articles"),
         "organizationInterests":
             MessageLookupByLibrary.simpleMessage("Organization Interests"),
         "qualifyingYouth": MessageLookupByLibrary.simpleMessage(
@@ -58,6 +62,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "select": MessageLookupByLibrary.simpleMessage("Select"),
         "shapeTheFuture":
             MessageLookupByLibrary.simpleMessage("Shape the Future"),
+        "showMore": MessageLookupByLibrary.simpleMessage("Show More"),
+        "showMoreArticle":
+            MessageLookupByLibrary.simpleMessage("Show More Article"),
         "supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA":
             MessageLookupByLibrary.simpleMessage(
                 "Support students, schools, and universities with resources that make a difference."),

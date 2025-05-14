@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../../components/images/cached_image.dart';
 import '../../../core/router/app_routes.dart';
 
 class VideoListWidget extends StatelessWidget {
@@ -41,10 +42,13 @@ class VideoListWidget extends StatelessWidget {
             children: [
               AspectRatio(
                 aspectRatio: 16 / 9,
-                child: Image.network(
-                  YoutubePlayer.getThumbnail(videoId: videoId),
-                  fit: BoxFit.cover,
+                child: CachedImage(
+                  imageUrl: YoutubePlayer.getThumbnail(videoId: videoId),
                 ),
+                // Image.network(
+                //   YoutubePlayer.getThumbnail(videoId: videoId),
+                //   fit: BoxFit.cover,
+                // ),
               ),
               const SizedBox(height: 6),
               Padding(

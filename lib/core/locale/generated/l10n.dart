@@ -2530,6 +2530,46 @@ class S {
       args: [],
     );
   }
+
+  /// `عرض المزيد من المقالات`
+  String get showMoreArticle {
+    return Intl.message(
+      'عرض المزيد من المقالات',
+      name: 'showMoreArticle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عرض المزيد`
+  String get showMore {
+    return Intl.message(
+      'عرض المزيد',
+      name: 'showMore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا توجد مقالات أخرى`
+  String get noMoreArticles {
+    return Intl.message(
+      'لا توجد مقالات أخرى',
+      name: 'noMoreArticles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا توجد مقالات متاحة`
+  String get noArticlesAvailable {
+    return Intl.message(
+      'لا توجد مقالات متاحة',
+      name: 'noArticlesAvailable',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

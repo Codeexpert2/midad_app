@@ -21,6 +21,7 @@ import 'package:midad/features/statics/privacy_policy.dart';
 import 'package:midad/features/statics/terms_conditions.dart';
 
 import '../../features/article/pages/article_details.dart';
+import '../../features/article/pages/articles.dart';
 import '../../features/home/pages/youtube_player_screen.dart';
 
 List<RouteBase> routes = <RouteBase>[
@@ -179,12 +180,17 @@ List<RouteBase> routes = <RouteBase>[
       return YoutubePlayerScreen(videoId: videoId);
     },
   ),
-   GoRoute(
+  GoRoute(
     path: AppRoutes.articleDetails.path,
     name: AppRoutes.articleDetails.name,
     builder: (context, state) {
       final articleID = int.parse(state.pathParameters['id']!);
       return ArticleDetailsScreen(articleId: articleID);
     },
+  ),
+  GoRoute(
+    path: AppRoutes.articles.path,
+    name: AppRoutes.articles.name,
+    builder: (_, __) => const ArticlesScreen(),
   ),
 ];

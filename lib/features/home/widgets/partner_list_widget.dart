@@ -19,12 +19,6 @@ class PartnerListWidget extends StatelessWidget {
         itemBuilder: (context, index) {
           return ClipRRect(
             borderRadius: BorderRadius.circular(50),
-            // child: Image.network(
-            //   logos[index],
-            //   width: 70,
-            //   height: context.height * 0.07,
-            //   fit: BoxFit.cover,
-            // ),
             child: CachedImage(
               imageUrl: logos[index],
               width: context.width * 0.2,
