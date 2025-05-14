@@ -50,6 +50,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "about": MessageLookupByLibrary.simpleMessage("حول"),
         "aboutApp": MessageLookupByLibrary.simpleMessage("عن التطبيق"),
         "accessDenied": MessageLookupByLibrary.simpleMessage("الوصول مرفوض"),
+        "accessToUniversityEducation":
+            MessageLookupByLibrary.simpleMessage("الوصول إلى التعليم الجامعي"),
         "accessibilityIssue":
             MessageLookupByLibrary.simpleMessage("مشكلة في الوصول:"),
         "accountDeletedSuccess":
@@ -69,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("الدرس"),
         "applanguage": MessageLookupByLibrary.simpleMessage("لغة التطبيق"),
         "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
+        "articles": MessageLookupByLibrary.simpleMessage("المقالات"),
         "attachments": MessageLookupByLibrary.simpleMessage("ملفات مرفقة"),
         "audioTrimmer": MessageLookupByLibrary.simpleMessage("محرر الصوت"),
         "backToLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -88,9 +91,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("تفقد بريدك الإلكتروني"),
+        "children": MessageLookupByLibrary.simpleMessage("برنامج الألطفال"),
         "clear": MessageLookupByLibrary.simpleMessage("مسح"),
         "clipSavedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم حفظ المقطع بنجاح"),
+        "communityParticipation":
+            MessageLookupByLibrary.simpleMessage("تعزيز المشاركة المجتمعية"),
         "confirmAccountInfo":
             MessageLookupByLibrary.simpleMessage("تأكيد معلومات الحساب"),
         "confirmPassword":
@@ -122,7 +128,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "deleteAccountWarning3": MessageLookupByLibrary.simpleMessage(
             "هذا الإجراء غير قابل للإلغاء"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
+        "developingQualityEducation":
+            MessageLookupByLibrary.simpleMessage("تطوير جودة التعليم"),
         "devlopedBy": MessageLookupByLibrary.simpleMessage("تم التطوير بواسطة"),
+        "devotingToEducation":
+            MessageLookupByLibrary.simpleMessage("زيادة التفرغ للتعليم"),
         "dirNotExist":
             MessageLookupByLibrary.simpleMessage("الدليل غير موجود."),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
@@ -182,6 +192,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "hour": m1,
         "hoursAgo": m2,
         "info": MessageLookupByLibrary.simpleMessage("معلومة"),
+        "infrastructureSupport":
+            MessageLookupByLibrary.simpleMessage("دعم البنية التحتية"),
         "inspireMinds": MessageLookupByLibrary.simpleMessage("إلهام العقول"),
         "internalServerError":
             MessageLookupByLibrary.simpleMessage("خطأ داخلي في الخادم"),
@@ -195,6 +207,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "justNow": MessageLookupByLibrary.simpleMessage("الآن"),
         "lastViewed": MessageLookupByLibrary.simpleMessage("آخر استماعاتك"),
         "latest": MessageLookupByLibrary.simpleMessage("أُضيف حديثاً"),
+        "latestNews": MessageLookupByLibrary.simpleMessage("اخر الاخبار"),
         "link": MessageLookupByLibrary.simpleMessage("الرابط"),
         "listRemovedSuccess":
             MessageLookupByLibrary.simpleMessage("تمت إزالة القائمة بنجاح."),
@@ -210,6 +223,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نص الرسالة قصير !"),
         "methodNotAllowed":
             MessageLookupByLibrary.simpleMessage("الطريقة غير مسموح بها"),
+        "midadPartners": MessageLookupByLibrary.simpleMessage("شركاء مداد"),
         "minute": m3,
         "minutesAgo": m4,
         "missingInfoFromSocialProvider": MessageLookupByLibrary.simpleMessage(
@@ -260,6 +274,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "openEmailApp":
             MessageLookupByLibrary.simpleMessage("فتح تطبيق البريد الإلكتروني"),
         "optional": MessageLookupByLibrary.simpleMessage("(اختياري)"),
+        "organizationInterests":
+            MessageLookupByLibrary.simpleMessage("اهتمامات المؤسسة"),
         "other": MessageLookupByLibrary.simpleMessage("آخر"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور*"),
         "passwordChanged":
@@ -299,6 +315,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "playlist": MessageLookupByLibrary.simpleMessage("قائمة التشغيل"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "qualifyingYouth":
+            MessageLookupByLibrary.simpleMessage("التأهيل لسوق العمل"),
         "rateLesson": MessageLookupByLibrary.simpleMessage("تقييم الدرس"),
         "ratingFailed":
             MessageLookupByLibrary.simpleMessage("للأسف، فشل التقييم."),
@@ -332,9 +350,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("استئناف التحميل"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "schoolSponsorship":
+            MessageLookupByLibrary.simpleMessage("رعاية المدارس"),
         "search": MessageLookupByLibrary.simpleMessage("ابحث هنا"),
         "secondsAgo": m6,
         "seeMore": MessageLookupByLibrary.simpleMessage("أظهر المزيد"),
+        "select": MessageLookupByLibrary.simpleMessage("اختر"),
         "selectRatingStar":
             MessageLookupByLibrary.simpleMessage("يرجى اختيار نجمة التقييم."),
         "sendTimeout":
@@ -358,6 +379,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA":
             MessageLookupByLibrary.simpleMessage(
                 "ندعم الطلاب والمدارس والجامعات بموارد تصنع الفرق."),
+        "supportingUniversityEducation":
+            MessageLookupByLibrary.simpleMessage("دعم التعليم الجامعي"),
         "techSupport": MessageLookupByLibrary.simpleMessage("الدعم الفني"),
         "termsConditions":
             MessageLookupByLibrary.simpleMessage("سياسة الاستخدام"),
@@ -379,6 +402,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "userIsBlocked": MessageLookupByLibrary.simpleMessage("المستخدم محظور"),
         "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "veryStrong": MessageLookupByLibrary.simpleMessage("قوي جدًا"),
+        "videoGallery": MessageLookupByLibrary.simpleMessage("معرض الفيديو"),
+        "videoPlayer": MessageLookupByLibrary.simpleMessage("عارض الفيديو"),
         "warning": MessageLookupByLibrary.simpleMessage("تحذير"),
         "weak": MessageLookupByLibrary.simpleMessage("ضعيف"),
         "weeksAgo": m7,
@@ -388,6 +413,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "مرحبًا بك في الشاشة الرئيسية!"),
         "writeComment": MessageLookupByLibrary.simpleMessage("كتابة تعليق"),
         "wrongUrl": MessageLookupByLibrary.simpleMessage("رابط غير صحيح"),
-        "yearsAgo": m8
+        "yearsAgo": m8,
+        "youth": MessageLookupByLibrary.simpleMessage("برنامج الشباب")
       };
 }

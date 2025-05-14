@@ -4,9 +4,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 
 import 'package:midad/components/main/main_appbar.dart';
+import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/features/profile/widgets/profile_item.dart';
-import 'package:midad/locale/generated/l10n.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});

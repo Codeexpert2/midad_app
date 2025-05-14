@@ -4,10 +4,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
+import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/features/home/constant/article_list.dart';
 
 import '../../../components/images/image_slider.dart';
-import '../../../locale/generated/l10n.dart';
 import '../constant/news_list.dart';
 import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:midad/core/locale/generated/l10n.dart';
+
 import '../../../core/themes/app_colors.dart';
-import '../../../locale/generated/l10n.dart';
 import '../constant/content_list.dart';
 import '../providers/home_provider.dart';
 

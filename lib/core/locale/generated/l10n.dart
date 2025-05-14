@@ -2360,6 +2360,176 @@ class S {
       args: [],
     );
   }
+
+  /// `اختر`
+  String get select {
+    return Intl.message(
+      'اختر',
+      name: 'select',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `برنامج الشباب`
+  String get youth {
+    return Intl.message(
+      'برنامج الشباب',
+      name: 'youth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `برنامج الألطفال`
+  String get children {
+    return Intl.message(
+      'برنامج الألطفال',
+      name: 'children',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اهتمامات المؤسسة`
+  String get organizationInterests {
+    return Intl.message(
+      'اهتمامات المؤسسة',
+      name: 'organizationInterests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الوصول إلى التعليم الجامعي`
+  String get accessToUniversityEducation {
+    return Intl.message(
+      'الوصول إلى التعليم الجامعي',
+      name: 'accessToUniversityEducation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `دعم التعليم الجامعي`
+  String get supportingUniversityEducation {
+    return Intl.message(
+      'دعم التعليم الجامعي',
+      name: 'supportingUniversityEducation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `زيادة التفرغ للتعليم`
+  String get devotingToEducation {
+    return Intl.message(
+      'زيادة التفرغ للتعليم',
+      name: 'devotingToEducation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التأهيل لسوق العمل`
+  String get qualifyingYouth {
+    return Intl.message(
+      'التأهيل لسوق العمل',
+      name: 'qualifyingYouth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تعزيز المشاركة المجتمعية`
+  String get communityParticipation {
+    return Intl.message(
+      'تعزيز المشاركة المجتمعية',
+      name: 'communityParticipation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رعاية المدارس`
+  String get schoolSponsorship {
+    return Intl.message(
+      'رعاية المدارس',
+      name: 'schoolSponsorship',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تطوير جودة التعليم`
+  String get developingQualityEducation {
+    return Intl.message(
+      'تطوير جودة التعليم',
+      name: 'developingQualityEducation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `دعم البنية التحتية`
+  String get infrastructureSupport {
+    return Intl.message(
+      'دعم البنية التحتية',
+      name: 'infrastructureSupport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اخر الاخبار`
+  String get latestNews {
+    return Intl.message(
+      'اخر الاخبار',
+      name: 'latestNews',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المقالات`
+  String get articles {
+    return Intl.message(
+      'المقالات',
+      name: 'articles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `شركاء مداد`
+  String get midadPartners {
+    return Intl.message(
+      'شركاء مداد',
+      name: 'midadPartners',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عارض الفيديو`
+  String get videoPlayer {
+    return Intl.message(
+      'عارض الفيديو',
+      name: 'videoPlayer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `معرض الفيديو`
+  String get videoGallery {
+    return Intl.message(
+      'معرض الفيديو',
+      name: 'videoGallery',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

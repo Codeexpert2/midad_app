@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:midad/core/constants/images.dart';
+import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/features/onboarding/models/onboarding_model.dart';
 
-import '../../locale/generated/l10n.dart';
 
 List<OnboardingPageData> pages(BuildContext context) {
   return [
