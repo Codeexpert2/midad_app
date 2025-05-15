@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../components/images/cached_image.dart';
+import '../../../core/router/app_routes.dart';
 import '../../../core/themes/app_colors.dart';
 import '../models/news_model.dart';
 
@@ -23,7 +24,12 @@ class LatestNewsItemWidget extends StatelessWidget {
       width: width,
       height: height,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          context.pushNamed(
+            AppRoutes.newsDetails.name,
+            extra: news,
+          );
+        },
         child: Card(
           color: AppColors.gray200.withOpacity(0.2),
           shape: RoundedRectangleBorder(

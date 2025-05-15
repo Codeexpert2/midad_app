@@ -22,9 +22,11 @@ import 'package:midad/features/statics/terms_conditions.dart';
 
 import '../../features/article/pages/article_details.dart';
 import '../../features/article/pages/articles.dart';
-import '../../features/videoGallery/pages/youtube_player_screen.dart';
+import '../../features/news/models/news_model.dart';
 import '../../features/news/pages/latest_news.dart';
+import '../../features/news/pages/news_details.dart';
 import '../../features/videoGallery/pages/video_gallery.dart';
+import '../../features/videoGallery/pages/youtube_player_screen.dart';
 
 List<RouteBase> routes = <RouteBase>[
   GoRoute(
@@ -199,6 +201,14 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.latestNews.path,
     name: AppRoutes.latestNews.name,
     builder: (_, __) => const LatestNewsScreen(),
+  ),
+  GoRoute(
+    path: AppRoutes.newsDetails.path,
+    name: AppRoutes.newsDetails.name,
+    builder: (context, state) {
+       final news = state.extra as News;
+      return NewsDetailsScreen(news: news);
+    },
   ),
   GoRoute(
     path: AppRoutes.videoGallery.path,
