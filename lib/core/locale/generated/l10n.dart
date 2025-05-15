@@ -2570,6 +2570,26 @@ class S {
       args: [],
     );
   }
+
+  /// `لا توجد أخبار أخرى`
+  String get noMoreNews {
+    return Intl.message(
+      'لا توجد أخبار أخرى',
+      name: 'noMoreNews',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا توجد أخبار متاحة`
+  String get noNewsAvailable {
+    return Intl.message(
+      'لا توجد أخبار متاحة',
+      name: 'noNewsAvailable',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

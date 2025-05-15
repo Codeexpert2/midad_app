@@ -30,5 +30,7 @@
   "showMoreArticle": "Show More Article",
   "showMore": "Show More",
   "noMoreArticles": "No More Articles",
-  "noArticlesAvailable": "No Articles Available"
+  "noArticlesAvailable": "No Articles Available",
+  "noMoreNews": "No More News",
+  "noNewsAvailable": "No News Available"
 }

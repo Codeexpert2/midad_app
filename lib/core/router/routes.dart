@@ -23,6 +23,7 @@ import 'package:midad/features/statics/terms_conditions.dart';
 import '../../features/article/pages/article_details.dart';
 import '../../features/article/pages/articles.dart';
 import '../../features/home/pages/youtube_player_screen.dart';
+import '../../features/news/pages/latest_news.dart';
 
 List<RouteBase> routes = <RouteBase>[
   GoRoute(
@@ -192,5 +193,10 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.articles.path,
     name: AppRoutes.articles.name,
     builder: (_, __) => const ArticlesScreen(),
+  ),
+  GoRoute(
+    path: AppRoutes.latestNews.path,
+    name: AppRoutes.latestNews.name,
+    builder: (_, __) => const LatestNews(),
   ),
 ];

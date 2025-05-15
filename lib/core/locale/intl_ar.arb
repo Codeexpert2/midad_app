@@ -249,5 +249,7 @@
   "showMoreArticle": "عرض المزيد من المقالات",
   "showMore": "عرض المزيد",
   "noMoreArticles": "لا توجد مقالات أخرى",
-  "noArticlesAvailable": "لا توجد مقالات متاحة"
+  "noArticlesAvailable": "لا توجد مقالات متاحة",
+  "noMoreNews": "لا توجد أخبار أخرى",
+  "noNewsAvailable": "لا توجد أخبار متاحة"
 }

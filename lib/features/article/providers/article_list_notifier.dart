@@ -5,6 +5,11 @@ import '../../../core/pagination/notifiers/paginated_list_notifier.dart';
 import '../../home/constant/article_list.dart';
 import '../models/article_model.dart';
 
+final articleListProvider = AutoDisposeStateNotifierProvider<
+    ArticleListNotifier, PaginationState<Article>>(
+  (ref) => ArticleListNotifier(),
+);
+
 class ArticleListNotifier extends PaginatedListNotifier<Article> {
   ArticleListNotifier() : super(fetchData: fetchPage);
 
@@ -19,8 +24,3 @@ class ArticleListNotifier extends PaginatedListNotifier<Article> {
     // return response['Articles'] as List<Article>;
   }
 }
-
-final articleListProvider = AutoDisposeStateNotifierProvider<
-    ArticleListNotifier, PaginationState<Article>>(
-  (ref) => ArticleListNotifier(),
-);

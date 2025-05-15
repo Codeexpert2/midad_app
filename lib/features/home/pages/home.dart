@@ -67,7 +67,11 @@ class HomeScreen extends ConsumerWidget {
                 title: S.of(context).latestNews,
                 isShowMore: true,
                 buttonText: S.of(context).showMore,
-                onButtonPressed: () {},
+                onButtonPressed: () {
+                  context.pushNamed(
+                    AppRoutes.latestNews.name,
+                  );
+                },
               ),
               const SizedBox(height: 12),
               LatestNewsWidget(newsList: newsList),

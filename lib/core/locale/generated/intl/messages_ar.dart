@@ -253,6 +253,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا توجد مقالات أخرى"),
         "noMoreData":
             MessageLookupByLibrary.simpleMessage("لا توجد بيانات أخرى"),
+        "noMoreNews":
+            MessageLookupByLibrary.simpleMessage("لا توجد أخبار أخرى"),
+        "noNewsAvailable":
+            MessageLookupByLibrary.simpleMessage("لا توجد أخبار متاحة"),
         "noNotifications":
             MessageLookupByLibrary.simpleMessage("لا توجد إشعارات."),
         "notFound": MessageLookupByLibrary.simpleMessage("غير موجود"),

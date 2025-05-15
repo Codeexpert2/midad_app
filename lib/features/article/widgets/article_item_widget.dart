@@ -22,16 +22,16 @@ class ArticleItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        context.pushNamed(
-          AppRoutes.articleDetails.name,
-          pathParameters: {'id': article.id.toString()},
-        );
-      },
-      child: SizedBox(
-        width: width,
-        height: height,
+    return SizedBox(
+      width: width,
+      height: height,
+      child: GestureDetector(
+        onTap: () {
+          context.pushNamed(
+            AppRoutes.articleDetails.name,
+            pathParameters: {'id': article.id.toString()},
+          );
+        },
         child: Card(
           color: AppColors.gray200.withOpacity(0.2),
           shape: RoundedRectangleBorder(

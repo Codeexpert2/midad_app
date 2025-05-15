@@ -28,7 +28,8 @@ enum AppRoutes {
   search('/search', 'search'),
   youtubePlayer('/youtubePlayer', 'youtubePlayer'),
   articleDetails('/article-details/:id', 'articleDetails'),
-  articles('/articles', 'articles');
+  articles('/articles', 'articles'),
+  latestNews('/latest-News', 'latestNews');
 
   final String path;
   final String name;
