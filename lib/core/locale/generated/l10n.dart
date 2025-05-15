@@ -2261,8 +2261,6 @@ class S {
     );
   }
 
-<<<<<<< HEAD
-=======
   /// `الرئيسية`
   String get home {
     return Intl.message(
@@ -2273,7 +2271,6 @@ class S {
     );
   }
 
->>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
   /// `مرحبًا بك في الشاشة الرئيسية!`
   String get welcomeToTheHomeScreen {
     return Intl.message(
@@ -2524,13 +2521,16 @@ class S {
     );
   }
 
-<<<<<<< HEAD
   /// `Home Screen`
   String get homeScreen {
     return Intl.message(
       'Home Screen',
       name: 'homeScreen',
-=======
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `مساعدة`
   String get help {
     return Intl.message(
@@ -2616,7 +2616,6 @@ class S {
     return Intl.message(
       'لا يوجد فيديوهات متاحة',
       name: 'noVideoAvailable',
->>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
       desc: '',
       args: [],
     );

@@ -39,12 +39,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons":
             MessageLookupByLibrary.simpleMessage(
                 "Explore rich cultural and awareness articles designed to broaden horizons."),
-<<<<<<< HEAD
-        "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
-=======
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
->>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
+        "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
         "infrastructureSupport":
             MessageLookupByLibrary.simpleMessage("Infrastructure support"),
         "inspireMinds": MessageLookupByLibrary.simpleMessage("Inspire Minds"),

@@ -219,10 +219,7 @@
   "downloadingFailed": "فشل التحميل",
   "refresh": "تحديث",
   "test": "امتحان",
-<<<<<<< HEAD
-=======
   "home": "الرئيسية",
->>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
   "welcomeToTheHomeScreen": "مرحبًا بك في الشاشة الرئيسية!",
   "devlopedBy": "تم التطوير بواسطة",
   "empowerEducation": "تمكين التعليم",
@@ -248,9 +245,7 @@
   "midadPartners": "شركاء مداد",
   "videoPlayer": "عارض الفيديو",
   "videoGallery": "معرض الفيديو",
-<<<<<<< HEAD
-  "homeScreen": "Home Screen"
-=======
+  "homeScreen": "Home Screen",
   "help": "مساعدة",
   "showMoreArticle": "عرض المزيد من المقالات",
   "showMore": "عرض المزيد",
@@ -260,5 +255,4 @@
   "noNewsAvailable": "لا يوجد أخبار متاحة",
   "noMoreVideo": "لا يوجد المزيد من الفيديوهات",
   "noVideoAvailable": "لا يوجد فيديوهات متاحة"
->>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
 }

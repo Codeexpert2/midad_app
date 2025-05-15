@@ -189,10 +189,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختيار صورة من الاستوديو"),
         "help": MessageLookupByLibrary.simpleMessage("مساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
-<<<<<<< HEAD
         "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
-=======
->>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
         "hour": m1,
         "hoursAgo": m2,
         "info": MessageLookupByLibrary.simpleMessage("معلومة"),
