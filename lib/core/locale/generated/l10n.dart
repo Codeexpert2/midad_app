@@ -2271,16 +2271,6 @@ class S {
     );
   }
 
-  /// `الرئيسية`
-  String get homeScreen {
-    return Intl.message(
-      'الرئيسية',
-      name: 'homeScreen',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `مرحبًا بك في الشاشة الرئيسية!`
   String get welcomeToTheHomeScreen {
     return Intl.message(
@@ -2526,6 +2516,16 @@ class S {
     return Intl.message(
       'معرض الفيديو',
       name: 'videoGallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home Screen`
+  String get homeScreen {
+    return Intl.message(
+      'Home Screen',
+      name: 'homeScreen',
       desc: '',
       args: [],
     );

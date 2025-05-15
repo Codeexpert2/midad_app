@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons":
             MessageLookupByLibrary.simpleMessage(
                 "Explore rich cultural and awareness articles designed to broaden horizons."),
+        "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
         "infrastructureSupport":
             MessageLookupByLibrary.simpleMessage("Infrastructure support"),
         "inspireMinds": MessageLookupByLibrary.simpleMessage("Inspire Minds"),

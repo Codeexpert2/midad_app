@@ -220,7 +220,6 @@
   "downloadingFailed": "فشل التحميل",
   "refresh": "تحديث",
   "test": "امتحان",
-  "homeScreen": "الرئيسية",
   "welcomeToTheHomeScreen": "مرحبًا بك في الشاشة الرئيسية!",
   "devlopedBy": "تم التطوير بواسطة",
   "empowerEducation": "تمكين التعليم",
@@ -229,7 +228,7 @@
   "inspireMinds": "إلهام العقول",
   "shapeTheFuture": "نصنع المستقبل",
   "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation": "انضم إلينا لدعم تعليم شامل ومبتكر وذي جودة للجميع.",
-  "select":"اختر",
+  "select": "اختر",
   "youth": "برنامج الشباب",
   "children": "برنامج الألطفال",
   "organizationInterests": "اهتمامات المؤسسة",
@@ -242,8 +241,9 @@
   "developingQualityEducation": "تطوير جودة التعليم",
   "infrastructureSupport": "دعم البنية التحتية",
   "latestNews": "اخر الاخبار",
-  "articles" : "المقالات",
+  "articles": "المقالات",
   "midadPartners": "شركاء مداد",
   "videoPlayer": "عارض الفيديو",
-  "videoGallery": "معرض الفيديو"
+  "videoGallery": "معرض الفيديو",
+  "homeScreen": "Home Screen"
 }
