@@ -16,6 +16,7 @@ import '../constant/video_list.dart';
 import '../widgets/article_list_widget.dart';
 import '../widgets/latest_news_widget.dart';
 import '../widgets/partner_list_widget.dart';
+import '../widgets/section_header_widget.dart';
 import '../widgets/video_list_widget.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -46,28 +47,15 @@ class HomeScreen extends ConsumerWidget {
               const SizedBox(height: 10),
               ImageSlider(imageUrls: sliderImages),
               const SizedBox(height: 24),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      S.of(context).articles,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium
-                          ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        context.pushNamed(
-                          AppRoutes.articles.name,
-                        );
-                      },
-                      child: Text(S.of(context).showMoreArticle),
-                    ),
-                  ],
-                ),
+              SectionHeader(
+                title: S.of(context).articles,
+                isShowMore: true,
+                buttonText: S.of(context).showMoreArticle,
+                onButtonPressed: () {
+                  context.pushNamed(
+                    AppRoutes.articles.name,
+                  );
+                },
               ),
               const SizedBox(height: 12),
               ArticleListWidget(
@@ -75,50 +63,27 @@ class HomeScreen extends ConsumerWidget {
                 limit: 4,
               ),
               const SizedBox(height: 14),
-              //TODO Refactor this section into a separate reusable widget and pass the texts and button action as parameters
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(S.of(context).latestNews,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            fontSize: 18, fontWeight: FontWeight.bold)),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(S.of(context).showMore),
-                    ),
-                  ],
-                ),
+              SectionHeader(
+                title: S.of(context).latestNews,
+                isShowMore: true,
+                buttonText: S.of(context).showMore,
+                onButtonPressed: () {},
               ),
               const SizedBox(height: 12),
               LatestNewsWidget(newsList: newsList),
               const SizedBox(height: 14),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).midadPartners,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+              SectionHeader(
+                title: S.of(context).midadPartners,
+                isShowMore: false,
               ),
               const SizedBox(height: 12),
               PartnerListWidget(logos: partnerLogos),
               const SizedBox(height: 14),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(S.of(context).videoGallery,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            fontSize: 18, fontWeight: FontWeight.bold)),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(S.of(context).showMore),
-                    ),
-                  ],
-                ),
+              SectionHeader(
+                title: S.of(context).videoGallery,
+                isShowMore: true,
+                buttonText: S.of(context).showMore,
+                onButtonPressed: () {},
               ),
               const SizedBox(height: 12),
               VideoListWidget(videos: videoList),
