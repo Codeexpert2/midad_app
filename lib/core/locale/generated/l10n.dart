@@ -60,16 +60,6 @@ class S {
     );
   }
 
-  /// `الرئيسية`
-  String get home {
-    return Intl.message(
-      'الرئيسية',
-      name: 'home',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `الملف الشخصي`
   String get profile {
     return Intl.message(
@@ -100,10 +90,10 @@ class S {
     );
   }
 
-  /// `تسجيل خروج`
+  /// `تسجيل الخروج`
   String get logout {
     return Intl.message(
-      'تسجيل خروج',
+      'تسجيل الخروج',
       name: 'logout',
       desc: '',
       args: [],
@@ -2271,6 +2261,19 @@ class S {
     );
   }
 
+<<<<<<< HEAD
+=======
+  /// `الرئيسية`
+  String get home {
+    return Intl.message(
+      'الرئيسية',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+>>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
   /// `مرحبًا بك في الشاشة الرئيسية!`
   String get welcomeToTheHomeScreen {
     return Intl.message(
@@ -2371,10 +2374,10 @@ class S {
     );
   }
 
-  /// `برنامج الألطفال`
+  /// `برنامج الأطفال`
   String get children {
     return Intl.message(
-      'برنامج الألطفال',
+      'برنامج الأطفال',
       name: 'children',
       desc: '',
       args: [],
@@ -2521,11 +2524,99 @@ class S {
     );
   }
 
+<<<<<<< HEAD
   /// `Home Screen`
   String get homeScreen {
     return Intl.message(
       'Home Screen',
       name: 'homeScreen',
+=======
+  /// `مساعدة`
+  String get help {
+    return Intl.message(
+      'مساعدة',
+      name: 'help',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عرض المزيد من المقالات`
+  String get showMoreArticle {
+    return Intl.message(
+      'عرض المزيد من المقالات',
+      name: 'showMoreArticle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عرض المزيد`
+  String get showMore {
+    return Intl.message(
+      'عرض المزيد',
+      name: 'showMore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا توجد مقالات أخرى`
+  String get noMoreArticles {
+    return Intl.message(
+      'لا توجد مقالات أخرى',
+      name: 'noMoreArticles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا توجد مقالات متاحة`
+  String get noArticlesAvailable {
+    return Intl.message(
+      'لا توجد مقالات متاحة',
+      name: 'noArticlesAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يوجد أخبار أخرى`
+  String get noMoreNews {
+    return Intl.message(
+      'لا يوجد أخبار أخرى',
+      name: 'noMoreNews',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يوجد أخبار متاحة`
+  String get noNewsAvailable {
+    return Intl.message(
+      'لا يوجد أخبار متاحة',
+      name: 'noNewsAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يوجد المزيد من الفيديوهات`
+  String get noMoreVideo {
+    return Intl.message(
+      'لا يوجد المزيد من الفيديوهات',
+      name: 'noMoreVideo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يوجد فيديوهات متاحة`
+  String get noVideoAvailable {
+    return Intl.message(
+      'لا يوجد فيديوهات متاحة',
+      name: 'noVideoAvailable',
+>>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
       desc: '',
       args: [],
     );

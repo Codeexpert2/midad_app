@@ -39,7 +39,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons":
             MessageLookupByLibrary.simpleMessage(
                 "Explore rich cultural and awareness articles designed to broaden horizons."),
+<<<<<<< HEAD
         "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
+=======
+        "help": MessageLookupByLibrary.simpleMessage("Help"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+>>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
         "infrastructureSupport":
             MessageLookupByLibrary.simpleMessage("Infrastructure support"),
         "inspireMinds": MessageLookupByLibrary.simpleMessage("Inspire Minds"),
@@ -48,6 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Join our journey to promote inclusive, innovative, and quality education for all."),
         "latestNews": MessageLookupByLibrary.simpleMessage("Latest News"),
         "midadPartners": MessageLookupByLibrary.simpleMessage("MIDAD Partners"),
+        "noArticlesAvailable":
+            MessageLookupByLibrary.simpleMessage("No Articles Available"),
+        "noMoreArticles":
+            MessageLookupByLibrary.simpleMessage("No More Articles"),
+        "noMoreNews": MessageLookupByLibrary.simpleMessage("No More News"),
+        "noMoreVideo": MessageLookupByLibrary.simpleMessage("No More Video"),
+        "noNewsAvailable":
+            MessageLookupByLibrary.simpleMessage("No News Available"),
+        "noVideoAvailable":
+            MessageLookupByLibrary.simpleMessage("No Video Available"),
         "organizationInterests":
             MessageLookupByLibrary.simpleMessage("Organization Interests"),
         "qualifyingYouth": MessageLookupByLibrary.simpleMessage(
@@ -57,6 +72,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "select": MessageLookupByLibrary.simpleMessage("Select"),
         "shapeTheFuture":
             MessageLookupByLibrary.simpleMessage("Shape the Future"),
+        "showMore": MessageLookupByLibrary.simpleMessage("Show More"),
+        "showMoreArticle":
+            MessageLookupByLibrary.simpleMessage("Show More Article"),
         "supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA":
             MessageLookupByLibrary.simpleMessage(
                 "Support students, schools, and universities with resources that make a difference."),

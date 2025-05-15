@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("تفقد بريدك الإلكتروني"),
-        "children": MessageLookupByLibrary.simpleMessage("برنامج الألطفال"),
+        "children": MessageLookupByLibrary.simpleMessage("برنامج الأطفال"),
         "clear": MessageLookupByLibrary.simpleMessage("مسح"),
         "clipSavedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم حفظ المقطع بنجاح"),
@@ -187,8 +187,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromCamera": MessageLookupByLibrary.simpleMessage("التقاط صورة"),
         "fromGallery":
             MessageLookupByLibrary.simpleMessage("اختيار صورة من الاستوديو"),
+        "help": MessageLookupByLibrary.simpleMessage("مساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+<<<<<<< HEAD
         "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
+=======
+>>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
         "hour": m1,
         "hoursAgo": m2,
         "info": MessageLookupByLibrary.simpleMessage("معلومة"),
@@ -216,7 +220,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginFailed": MessageLookupByLibrary.simpleMessage(
             "فشلت عملية تسجيل الدخول، حاول مرة أخرى لاحقًا."),
-        "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "message": MessageLookupByLibrary.simpleMessage("الرسالة"),
         "messageText": MessageLookupByLibrary.simpleMessage("نص الرسالة"),
         "messageTextShort":
@@ -240,6 +244,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "كلمة المرور الجديدة يجب أن تختلف عن كلمات المرور التي تم استخدامها سابقًا."),
         "noAccountQuestion":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "noArticlesAvailable":
+            MessageLookupByLibrary.simpleMessage("لا توجد مقالات متاحة"),
         "noContent": MessageLookupByLibrary.simpleMessage("لا يوجد محتوى"),
         "noDownloadedFiles":
             MessageLookupByLibrary.simpleMessage("لا توجد ملفات تم تحميلها"),
@@ -247,10 +253,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لم يتم اختيار أي ملفات"),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالإنترنت"),
+        "noMoreArticles":
+            MessageLookupByLibrary.simpleMessage("لا توجد مقالات أخرى"),
         "noMoreData":
             MessageLookupByLibrary.simpleMessage("لا توجد بيانات أخرى"),
+        "noMoreNews":
+            MessageLookupByLibrary.simpleMessage("لا يوجد أخبار أخرى"),
+        "noMoreVideo": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد المزيد من الفيديوهات"),
+        "noNewsAvailable":
+            MessageLookupByLibrary.simpleMessage("لا يوجد أخبار متاحة"),
         "noNotifications":
             MessageLookupByLibrary.simpleMessage("لا توجد إشعارات."),
+        "noVideoAvailable":
+            MessageLookupByLibrary.simpleMessage("لا يوجد فيديوهات متاحة"),
         "notFound": MessageLookupByLibrary.simpleMessage("غير موجود"),
         "notLoggedIn": MessageLookupByLibrary.simpleMessage(
             "لم تقم بتسجيل الدخول، يرجى تسجيل الدخول"),
@@ -365,6 +381,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "shapeTheFuture": MessageLookupByLibrary.simpleMessage("نصنع المستقبل"),
         "showLess": MessageLookupByLibrary.simpleMessage("أظهر القليل"),
+        "showMore": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
+        "showMoreArticle":
+            MessageLookupByLibrary.simpleMessage("عرض المزيد من المقالات"),
         "signInWith":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),

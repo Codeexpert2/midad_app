@@ -71,6 +71,8 @@ dependencies:
   firebase_crashlytics: ^4.1.5
   flutter_local_notifications: ^18.0.1
   shimmer: ^3.0.0
+  device_preview: ^1.2.0
+
 
 dev_dependencies:
   flutter_test:
@@ -81,7 +83,14 @@ dev_dependencies:
   custom_lint: ^0.6.7
   riverpod_lint: ^2.3.13
   flutter_native_splash: ^2.4.2
+  flutter_launcher_icons: ^0.14.3
   intl_utils: ^2.8.7
+
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/midad_icon.png"
 
 flutter:
   uses-material-design: true
@@ -90,12 +99,15 @@ flutter:
     - assets/images/
     - assets/icons/
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: assets/fonts/Schyler-Regular.ttf
-  #       - asset: assets/fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cairo-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cairo-Light.ttf
+          weight: 300
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: assets/fonts/TrajanPro.ttf
@@ -118,4 +130,4 @@ flutter_intl:
   main_locale: ar # Optional. Sets the main locale used for generating localization files. Provided value should consist of language code and optional script and country codes separated with underscore (e.g. 'en', 'en_GB', 'zh_Hans', 'zh_Hans_CN'). Default: en
   arb_dir: lib/core/locale # Optional. Sets the directory of your ARB resource files. Provided value should be a valid path on your system. Default: lib/l10n
   output_dir: lib/core/locale/generated # Optional. Sets the directory of generated localization files. Provided value should be a valid path on your system. Default: lib/generated
-  use_deferred_loading: false # Optional. Must be set to true to generate localization code that is loaded with deferred loading. Default: false
+  use_deferred_loading: true # Optional. Must be set to true to generate localization code that is loaded with deferred loading. Default: false

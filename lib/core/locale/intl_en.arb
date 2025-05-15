@@ -8,6 +8,10 @@
   "inspireMinds": "Inspire Minds",
   "shapeTheFuture": "Shape the Future",
   "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation": "Join our journey to promote inclusive, innovative, and quality education for all.",
+<<<<<<< HEAD
+=======
+  "home": "Home",
+>>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
   "select": "Select",
   "youth": "Youth",
   "children": "Children",
@@ -25,5 +29,17 @@
   "midadPartners": "MIDAD Partners",
   "videoPlayer": "Video Player",
   "videoGallery": "Video Gallery",
+<<<<<<< HEAD
   "homeScreen": "Home Screen"
+=======
+  "help": "Help",
+  "showMoreArticle": "Show More Article",
+  "showMore": "Show More",
+  "noMoreArticles": "No More Articles",
+  "noArticlesAvailable": "No Articles Available",
+  "noMoreNews": "No More News",
+  "noNewsAvailable": "No News Available",
+  "noMoreVideo": "No More Video",
+  "noVideoAvailable": "No Video Available"
+>>>>>>> 91541f004917e404447b8f8f9d56f5c02528b8bf
 }

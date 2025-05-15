@@ -14,9 +14,9 @@ import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
 import '../constant/video_list.dart';
 import '../widgets/article_list_widget.dart';
-import '../widgets/content_menu.dart';
 import '../widgets/latest_news_widget.dart';
 import '../widgets/partner_list_widget.dart';
+import '../widgets/section_header_widget.dart';
 import '../widgets/video_list_widget.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -26,7 +26,7 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: MainAppBar(
-        title: S.of(context).homeScreen,
+        title: S.of(context).home,
         actions: [
           IconButton(
             icon: const Icon(Icons.settings_outlined),
@@ -44,50 +44,54 @@ class HomeScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ContentMenu(),
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
               ImageSlider(imageUrls: sliderImages),
               const SizedBox(height: 24),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).articles,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+              SectionHeader(
+                title: S.of(context).articles,
+                isShowMore: true,
+                buttonText: S.of(context).showMoreArticle,
+                onButtonPressed: () {
+                  context.pushNamed(
+                    AppRoutes.articles.name,
+                  );
+                },
               ),
               const SizedBox(height: 12),
-              ArticleListWidget(articleList: articleList),
-              const SizedBox(height: 12),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).latestNews,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+              ArticleListWidget(
+                articleList: articleList,
+                limit: 4,
+              ),
+              const SizedBox(height: 14),
+              SectionHeader(
+                title: S.of(context).latestNews,
+                isShowMore: true,
+                buttonText: S.of(context).showMore,
+                onButtonPressed: () {
+                  context.pushNamed(
+                    AppRoutes.latestNews.name,
+                  );
+                },
               ),
               const SizedBox(height: 12),
               LatestNewsWidget(newsList: newsList),
-              const SizedBox(height: 12),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).midadPartners,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 14),
+              SectionHeader(
+                title: S.of(context).midadPartners,
+                isShowMore: false,
               ),
               const SizedBox(height: 12),
               PartnerListWidget(logos: partnerLogos),
-              const SizedBox(height: 12),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(S.of(context).videoGallery,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 14),
+              SectionHeader(
+                title: S.of(context).videoGallery,
+                isShowMore: true,
+                buttonText: S.of(context).showMore,
+                onButtonPressed: () {
+                  context.pushNamed(
+                    AppRoutes.videoGallery.name,
+                  );
+                },
               ),
               const SizedBox(height: 12),
               VideoListWidget(videos: videoList),

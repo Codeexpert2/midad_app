@@ -12,5 +12,5 @@ class Article {
   final String imageUrl;
   final String description;
   final String? author;
-  final String? date;
+  final DateTime? date;
 }

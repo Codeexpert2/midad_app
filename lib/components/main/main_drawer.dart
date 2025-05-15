@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/core/router/app_routes.dart';
-import 'package:midad/providers/auth_provider.dart';
+
+import '../../core/locale/generated/l10n.dart';
+import '../../features/home/widgets/children_menu.dart';
+import '../../features/home/widgets/organization_interest_menu.dart';
+import '../../features/home/widgets/youth_menu.dart';
 
 import 'app_divider.dart';
 
@@ -17,62 +21,44 @@ class MainDrawer extends ConsumerWidget {
       child: Drawer(
         child: ListView(
           children: <Widget>[
-            // GestureDetector(
-            //   onTap: () {
-            //     Navigator.pop(context);
-            //     context.goNamed(AppRoutes.profile.name);
-            //   },
-            //   child: DrawerHeader(
-            //     decoration: BoxDecoration(
-            //       color: Colors.grey.shade50,
-            //       // border: Border(
-            //       //   bottom: BorderSide(
-            //       //     color: Colors.red.withOpacity(0.1),
-            //       //   ),
-            //       // ),
-            //     ),
-            //     padding: EdgeInsets.zero,
-            //     child: const Icon(Icons.person),
-            //     // child: Image(
-            //     //   image: AssetImage(ImageAssets.mainImage),
-            //     //   fit: BoxFit.cover,
-            //     // ),
-            //   ),
-            // ),
-            // const AppDivider(),
+            const SizedBox(height: 12),
             ListTile(
               leading: const Icon(Icons.home),
-              title: const Text(
-                'الصفحة الرئيسية',
+              title: Text(
+                S.of(context).home,
               ),
               onTap: () {
-                Navigator.pop(context);
+                context.pop();
                 context.goNamed(AppRoutes.home.name);
               },
             ),
             ListTile(
               leading: const Icon(Icons.category),
-              title: const Text('category'),
+              title: Text(S.of(context).category),
               onTap: () {
-                Navigator.pop(context);
+                context.pop();
                 context.pushNamed(AppRoutes.category.name);
               },
             ),
             ListTile(
               leading: const Icon(Icons.search),
-              title: const Text(
-                'البحث',
+              title: Text(
+                S.of(context).search,
               ),
               onTap: () {
-                Navigator.pop(context);
+                context.pop();
                 context.pushNamed(AppRoutes.search.name);
               },
             ),
             const AppDivider(),
+            const YouthMenu(),
+            const ChildrenMenu(),
+            const OrganizationInterestMenu(),
+            const AppDivider(),
             ListTile(
               leading: const Icon(Icons.help_outline),
-              title: const Text(
-                'help',
+              title: Text(
+                S.of(context).help,
               ),
               onTap: () {
                 Navigator.pop(context);
@@ -80,23 +66,23 @@ class MainDrawer extends ConsumerWidget {
               },
             ),
             const AppDivider(),
-            ListTile(
-              leading: Icon(
-                Icons.exit_to_app,
-                color: Theme.of(context).colorScheme.error,
-              ),
-              title: Text(
-                'تسجيل الخروج',
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.error,
-                ),
-              ),
-              onTap: () {
-                // confirm dialog
-                Navigator.pop(context);
-                ref.read(authNotifierProvider.notifier).logout();
-              },
-            ),
+            // ListTile(
+            //   leading: Icon(
+            //     Icons.exit_to_app,
+            //     color: Theme.of(context).colorScheme.error,
+            //   ),
+            //   title: Text(
+            //     S.of(context).logout,
+            //     style: TextStyle(
+            //       color: Theme.of(context).colorScheme.error,
+            //     ),
+            //   ),
+            //   onTap: () {
+            //     // confirm dialog
+            //     Navigator.pop(context);
+            //     ref.read(authNotifierProvider.notifier).logout();
+            //   },
+            // ),
           ],
         ),
       ),

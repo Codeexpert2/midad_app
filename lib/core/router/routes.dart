@@ -21,7 +21,12 @@ import 'package:midad/features/statics/privacy_policy.dart';
 import 'package:midad/features/statics/terms_conditions.dart';
 
 import '../../features/article/pages/article_details.dart';
-import '../../features/home/pages/youtube_player_screen.dart';
+import '../../features/article/pages/articles.dart';
+import '../../features/news/models/news_model.dart';
+import '../../features/news/pages/latest_news.dart';
+import '../../features/news/pages/news_details.dart';
+import '../../features/videoGallery/pages/video_gallery.dart';
+import '../../features/videoGallery/pages/youtube_player_screen.dart';
 
 List<RouteBase> routes = <RouteBase>[
   GoRoute(
@@ -179,12 +184,35 @@ List<RouteBase> routes = <RouteBase>[
       return YoutubePlayerScreen(videoId: videoId);
     },
   ),
-   GoRoute(
+  GoRoute(
     path: AppRoutes.articleDetails.path,
     name: AppRoutes.articleDetails.name,
     builder: (context, state) {
       final articleID = int.parse(state.pathParameters['id']!);
       return ArticleDetailsScreen(articleId: articleID);
     },
+  ),
+  GoRoute(
+    path: AppRoutes.articles.path,
+    name: AppRoutes.articles.name,
+    builder: (_, __) => const ArticlesScreen(),
+  ),
+  GoRoute(
+    path: AppRoutes.latestNews.path,
+    name: AppRoutes.latestNews.name,
+    builder: (_, __) => const LatestNewsScreen(),
+  ),
+  GoRoute(
+    path: AppRoutes.newsDetails.path,
+    name: AppRoutes.newsDetails.name,
+    builder: (context, state) {
+       final news = state.extra as News;
+      return NewsDetailsScreen(news: news);
+    },
+  ),
+  GoRoute(
+    path: AppRoutes.videoGallery.path,
+    name: AppRoutes.videoGallery.name,
+    builder: (_, __) => const VideoGalleryScreen(),
   ),
 ];
