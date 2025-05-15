@@ -45,6 +45,7 @@ class ArticleDetailsScreen extends ConsumerWidget {
               /// Image
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
+                //TODO use CachedImage
                 child: Image.network(
                   article.imageUrl,
                   width: double.infinity,

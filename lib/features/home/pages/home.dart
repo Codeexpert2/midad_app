@@ -75,6 +75,7 @@ class HomeScreen extends ConsumerWidget {
                 limit: 4,
               ),
               const SizedBox(height: 14),
+              //TODO Refactor this section into a separate reusable widget and pass the texts and button action as parameters
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(

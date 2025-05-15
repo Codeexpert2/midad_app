@@ -28,7 +28,8 @@ class YouthMenu extends ConsumerWidget {
           title: Text(article.title),
           onTap: () {
             contentProvider.isExpanded = false;
-            Navigator.pop(context);
+            context.pop();
+            // Navigator.pop(context);
             context.pushNamed(
               AppRoutes.articleDetails.name,
               pathParameters: {'id': article.id.toString()},

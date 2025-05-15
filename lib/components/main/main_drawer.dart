@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/core/router/app_routes.dart';
-import 'package:midad/providers/auth_provider.dart';
 
 import '../../core/locale/generated/l10n.dart';
 import '../../features/home/widgets/children_menu.dart';
@@ -67,23 +66,23 @@ class MainDrawer extends ConsumerWidget {
               },
             ),
             const AppDivider(),
-            ListTile(
-              leading: Icon(
-                Icons.exit_to_app,
-                color: Theme.of(context).colorScheme.error,
-              ),
-              title: Text(
-                S.of(context).logout,
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.error,
-                ),
-              ),
-              onTap: () {
-                // confirm dialog
-                Navigator.pop(context);
-                ref.read(authNotifierProvider.notifier).logout();
-              },
-            ),
+            // ListTile(
+            //   leading: Icon(
+            //     Icons.exit_to_app,
+            //     color: Theme.of(context).colorScheme.error,
+            //   ),
+            //   title: Text(
+            //     S.of(context).logout,
+            //     style: TextStyle(
+            //       color: Theme.of(context).colorScheme.error,
+            //     ),
+            //   ),
+            //   onTap: () {
+            //     // confirm dialog
+            //     Navigator.pop(context);
+            //     ref.read(authNotifierProvider.notifier).logout();
+            //   },
+            // ),
           ],
         ),
       ),
