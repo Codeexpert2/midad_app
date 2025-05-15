@@ -28,7 +28,7 @@ class MainDrawer extends ConsumerWidget {
                 S.of(context).home,
               ),
               onTap: () {
-                Navigator.pop(context);
+                context.pop();
                 context.goNamed(AppRoutes.home.name);
               },
             ),
@@ -36,7 +36,7 @@ class MainDrawer extends ConsumerWidget {
               leading: const Icon(Icons.category),
               title: Text(S.of(context).category),
               onTap: () {
-                Navigator.pop(context);
+                context.pop();
                 context.pushNamed(AppRoutes.category.name);
               },
             ),
@@ -46,7 +46,7 @@ class MainDrawer extends ConsumerWidget {
                 S.of(context).search,
               ),
               onTap: () {
-                Navigator.pop(context);
+                context.pop();
                 context.pushNamed(AppRoutes.search.name);
               },
             ),

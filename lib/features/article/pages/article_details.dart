@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../components/images/cached_image.dart';
 import '../../../components/main/main_appbar.dart';
-import '../../../core/constants/images.dart';
 import '../../../core/extensions/extensions.dart';
 import '../../../core/helpers/date_helper.dart';
 import '../../../core/themes/app_colors.dart';
@@ -45,16 +45,10 @@ class ArticleDetailsScreen extends ConsumerWidget {
               /// Image
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
-                //TODO use CachedImage
-                child: Image.network(
-                  article.imageUrl,
-                  width: double.infinity,
+                child: CachedImage(
+                  imageUrl: article.imageUrl,
                   height: context.height * 0.28,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => const Image(
-                    image: AssetImage(AppImages.imagesMidadLogoG),
-                    fit: BoxFit.cover,
-                  ),
+                  width: double.infinity,
                 ),
               ),
               const SizedBox(height: 25.0),
