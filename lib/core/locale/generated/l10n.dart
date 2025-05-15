@@ -2371,10 +2371,10 @@ class S {
     );
   }
 
-  /// `برنامج الألطفال`
+  /// `برنامج الأطفال`
   String get children {
     return Intl.message(
-      'برنامج الألطفال',
+      'برنامج الأطفال',
       name: 'children',
       desc: '',
       args: [],

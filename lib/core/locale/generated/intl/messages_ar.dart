@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("تفقد بريدك الإلكتروني"),
-        "children": MessageLookupByLibrary.simpleMessage("برنامج الألطفال"),
+        "children": MessageLookupByLibrary.simpleMessage("برنامج الأطفال"),
         "clear": MessageLookupByLibrary.simpleMessage("مسح"),
         "clipSavedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم حفظ المقطع بنجاح"),
