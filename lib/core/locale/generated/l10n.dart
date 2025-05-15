@@ -2571,21 +2571,41 @@ class S {
     );
   }
 
-  /// `لا توجد أخبار أخرى`
+  /// `لا يوجد أخبار أخرى`
   String get noMoreNews {
     return Intl.message(
-      'لا توجد أخبار أخرى',
+      'لا يوجد أخبار أخرى',
       name: 'noMoreNews',
       desc: '',
       args: [],
     );
   }
 
-  /// `لا توجد أخبار متاحة`
+  /// `لا يوجد أخبار متاحة`
   String get noNewsAvailable {
     return Intl.message(
-      'لا توجد أخبار متاحة',
+      'لا يوجد أخبار متاحة',
       name: 'noNewsAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يوجد المزيد من الفيديوهات`
+  String get noMoreVideo {
+    return Intl.message(
+      'لا يوجد المزيد من الفيديوهات',
+      name: 'noMoreVideo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يوجد فيديوهات متاحة`
+  String get noVideoAvailable {
+    return Intl.message(
+      'لا يوجد فيديوهات متاحة',
+      name: 'noVideoAvailable',
       desc: '',
       args: [],
     );

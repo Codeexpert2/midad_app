@@ -12,17 +12,15 @@ class ArticleListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final displayList =
-        limit != null ? articleList.take(limit!).toList() : articleList;
     return SizedBox(
       height: context.height * 0.27,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 8),
-        itemCount: displayList.length,
+        itemCount: articleList.length,
         separatorBuilder: (_, __) => const SizedBox(width: 12),
         itemBuilder: (context, index) {
-          final article = displayList[index];
+          final article = articleList[index];
           return ArticleItemWidget(
             article: article,
             width: context.width * 0.6,

@@ -54,8 +54,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "noMoreArticles":
             MessageLookupByLibrary.simpleMessage("No More Articles"),
         "noMoreNews": MessageLookupByLibrary.simpleMessage("No More News"),
+        "noMoreVideo": MessageLookupByLibrary.simpleMessage("No More Video"),
         "noNewsAvailable":
             MessageLookupByLibrary.simpleMessage("No News Available"),
+        "noVideoAvailable":
+            MessageLookupByLibrary.simpleMessage("No Video Available"),
         "organizationInterests":
             MessageLookupByLibrary.simpleMessage("Organization Interests"),
         "qualifyingYouth": MessageLookupByLibrary.simpleMessage(

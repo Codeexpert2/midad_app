@@ -6,7 +6,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:midad/core/extensions/extensions.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 
-import '../providers/home_provider.dart';
+import '../../home/providers/home_provider.dart';
 
 class YoutubePlayerScreen extends ConsumerWidget {
   const YoutubePlayerScreen({super.key, required this.videoId});

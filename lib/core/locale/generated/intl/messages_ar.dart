@@ -254,11 +254,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "noMoreData":
             MessageLookupByLibrary.simpleMessage("لا توجد بيانات أخرى"),
         "noMoreNews":
-            MessageLookupByLibrary.simpleMessage("لا توجد أخبار أخرى"),
+            MessageLookupByLibrary.simpleMessage("لا يوجد أخبار أخرى"),
+        "noMoreVideo": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد المزيد من الفيديوهات"),
         "noNewsAvailable":
-            MessageLookupByLibrary.simpleMessage("لا توجد أخبار متاحة"),
+            MessageLookupByLibrary.simpleMessage("لا يوجد أخبار متاحة"),
         "noNotifications":
             MessageLookupByLibrary.simpleMessage("لا توجد إشعارات."),
+        "noVideoAvailable":
+            MessageLookupByLibrary.simpleMessage("لا يوجد فيديوهات متاحة"),
         "notFound": MessageLookupByLibrary.simpleMessage("غير موجود"),
         "notLoggedIn": MessageLookupByLibrary.simpleMessage(
             "لم تقم بتسجيل الدخول، يرجى تسجيل الدخول"),

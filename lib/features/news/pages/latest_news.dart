@@ -12,8 +12,8 @@ import '../providers/latest_news_list_notifier.dart';
 import '../providers/latest_news_notifier.dart';
 import '../widgets/latest_news_item_widget.dart';
 
-class LatestNews extends ConsumerWidget {
-  const LatestNews({super.key});
+class LatestNewsScreen extends ConsumerWidget {
+  const LatestNewsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -87,7 +87,11 @@ class HomeScreen extends ConsumerWidget {
                 title: S.of(context).videoGallery,
                 isShowMore: true,
                 buttonText: S.of(context).showMore,
-                onButtonPressed: () {},
+                onButtonPressed: () {
+                  context.pushNamed(
+                    AppRoutes.videoGallery.name,
+                  );
+                },
               ),
               const SizedBox(height: 12),
               VideoListWidget(videos: videoList),

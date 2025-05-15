@@ -250,6 +250,8 @@
   "showMore": "عرض المزيد",
   "noMoreArticles": "لا توجد مقالات أخرى",
   "noArticlesAvailable": "لا توجد مقالات متاحة",
-  "noMoreNews": "لا توجد أخبار أخرى",
-  "noNewsAvailable": "لا توجد أخبار متاحة"
+  "noMoreNews": "لا يوجد أخبار أخرى",
+  "noNewsAvailable": "لا يوجد أخبار متاحة",
+  "noMoreVideo": "لا يوجد المزيد من الفيديوهات",
+  "noVideoAvailable": "لا يوجد فيديوهات متاحة"
 }
