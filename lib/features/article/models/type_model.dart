@@ -1,4 +1,3 @@
-
 class TypeModel {
   TypeModel({
     required this.id,
