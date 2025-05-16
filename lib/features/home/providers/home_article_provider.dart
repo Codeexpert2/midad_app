@@ -2,7 +2,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../core/pagination/models/pagination_params.dart';
 import '../../article/models/article_model.dart';
-import '../../article/providers/article_list_notifier.dart';
+import '../../article/providers/article_service_provider.dart';
 
 final homeArticlesNotifierProvider =
     AsyncNotifierProvider<HomeArticlesNotifier, List<Article>>(() {

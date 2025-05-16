@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:midad/core/themes/app_colors.dart';
 
 import '../../../components/images/cached_image.dart';
+import '../../../core/router/app_routes.dart';
 import '../models/article_model.dart';
 
 class ArticleItemWidget extends StatelessWidget {
@@ -26,11 +27,10 @@ class ArticleItemWidget extends StatelessWidget {
       height: height,
       child: GestureDetector(
         onTap: () {
-          // context.pushNamed(
-          //   AppRoutes.articleDetails.name,
-          //   extra: article,
-          //   // pathParameters: {'id': article.id.toString()},
-          // );
+          context.pushNamed(
+            AppRoutes.articleDetails.name,
+            pathParameters: {'id': article.id.toString()},
+          );
         },
         child: Card(
           color: AppColors.gray200.withOpacity(0.2),

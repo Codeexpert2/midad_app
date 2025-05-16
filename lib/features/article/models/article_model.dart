@@ -9,14 +9,14 @@ class Article {
     required this.title,
     required this.content,
     required this.image,
-     this.promptContent,
+    required this.promptContent,
     required this.userId,
-     this.promptTypeId,
-     this.promptCategoryId,
-     this.status,
-     this.category,
-     this.tags,
-     this.type,
+    required this.promptTypeId,
+    required this.promptCategoryId,
+    required this.status,
+    required this.category,
+    required this.tags,
+    required this.type,
   });
 
   factory Article.fromJson(Map<String, dynamic> json) {
@@ -39,12 +39,12 @@ class Article {
   final String title;
   final String content;
   final String image;
-  final String? promptContent;
+  final String promptContent;
   final int userId;
-  final int? promptTypeId;
-  final int? promptCategoryId;
-  final String? status;
-  final Category? category;
-  final List<Tag>? tags;
-  final TypeModel? type;
+  final int promptTypeId;
+  final int promptCategoryId;
+  final String status;
+  final Category category;
+  final List<Tag> tags;
+  final TypeModel type;
 }

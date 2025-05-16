@@ -34,4 +34,18 @@ class ArticleService {
       rethrow;
     }
   }
+
+  Future<Article> getArticleDetails(int articleId) async {
+    try {
+      final response = await apiClient.get('/articles/$articleId');
+      final data = response.data;
+
+      final article = Article.fromJson(data['data']);
+
+      return article;
+    } on DioException catch (e) {
+      AppLog.error('e: $e');
+      rethrow;
+    }
+  }
 }

@@ -1,7 +1,6 @@
 import 'package:midad/components/web/web.dart';
 import 'package:midad/core/keys/keys.dart';
 import 'package:midad/core/router/app_routes.dart';
-import 'package:midad/features/article/models/article_model.dart';
 import 'package:midad/features/auth/pages/login_screen.dart';
 import 'package:midad/features/auth/pages/password_reset_screen.dart';
 import 'package:midad/features/auth/pages/register_screen.dart';
@@ -189,8 +188,8 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.articleDetails.path,
     name: AppRoutes.articleDetails.name,
     builder: (context, state) {
-      final article = state.extra as Article;
-      return ArticleDetailsScreen(article: article);
+      final articleId = int.parse(state.pathParameters['id']!);
+      return ArticleDetailsScreen(articleId: articleId);
     },
   ),
   GoRoute(
@@ -207,7 +206,7 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.newsDetails.path,
     name: AppRoutes.newsDetails.name,
     builder: (context, state) {
-       final news = state.extra as News;
+      final news = state.extra as News;
       return NewsDetailsScreen(news: news);
     },
   ),
