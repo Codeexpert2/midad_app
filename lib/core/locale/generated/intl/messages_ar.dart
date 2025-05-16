@@ -366,6 +366,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "schoolSponsorship":
             MessageLookupByLibrary.simpleMessage("رعاية المدارس"),
         "search": MessageLookupByLibrary.simpleMessage("ابحث هنا"),
+        "searchArticle": MessageLookupByLibrary.simpleMessage("ابحث عن مقالة"),
         "secondsAgo": m6,
         "seeMore": MessageLookupByLibrary.simpleMessage("أظهر المزيد"),
         "select": MessageLookupByLibrary.simpleMessage("اختر"),

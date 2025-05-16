@@ -6,13 +6,13 @@ import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
-import 'package:midad/features/home/constant/article_list.dart';
 
 import '../../../components/images/image_slider.dart';
 import '../constant/news_list.dart';
 import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
 import '../constant/video_list.dart';
+import '../providers/home_article_provider.dart';
 import '../widgets/article_list_widget.dart';
 import '../widgets/latest_news_widget.dart';
 import '../widgets/partner_list_widget.dart';
@@ -24,6 +24,8 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final homeArticles = ref.watch(homeArticlesNotifierProvider);
+
     return Scaffold(
       appBar: MainAppBar(
         title: S.of(context).home,
@@ -58,9 +60,12 @@ class HomeScreen extends ConsumerWidget {
                 },
               ),
               const SizedBox(height: 12),
-              ArticleListWidget(
-                articleList: articleList,
-                limit: 4,
+              homeArticles.when(
+                data: (articles) => ArticleListWidget(
+                  articleList: articles,
+                ),
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (err, stack) => const Center(child: Text('Error')),
               ),
               const SizedBox(height: 14),
               SectionHeader(

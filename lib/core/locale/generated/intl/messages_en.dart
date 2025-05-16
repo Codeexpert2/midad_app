@@ -66,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qualifying youth for the labor market"),
         "schoolSponsorship":
             MessageLookupByLibrary.simpleMessage("School Sponsorship"),
+        "searchArticle": MessageLookupByLibrary.simpleMessage("Search article"),
         "select": MessageLookupByLibrary.simpleMessage("Select"),
         "shapeTheFuture":
             MessageLookupByLibrary.simpleMessage("Shape the Future"),

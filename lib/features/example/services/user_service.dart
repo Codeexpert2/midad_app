@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../../../core/pagination/models/pagination_params.dart';
 import '../models/user.dart';
 

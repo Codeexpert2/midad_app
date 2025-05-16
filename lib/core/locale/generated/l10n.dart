@@ -2620,6 +2620,16 @@ class S {
       args: [],
     );
   }
+
+  /// `ابحث عن مقالة`
+  String get searchArticle {
+    return Intl.message(
+      'ابحث عن مقالة',
+      name: 'searchArticle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

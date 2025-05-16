@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:midad/core/themes/app_colors.dart';
 
 import '../../../components/images/cached_image.dart';
-import '../../../core/router/app_routes.dart';
 import '../models/article_model.dart';
 
 class ArticleItemWidget extends StatelessWidget {
@@ -27,10 +26,11 @@ class ArticleItemWidget extends StatelessWidget {
       height: height,
       child: GestureDetector(
         onTap: () {
-          context.pushNamed(
-            AppRoutes.articleDetails.name,
-            pathParameters: {'id': article.id.toString()},
-          );
+          // context.pushNamed(
+          //   AppRoutes.articleDetails.name,
+          //   extra: article,
+          //   // pathParameters: {'id': article.id.toString()},
+          // );
         },
         child: Card(
           color: AppColors.gray200.withOpacity(0.2),
@@ -47,7 +47,7 @@ class ArticleItemWidget extends StatelessWidget {
                   topRight: Radius.circular(12),
                 ),
                 child: CachedImage(
-                  imageUrl: article.imageUrl,
+                  imageUrl: article.image,
                   height: imageHeight,
                   width: width,
                 ),
@@ -56,24 +56,28 @@ class ArticleItemWidget extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        article.title,
-                        style: const TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w600),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(height: 7),
-                      Text(
-                        article.description,
-                        style: const TextStyle(fontSize: 12),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ],
-                  ),
+                  child: LayoutBuilder(builder: (context, constraints) {
+                    return Column(
+                      children: [
+                        Text(
+                          article.title,
+                          style: const TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w600),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        const SizedBox(height: 7),
+                        Expanded(
+                          child: Text(
+                            article.content,
+                            style: const TextStyle(fontSize: 12),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    );
+                  }),
                 ),
               ),
             ],

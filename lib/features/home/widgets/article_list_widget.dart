@@ -6,10 +6,9 @@ import '../../article/models/article_model.dart';
 import '../../article/widgets/article_item_widget.dart';
 
 class ArticleListWidget extends StatelessWidget {
-  const ArticleListWidget({super.key, required this.articleList, this.limit});
+  const ArticleListWidget({super.key, required this.articleList});
   final List<Article> articleList;
-  final int? limit;
-
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(

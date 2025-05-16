@@ -254,5 +254,6 @@
   "noMoreNews": "لا يوجد أخبار أخرى",
   "noNewsAvailable": "لا يوجد أخبار متاحة",
   "noMoreVideo": "لا يوجد المزيد من الفيديوهات",
-  "noVideoAvailable": "لا يوجد فيديوهات متاحة"
+  "noVideoAvailable": "لا يوجد فيديوهات متاحة",
+  "searchArticle": "ابحث عن مقالة"
 }

@@ -4,7 +4,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/core/extensions/extensions.dart';
 
-import '../../../components/main/main_appbar.dart';
 import '../../../core/locale/generated/l10n.dart';
 import '../../../core/pagination/paginated_list_widget.dart';
 import '../models/article_model.dart';
@@ -17,9 +16,36 @@ class ArticlesScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final articlesProvider = ref.watch(articleProvider);
+
     return Scaffold(
-      appBar: MainAppBar(
-        title: S.of(context).articles,
+      appBar: AppBar(
+        titleSpacing: 0,
+        title: TextField(
+          controller: articlesProvider.searchController,
+          decoration: InputDecoration(
+            hintText: S.of(context).searchArticle,
+            suffixIcon: articlesProvider.searchController.text.isEmpty
+                ? null
+                : IconButton(
+                    icon:
+                        const Icon(Icons.clear_rounded, color: Colors.black54),
+                    onPressed: () {
+                      articlesProvider.searchController.clear();
+                      articlesProvider.onSearchChanged();
+                    },
+                  ),
+            border: const OutlineInputBorder(
+              borderSide: BorderSide.none,
+            ),
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide.none,
+            ),
+            focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide.none,
+            ),
+          ),
+        ),
       ),
       body: PaginatedListWidget<Article>(
         provider: articleListProvider,
