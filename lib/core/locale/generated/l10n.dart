@@ -2740,6 +2740,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Journals`
+  String get journals {
+    return Intl.message(
+      'Journals',
+      name: 'journals',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details Journal`
+  String get detailsJournal {
+    return Intl.message(
+      'Details Journal',
+      name: 'detailsJournal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Title`
+  String get noTitle {
+    return Intl.message(
+      'No Title',
+      name: 'noTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Description`
+  String get noDescription {
+    return Intl.message(
+      'No Description',
+      name: 'noDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:midad/core/locale/generated/l10n.dart';
+
 import '../models/journal_model.dart';
 
 class JournalCard extends StatelessWidget {
@@ -44,7 +46,7 @@ class JournalCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      journal.title ?? 'No Title',
+                      journal.title ?? S.of(context).noTitle,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
@@ -56,7 +58,7 @@ class JournalCard extends StatelessWidget {
                     Text(
                       journal.body != null && journal.body!.isNotEmpty
                           ? '${journal.body!.substring(0, journal.body!.length > 60 ? 60 : journal.body!.length)}...'
-                          : 'No Description',
+                          : S.of(context).noDescription,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(

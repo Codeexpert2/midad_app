@@ -49,5 +49,9 @@
   "requestCanceled": "Request Canceled",
   "cacheError": "Cache Error",
   "formatException": "Format Exception",
-  "connectionErrorException": "Connection Error Exception"
+  "connectionErrorException": "Connection Error Exception",
+  "journals": "Journals",
+  "detailsJournal": "Details Journal",
+  "noTitle": "No Title",
+  "noDescription": "No Description"
 }

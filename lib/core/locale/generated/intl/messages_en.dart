@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Community Participation"),
         "connectionErrorException":
             MessageLookupByLibrary.simpleMessage("Connection Error Exception"),
+        "detailsJournal":
+            MessageLookupByLibrary.simpleMessage("Details Journal"),
         "developingQualityEducation": MessageLookupByLibrary.simpleMessage(
             "Developing the Quality of Education"),
         "devlopedBy": MessageLookupByLibrary.simpleMessage("Devloped By"),
@@ -57,18 +59,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation":
             MessageLookupByLibrary.simpleMessage(
                 "Join our journey to promote inclusive, innovative, and quality education for all."),
+        "journals": MessageLookupByLibrary.simpleMessage("Journals"),
         "latestNews": MessageLookupByLibrary.simpleMessage("Latest News"),
         "midadPartners": MessageLookupByLibrary.simpleMessage("MIDAD Partners"),
         "netWorkErrorMessage":
-            MessageLookupByLibrary.simpleMessage("Net Work Error Message"),
+            MessageLookupByLibrary.simpleMessage("Network Error Message"),
         "noArticlesAvailable":
             MessageLookupByLibrary.simpleMessage("No Articles Available"),
+        "noDescription": MessageLookupByLibrary.simpleMessage("No Description"),
         "noMoreArticles":
             MessageLookupByLibrary.simpleMessage("No More Articles"),
         "noMoreNews": MessageLookupByLibrary.simpleMessage("No More News"),
         "noMoreVideo": MessageLookupByLibrary.simpleMessage("No More Video"),
         "noNewsAvailable":
             MessageLookupByLibrary.simpleMessage("No News Available"),
+        "noTitle": MessageLookupByLibrary.simpleMessage("No Title"),
         "noVideoAvailable":
             MessageLookupByLibrary.simpleMessage("No Video Available"),
         "notFoundMessage":

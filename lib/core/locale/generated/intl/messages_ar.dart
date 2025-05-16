@@ -132,6 +132,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "deleteAccountWarning3": MessageLookupByLibrary.simpleMessage(
             "هذا الإجراء غير قابل للإلغاء"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
+        "detailsJournal":
+            MessageLookupByLibrary.simpleMessage("Details Journal"),
         "developingQualityEducation":
             MessageLookupByLibrary.simpleMessage("تطوير جودة التعليم"),
         "devlopedBy": MessageLookupByLibrary.simpleMessage("تم التطوير بواسطة"),
@@ -213,6 +215,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation":
             MessageLookupByLibrary.simpleMessage(
                 "انضم إلينا لدعم تعليم شامل ومبتكر وذي جودة للجميع."),
+        "journals": MessageLookupByLibrary.simpleMessage("Journals"),
         "justNow": MessageLookupByLibrary.simpleMessage("الآن"),
         "lastViewed": MessageLookupByLibrary.simpleMessage("آخر استماعاتك"),
         "latest": MessageLookupByLibrary.simpleMessage("أُضيف حديثاً"),
@@ -254,6 +257,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noArticlesAvailable":
             MessageLookupByLibrary.simpleMessage("لا توجد مقالات متاحة"),
         "noContent": MessageLookupByLibrary.simpleMessage("لا يوجد محتوى"),
+        "noDescription": MessageLookupByLibrary.simpleMessage("No Description"),
         "noDownloadedFiles":
             MessageLookupByLibrary.simpleMessage("لا توجد ملفات تم تحميلها"),
         "noFilesSelected":
@@ -272,6 +276,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا يوجد أخبار متاحة"),
         "noNotifications":
             MessageLookupByLibrary.simpleMessage("لا توجد إشعارات."),
+        "noTitle": MessageLookupByLibrary.simpleMessage("No Title"),
         "noVideoAvailable":
             MessageLookupByLibrary.simpleMessage("لا يوجد فيديوهات متاحة"),
         "notFound": MessageLookupByLibrary.simpleMessage("غير موجود"),

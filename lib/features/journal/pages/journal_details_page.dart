@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/components/errors/no_content_indicator.dart';
 import 'package:midad/components/loading/loading_widget.dart';
+import 'package:midad/core/locale/generated/l10n.dart';
 
 import '../providers/journal_provider.dart';
 
@@ -16,7 +17,7 @@ class JournalDetailsPage extends ConsumerWidget {
     final journalAsync = ref.watch(journalDetailsProvider(journalId));
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Details Journal'),
+        title:  Text(S.of(context).detailsJournal),
         centerTitle: true,
       ),
       body: journalAsync.when(
@@ -30,7 +31,7 @@ class JournalDetailsPage extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                journal.title ?? 'No Title',
+                journal.title ?? S.of(context).noTitle,
                 style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
