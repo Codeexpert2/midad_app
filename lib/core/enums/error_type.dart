@@ -1,7 +1,7 @@
 // ignore_for_file: lines_longer_than_80_chars
 
-import 'failure.dart';
-import 'response_code.dart';
+import '../errors/failure.dart';
+import '../errors/response_code.dart';
 
 enum ErrorType {
   success,

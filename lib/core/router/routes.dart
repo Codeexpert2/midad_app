@@ -4,10 +4,11 @@ import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/features/auth/pages/login_screen.dart';
 import 'package:midad/features/auth/pages/password_reset_screen.dart';
 import 'package:midad/features/auth/pages/register_screen.dart';
-import 'package:midad/features/category/category_screen.dart';
 import 'package:midad/features/example/screens/user_list_screen.dart';
 import 'package:midad/features/help/pages/help_screen.dart';
 import 'package:midad/features/home/pages/home.dart';
+import 'package:midad/features/journal/pages/journal_details_page.dart';
+import 'package:midad/features/journal/pages/journal_page.dart';
 import 'package:midad/features/notification/notification_screen.dart';
 import 'package:midad/features/onboarding/onboarding_screen.dart';
 import 'package:midad/features/profile/pages/change_password_screen.dart';
@@ -126,15 +127,25 @@ List<RouteBase> routes = <RouteBase>[
         ],
       ),
       GoRoute(
-        name: AppRoutes.category.name,
-        path: AppRoutes.category.path,
+        name: AppRoutes.journal.name,
+        path: AppRoutes.journal.path,
         parentNavigatorKey: shellNavigatorKey,
         pageBuilder: (context, state) {
           return const NoTransitionPage(
-            child: CategoryScreen(),
+            child: JournalPage(),
           );
         },
       ),
+      // GoRoute(
+      //   name: AppRoutes.category.name,
+      //   path: AppRoutes.category.path,
+      //   parentNavigatorKey: shellNavigatorKey,
+      //   pageBuilder: (context, state) {
+      //     return const NoTransitionPage(
+      //       child: CategoryScreen(),
+      //     );
+      //   },
+      // ),
       GoRoute(
         name: AppRoutes.search.name,
         path: AppRoutes.search.path,
@@ -214,5 +225,13 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.videoGallery.path,
     name: AppRoutes.videoGallery.name,
     builder: (_, __) => const VideoGalleryScreen(),
+  ),
+  GoRoute(
+    path: AppRoutes.journalDetails.path,
+    name: AppRoutes.journalDetails.name,
+    builder: (context, state) {
+      final journalId = state.pathParameters['journalId'] ?? '';
+      return JournalDetailsPage(journalId: journalId);
+    },
   ),
 ];

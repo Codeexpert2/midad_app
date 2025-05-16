@@ -2630,6 +2630,156 @@ class S {
       args: [],
     );
   }
+
+  /// `Net Work Error Message`
+  String get netWorkErrorMessage {
+    return Intl.message(
+      'Net Work Error Message',
+      name: 'netWorkErrorMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time Out Error Message`
+  String get timeOutErrorMessage {
+    return Intl.message(
+      'Time Out Error Message',
+      name: 'timeOutErrorMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bad Request Message`
+  String get badRequestMessage {
+    return Intl.message(
+      'Bad Request Message',
+      name: 'badRequestMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unauthorized Message`
+  String get unauthorizedMessage {
+    return Intl.message(
+      'Unauthorized Message',
+      name: 'unauthorizedMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forbidden Message`
+  String get forbiddenMessage {
+    return Intl.message(
+      'Forbidden Message',
+      name: 'forbiddenMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not Found Message`
+  String get notFoundMessage {
+    return Intl.message(
+      'Not Found Message',
+      name: 'notFoundMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Server Error Message`
+  String get serverErrorMessage {
+    return Intl.message(
+      'Server Error Message',
+      name: 'serverErrorMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown Error Message`
+  String get unknownErrorMessage {
+    return Intl.message(
+      'Unknown Error Message',
+      name: 'unknownErrorMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unprocessable Content`
+  String get unprocessableContent {
+    return Intl.message(
+      'Unprocessable Content',
+      name: 'unprocessableContent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Format Exception`
+  String get formatException {
+    return Intl.message(
+      'Format Exception',
+      name: 'formatException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connection Error Exception`
+  String get connectionErrorException {
+    return Intl.message(
+      'Connection Error Exception',
+      name: 'connectionErrorException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Journals`
+  String get journals {
+    return Intl.message(
+      'Journals',
+      name: 'journals',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details Journal`
+  String get detailsJournal {
+    return Intl.message(
+      'Details Journal',
+      name: 'detailsJournal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Title`
+  String get noTitle {
+    return Intl.message(
+      'No Title',
+      name: 'noTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Description`
+  String get noDescription {
+    return Intl.message(
+      'No Description',
+      name: 'noDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

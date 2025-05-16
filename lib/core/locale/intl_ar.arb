@@ -255,5 +255,20 @@
   "noNewsAvailable": "لا يوجد أخبار متاحة",
   "noMoreVideo": "لا يوجد المزيد من الفيديوهات",
   "noVideoAvailable": "لا يوجد فيديوهات متاحة",
-  "searchArticle": "ابحث عن مقالة"
+  "searchArticle": "ابحث عن مقالة",
+  "netWorkErrorMessage": "خطأ في الشبكة",
+  "timeOutErrorMessage": "انتهت مهلة الاتصال",
+  "badRequestMessage": "طلب غير صالح",
+  "unauthorizedMessage": "غير مصرح",
+  "forbiddenMessage": "ممنوع الوصول",
+  "notFoundMessage": "غير موجود",
+  "serverErrorMessage": "خطأ في الخادم",
+  "unknownErrorMessage": "خطأ غير معروف",
+  "unprocessableContent": "المحتوى غير قابل للمعالجة",
+  "formatException": "خطأ في التنسيق",
+  "connectionErrorException": "خطأ في الاتصال",
+  "journals": "المجلات",
+  "detailsJournal": "تفاصيل المجلة",
+  "noTitle": "بدون عنوان",
+  "noDescription": "لا يوجد وصف"
 }
