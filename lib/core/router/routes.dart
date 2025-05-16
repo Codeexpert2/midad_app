@@ -23,6 +23,7 @@ import 'package:midad/features/statics/terms_conditions.dart';
 
 import '../../features/article/pages/article_details.dart';
 import '../../features/article/pages/articles.dart';
+import '../../features/category/pages/category_screen.dart';
 import '../../features/news/models/news_model.dart';
 import '../../features/news/pages/latest_news.dart';
 import '../../features/news/pages/news_details.dart';
@@ -233,5 +234,10 @@ List<RouteBase> routes = <RouteBase>[
       final journalId = state.pathParameters['journalId'] ?? '';
       return JournalDetailsPage(journalId: journalId);
     },
+  ),
+  GoRoute(
+    name: AppRoutes.category.name,
+    path: AppRoutes.category.path,
+    builder: (_, __) => const CategoryScreen(),
   ),
 ];
