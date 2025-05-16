@@ -7,7 +7,9 @@ import '../../../core/pagination/models/pagination_params.dart';
 import '../models/article_model.dart';
 
 class ArticleService {
-  final apiClient = ApiClient();
+  ArticleService(this._apiClient);
+
+  final ApiClient _apiClient;
 
   Future<List<Article>> getArticles(PaginationParams params) async {
     try {
@@ -18,7 +20,7 @@ class ArticleService {
         if (params.filters != null) ...params.filters!,
       };
 
-      final response = await apiClient.get(
+      final response = await _apiClient.get(
         '/articles',
         queryParameters: queryParameters,
       );
@@ -37,7 +39,7 @@ class ArticleService {
 
   Future<Article> getArticleDetails(int articleId) async {
     try {
-      final response = await apiClient.get('/articles/$articleId');
+      final response = await _apiClient.get('/articles/$articleId');
       final data = response.data;
 
       final article = Article.fromJson(data);
