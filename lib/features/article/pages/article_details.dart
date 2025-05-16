@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../components/errors/error_indicator.dart';
 import '../../../components/images/cached_image.dart';
+import '../../../components/loading/loading_widget.dart';
 import '../../../components/main/main_appbar.dart';
 import '../../../core/extensions/extensions.dart';
+import '../../../core/locale/generated/l10n.dart';
 import '../providers/article_details_provider.dart';
 
 class ArticleDetailsScreen extends ConsumerWidget {
@@ -65,8 +68,13 @@ class ArticleDetailsScreen extends ConsumerWidget {
             ),
           ),
         ),
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, stack) => const Center(child: Text('Error')),
+        loading: () => const LoadingWidget(),
+        error: (err, stack) => ErrorIndicator(
+          errorMessage: S.of(context).error,
+          onRetry: () {
+            ref.invalidate(articleDetailsProvider(articleId));
+          },
+        ),
       ),
     );
   }
