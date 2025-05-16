@@ -255,5 +255,16 @@
   "noNewsAvailable": "لا يوجد أخبار متاحة",
   "noMoreVideo": "لا يوجد المزيد من الفيديوهات",
   "noVideoAvailable": "لا يوجد فيديوهات متاحة",
-  "searchArticle": "ابحث عن مقالة"
+  "searchArticle": "ابحث عن مقالة",
+  "netWorkErrorMessage": "Net Work Error Message",
+  "timeOutErrorMessage": "Time Out Error Message",
+  "badRequestMessage": "Bad Request Message",
+  "unauthorizedMessage": "Unauthorized Message",
+  "forbiddenMessage": "Forbidden Message",
+  "notFoundMessage": "Not Found Message",
+  "serverErrorMessage": "Server Error Message",
+  "unknownErrorMessage": "Unknown Error Message",
+  "unprocessableContent": "Unprocessable Content",
+  "formatException": "Format Exception",
+  "connectionErrorException": "Connection Error Exception"
 }

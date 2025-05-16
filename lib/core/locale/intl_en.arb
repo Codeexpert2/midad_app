@@ -36,5 +36,18 @@
   "noNewsAvailable": "No News Available",
   "noMoreVideo": "No More Video",
   "noVideoAvailable": "No Video Available",
-  "searchArticle": "Search article"
+  "searchArticle": "Search article",
+  "netWorkErrorMessage": "Net Work Error Message",
+  "timeOutErrorMessage": "Time Out Error Message",
+  "badRequestMessage": "Bad Request Message",
+  "unauthorizedMessage": "Unauthorized Message",
+  "forbiddenMessage": "Forbidden Message",
+  "notFoundMessage": "Not Found Message",
+  "serverErrorMessage": "Server Error Message",
+  "unknownErrorMessage": "Unknown Error Message",
+  "unprocessableContent": "Unprocessable Content",
+  "requestCanceled": "Request Canceled",
+  "cacheError": "Cache Error",
+  "formatException": "Format Exception",
+  "connectionErrorException": "Connection Error Exception"
 }

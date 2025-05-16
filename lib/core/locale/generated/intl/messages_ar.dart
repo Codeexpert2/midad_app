@@ -76,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "audioTrimmer": MessageLookupByLibrary.simpleMessage("محرر الصوت"),
         "backToLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "badRequest": MessageLookupByLibrary.simpleMessage("طلب غير صحيح"),
+        "badRequestMessage":
+            MessageLookupByLibrary.simpleMessage("Bad Request Message"),
         "bookmarkList":
             MessageLookupByLibrary.simpleMessage("القوائم المرجعية"),
         "bookmarks": MessageLookupByLibrary.simpleMessage("المحفوظات"),
@@ -105,6 +107,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور المؤكدة مطلوبة"),
         "connectTimeout":
             MessageLookupByLibrary.simpleMessage("انتهاء مهلة الاتصال"),
+        "connectionErrorException":
+            MessageLookupByLibrary.simpleMessage("Connection Error Exception"),
         "contactus": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "contentInquiry":
             MessageLookupByLibrary.simpleMessage("استفسار عن المحتوى"),
@@ -182,8 +186,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "filesSelected":
             MessageLookupByLibrary.simpleMessage("تم اختيار الملفات:"),
         "forbidden": MessageLookupByLibrary.simpleMessage("ممنوع"),
+        "forbiddenMessage":
+            MessageLookupByLibrary.simpleMessage("Forbidden Message"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "formatException":
+            MessageLookupByLibrary.simpleMessage("Format Exception"),
         "fromCamera": MessageLookupByLibrary.simpleMessage("التقاط صورة"),
         "fromGallery":
             MessageLookupByLibrary.simpleMessage("اختيار صورة من الاستوديو"),
@@ -234,6 +242,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "mostViewed": MessageLookupByLibrary.simpleMessage("الأكثر مشاهدة"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم*"),
         "nameTooShort": MessageLookupByLibrary.simpleMessage("الاسم قصير جدا"),
+        "netWorkErrorMessage":
+            MessageLookupByLibrary.simpleMessage("Net Work Error Message"),
         "newList": MessageLookupByLibrary.simpleMessage("قائمة جديدة"),
         "newPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
@@ -265,6 +275,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noVideoAvailable":
             MessageLookupByLibrary.simpleMessage("لا يوجد فيديوهات متاحة"),
         "notFound": MessageLookupByLibrary.simpleMessage("غير موجود"),
+        "notFoundMessage":
+            MessageLookupByLibrary.simpleMessage("Not Found Message"),
         "notLoggedIn": MessageLookupByLibrary.simpleMessage(
             "لم تقم بتسجيل الدخول، يرجى تسجيل الدخول"),
         "notReceivedEmail":
@@ -376,6 +388,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("انتهاء مهلة الإرسال"),
         "sendVerificationEmail":
             MessageLookupByLibrary.simpleMessage("ارسل بريد التحقق"),
+        "serverErrorMessage":
+            MessageLookupByLibrary.simpleMessage("Server Error Message"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "shapeTheFuture": MessageLookupByLibrary.simpleMessage("نصنع المستقبل"),
         "showLess": MessageLookupByLibrary.simpleMessage("أظهر القليل"),
@@ -402,13 +416,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "termsConditions":
             MessageLookupByLibrary.simpleMessage("سياسة الاستخدام"),
         "test": MessageLookupByLibrary.simpleMessage("امتحان"),
+        "timeOutErrorMessage":
+            MessageLookupByLibrary.simpleMessage("Time Out Error Message"),
         "title": MessageLookupByLibrary.simpleMessage("العنوان"),
         "titleRequired": MessageLookupByLibrary.simpleMessage("العنوان مطلوب"),
         "titleShort": MessageLookupByLibrary.simpleMessage("العنوان قصير"),
         "unauthorised": MessageLookupByLibrary.simpleMessage("غير مصرح به"),
         "unauthorized": MessageLookupByLibrary.simpleMessage("غير مصرح"),
+        "unauthorizedMessage":
+            MessageLookupByLibrary.simpleMessage("Unauthorized Message"),
         "unknownError":
             MessageLookupByLibrary.simpleMessage("حدث خطأ غير معروف!"),
+        "unknownErrorMessage":
+            MessageLookupByLibrary.simpleMessage("Unknown Error Message"),
+        "unprocessableContent":
+            MessageLookupByLibrary.simpleMessage("Unprocessable Content"),
         "unprocessableEntity":
             MessageLookupByLibrary.simpleMessage("كيان غير قابل للمعالجة"),
         "update": MessageLookupByLibrary.simpleMessage("تحديث"),
