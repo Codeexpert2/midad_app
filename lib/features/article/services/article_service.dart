@@ -7,7 +7,7 @@ import '../../../core/pagination/models/pagination_params.dart';
 import '../models/article_model.dart';
 
 class ArticleService {
-  final ApiClient apiClient = ApiClient();
+  final apiClient = ApiClient();
 
   Future<List<Article>> getArticles(PaginationParams params) async {
     try {
@@ -18,8 +18,10 @@ class ArticleService {
         if (params.filters != null) ...params.filters!,
       };
 
-      final response =
-          await apiClient.get('/articles', queryParameters: queryParameters);
+      final response = await apiClient.get(
+        '/articles',
+        queryParameters: queryParameters,
+      );
       final data = response.data;
 
       final articles = (data['data'] as List)
