@@ -23,6 +23,7 @@ import 'package:midad/features/statics/terms_conditions.dart';
 
 import '../../features/article/pages/article_details.dart';
 import '../../features/article/pages/articles.dart';
+import '../../features/category/pages/category_details_screen.dart';
 import '../../features/category/pages/category_screen.dart';
 import '../../features/news/models/news_model.dart';
 import '../../features/news/pages/latest_news.dart';
@@ -240,4 +241,16 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.category.path,
     builder: (_, __) => const CategoryScreen(),
   ),
+  GoRoute(
+  name: AppRoutes.categoryDetails.name,
+    path: AppRoutes.categoryDetails.path,
+  builder: (context, state) {
+    final categoryId = int.parse(state.uri.queryParameters['categoryId']!);
+    final categoryName = state.uri.queryParameters['categoryName']!;
+    return CategoryDetailsScreen(
+      categoryId: categoryId,
+      categoryName: categoryName,
+    );
+  },
+),
 ];

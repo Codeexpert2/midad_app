@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Devoting to Education"),
         "empowerEducation":
             MessageLookupByLibrary.simpleMessage("Empower Education"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
         "exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons":
             MessageLookupByLibrary.simpleMessage(
                 "Explore rich cultural and awareness articles designed to broaden horizons."),

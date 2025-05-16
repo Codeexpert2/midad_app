@@ -77,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "backToLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "badRequest": MessageLookupByLibrary.simpleMessage("طلب غير صحيح"),
         "badRequestMessage":
-            MessageLookupByLibrary.simpleMessage("Bad Request Message"),
+            MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
         "bookmarkList":
             MessageLookupByLibrary.simpleMessage("القوائم المرجعية"),
         "bookmarks": MessageLookupByLibrary.simpleMessage("المحفوظات"),
@@ -108,7 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connectTimeout":
             MessageLookupByLibrary.simpleMessage("انتهاء مهلة الاتصال"),
         "connectionErrorException":
-            MessageLookupByLibrary.simpleMessage("Connection Error Exception"),
+            MessageLookupByLibrary.simpleMessage("خطأ في الاتصال"),
         "contactus": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "contentInquiry":
             MessageLookupByLibrary.simpleMessage("استفسار عن المحتوى"),
@@ -132,8 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "deleteAccountWarning3": MessageLookupByLibrary.simpleMessage(
             "هذا الإجراء غير قابل للإلغاء"),
         "description": MessageLookupByLibrary.simpleMessage("الوصف"),
-        "detailsJournal":
-            MessageLookupByLibrary.simpleMessage("Details Journal"),
+        "detailsJournal": MessageLookupByLibrary.simpleMessage("تفاصيل المجلة"),
         "developingQualityEducation":
             MessageLookupByLibrary.simpleMessage("تطوير جودة التعليم"),
         "devlopedBy": MessageLookupByLibrary.simpleMessage("تم التطوير بواسطة"),
@@ -189,11 +188,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم اختيار الملفات:"),
         "forbidden": MessageLookupByLibrary.simpleMessage("ممنوع"),
         "forbiddenMessage":
-            MessageLookupByLibrary.simpleMessage("Forbidden Message"),
+            MessageLookupByLibrary.simpleMessage("ممنوع الوصول"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "formatException":
-            MessageLookupByLibrary.simpleMessage("Format Exception"),
+            MessageLookupByLibrary.simpleMessage("خطأ في التنسيق"),
         "fromCamera": MessageLookupByLibrary.simpleMessage("التقاط صورة"),
         "fromGallery":
             MessageLookupByLibrary.simpleMessage("اختيار صورة من الاستوديو"),
@@ -215,7 +214,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "joinOurJourneyToPromoteInclusiveInnovativeAndQualityEducation":
             MessageLookupByLibrary.simpleMessage(
                 "انضم إلينا لدعم تعليم شامل ومبتكر وذي جودة للجميع."),
-        "journals": MessageLookupByLibrary.simpleMessage("Journals"),
+        "journals": MessageLookupByLibrary.simpleMessage("المجلات"),
         "justNow": MessageLookupByLibrary.simpleMessage("الآن"),
         "lastViewed": MessageLookupByLibrary.simpleMessage("آخر استماعاتك"),
         "latest": MessageLookupByLibrary.simpleMessage("أُضيف حديثاً"),
@@ -246,7 +245,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("الاسم*"),
         "nameTooShort": MessageLookupByLibrary.simpleMessage("الاسم قصير جدا"),
         "netWorkErrorMessage":
-            MessageLookupByLibrary.simpleMessage("Net Work Error Message"),
+            MessageLookupByLibrary.simpleMessage("خطأ في الشبكة"),
         "newList": MessageLookupByLibrary.simpleMessage("قائمة جديدة"),
         "newPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
@@ -257,7 +256,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noArticlesAvailable":
             MessageLookupByLibrary.simpleMessage("لا توجد مقالات متاحة"),
         "noContent": MessageLookupByLibrary.simpleMessage("لا يوجد محتوى"),
-        "noDescription": MessageLookupByLibrary.simpleMessage("No Description"),
+        "noDescription": MessageLookupByLibrary.simpleMessage("لا يوجد وصف"),
         "noDownloadedFiles":
             MessageLookupByLibrary.simpleMessage("لا توجد ملفات تم تحميلها"),
         "noFilesSelected":
@@ -276,12 +275,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا يوجد أخبار متاحة"),
         "noNotifications":
             MessageLookupByLibrary.simpleMessage("لا توجد إشعارات."),
-        "noTitle": MessageLookupByLibrary.simpleMessage("No Title"),
+        "noTitle": MessageLookupByLibrary.simpleMessage("بدون عنوان"),
         "noVideoAvailable":
             MessageLookupByLibrary.simpleMessage("لا يوجد فيديوهات متاحة"),
         "notFound": MessageLookupByLibrary.simpleMessage("غير موجود"),
-        "notFoundMessage":
-            MessageLookupByLibrary.simpleMessage("Not Found Message"),
+        "notFoundMessage": MessageLookupByLibrary.simpleMessage("غير موجود"),
         "notLoggedIn": MessageLookupByLibrary.simpleMessage(
             "لم تقم بتسجيل الدخول، يرجى تسجيل الدخول"),
         "notReceivedEmail":
@@ -394,7 +392,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendVerificationEmail":
             MessageLookupByLibrary.simpleMessage("ارسل بريد التحقق"),
         "serverErrorMessage":
-            MessageLookupByLibrary.simpleMessage("Server Error Message"),
+            MessageLookupByLibrary.simpleMessage("خطأ في الخادم"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "shapeTheFuture": MessageLookupByLibrary.simpleMessage("نصنع المستقبل"),
         "showLess": MessageLookupByLibrary.simpleMessage("أظهر القليل"),
@@ -422,20 +420,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سياسة الاستخدام"),
         "test": MessageLookupByLibrary.simpleMessage("امتحان"),
         "timeOutErrorMessage":
-            MessageLookupByLibrary.simpleMessage("Time Out Error Message"),
+            MessageLookupByLibrary.simpleMessage("انتهت مهلة الاتصال"),
         "title": MessageLookupByLibrary.simpleMessage("العنوان"),
         "titleRequired": MessageLookupByLibrary.simpleMessage("العنوان مطلوب"),
         "titleShort": MessageLookupByLibrary.simpleMessage("العنوان قصير"),
         "unauthorised": MessageLookupByLibrary.simpleMessage("غير مصرح به"),
         "unauthorized": MessageLookupByLibrary.simpleMessage("غير مصرح"),
-        "unauthorizedMessage":
-            MessageLookupByLibrary.simpleMessage("Unauthorized Message"),
+        "unauthorizedMessage": MessageLookupByLibrary.simpleMessage("غير مصرح"),
         "unknownError":
             MessageLookupByLibrary.simpleMessage("حدث خطأ غير معروف!"),
         "unknownErrorMessage":
-            MessageLookupByLibrary.simpleMessage("Unknown Error Message"),
+            MessageLookupByLibrary.simpleMessage("خطأ غير معروف"),
         "unprocessableContent":
-            MessageLookupByLibrary.simpleMessage("Unprocessable Content"),
+            MessageLookupByLibrary.simpleMessage("المحتوى غير قابل للمعالجة"),
         "unprocessableEntity":
             MessageLookupByLibrary.simpleMessage("كيان غير قابل للمعالجة"),
         "update": MessageLookupByLibrary.simpleMessage("تحديث"),

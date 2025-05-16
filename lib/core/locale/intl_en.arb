@@ -53,5 +53,6 @@
   "journals": "Journals",
   "detailsJournal": "Details Journal",
   "noTitle": "No Title",
-  "noDescription": "No Description"
+  "noDescription": "No Description",
+  "error": "Error"
 }

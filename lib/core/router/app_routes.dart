@@ -33,7 +33,8 @@ enum AppRoutes {
   newsDetails('/news-details', 'newsDetails'),
   videoGallery('/video-gallery', 'videoGallery'),
   journal('/journal', 'journal'),
-  journalDetails('/journal/details/:journalId', 'journalDetails');
+  journalDetails('/journal/details/:journalId', 'journalDetails'),
+  categoryDetails('/category-details', 'categoryDetails');
 
   final String path;
   final String name;

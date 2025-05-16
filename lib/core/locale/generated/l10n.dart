@@ -2631,150 +2631,150 @@ class S {
     );
   }
 
-  /// `Net Work Error Message`
+  /// `خطأ في الشبكة`
   String get netWorkErrorMessage {
     return Intl.message(
-      'Net Work Error Message',
+      'خطأ في الشبكة',
       name: 'netWorkErrorMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Time Out Error Message`
+  /// `انتهت مهلة الاتصال`
   String get timeOutErrorMessage {
     return Intl.message(
-      'Time Out Error Message',
+      'انتهت مهلة الاتصال',
       name: 'timeOutErrorMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Bad Request Message`
+  /// `طلب غير صالح`
   String get badRequestMessage {
     return Intl.message(
-      'Bad Request Message',
+      'طلب غير صالح',
       name: 'badRequestMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Unauthorized Message`
+  /// `غير مصرح`
   String get unauthorizedMessage {
     return Intl.message(
-      'Unauthorized Message',
+      'غير مصرح',
       name: 'unauthorizedMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Forbidden Message`
+  /// `ممنوع الوصول`
   String get forbiddenMessage {
     return Intl.message(
-      'Forbidden Message',
+      'ممنوع الوصول',
       name: 'forbiddenMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Not Found Message`
+  /// `غير موجود`
   String get notFoundMessage {
     return Intl.message(
-      'Not Found Message',
+      'غير موجود',
       name: 'notFoundMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Server Error Message`
+  /// `خطأ في الخادم`
   String get serverErrorMessage {
     return Intl.message(
-      'Server Error Message',
+      'خطأ في الخادم',
       name: 'serverErrorMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Unknown Error Message`
+  /// `خطأ غير معروف`
   String get unknownErrorMessage {
     return Intl.message(
-      'Unknown Error Message',
+      'خطأ غير معروف',
       name: 'unknownErrorMessage',
       desc: '',
       args: [],
     );
   }
 
-  /// `Unprocessable Content`
+  /// `المحتوى غير قابل للمعالجة`
   String get unprocessableContent {
     return Intl.message(
-      'Unprocessable Content',
+      'المحتوى غير قابل للمعالجة',
       name: 'unprocessableContent',
       desc: '',
       args: [],
     );
   }
 
-  /// `Format Exception`
+  /// `خطأ في التنسيق`
   String get formatException {
     return Intl.message(
-      'Format Exception',
+      'خطأ في التنسيق',
       name: 'formatException',
       desc: '',
       args: [],
     );
   }
 
-  /// `Connection Error Exception`
+  /// `خطأ في الاتصال`
   String get connectionErrorException {
     return Intl.message(
-      'Connection Error Exception',
+      'خطأ في الاتصال',
       name: 'connectionErrorException',
       desc: '',
       args: [],
     );
   }
 
-  /// `Journals`
+  /// `المجلات`
   String get journals {
     return Intl.message(
-      'Journals',
+      'المجلات',
       name: 'journals',
       desc: '',
       args: [],
     );
   }
 
-  /// `Details Journal`
+  /// `تفاصيل المجلة`
   String get detailsJournal {
     return Intl.message(
-      'Details Journal',
+      'تفاصيل المجلة',
       name: 'detailsJournal',
       desc: '',
       args: [],
     );
   }
 
-  /// `No Title`
+  /// `بدون عنوان`
   String get noTitle {
     return Intl.message(
-      'No Title',
+      'بدون عنوان',
       name: 'noTitle',
       desc: '',
       args: [],
     );
   }
 
-  /// `No Description`
+  /// `لا يوجد وصف`
   String get noDescription {
     return Intl.message(
-      'No Description',
+      'لا يوجد وصف',
       name: 'noDescription',
       desc: '',
       args: [],
