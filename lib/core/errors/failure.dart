@@ -10,7 +10,7 @@
 // }
 import 'dart:io';
 
-import 'package:midad/core/errors/error_type.dart';
+import 'package:midad/core/enums/error_type.dart';
 
 class Failure {
   // error, success
