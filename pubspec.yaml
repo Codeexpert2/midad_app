@@ -26,7 +26,7 @@ dependencies:
   flutter_svg: ^2.0.16
   cupertino_icons: ^1.0.8
   intl_phone_number_input: ^0.7.4
-  flutter_widget_from_html: ^0.15.3
+  flutter_widget_from_html: ^0.16.0
 
   # state management
   get_it: ^8.0.3

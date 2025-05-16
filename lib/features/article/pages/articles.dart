@@ -16,39 +16,11 @@ class ArticlesScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final articlesProvider = ref.watch(articleProvider);
 
     return Scaffold(
-      // appBar: AppBar(
-      //   titleSpacing: 0,
-      //   title: TextField(
-      //     controller: articlesProvider.searchController,
-      //     decoration: InputDecoration(
-      //       hintText: S.of(context).searchArticle,
-      //       suffixIcon: articlesProvider.searchController.text.isEmpty
-      //           ? null
-      //           : IconButton(
-      //               icon:
-      //                   const Icon(Icons.clear_rounded, color: Colors.black54),
-      //               onPressed: () {
-      //                 articlesProvider.searchController.clear();
-      //                 articlesProvider.onSearchChanged();
-      //               },
-      //             ),
-      //       border: const OutlineInputBorder(
-      //         borderSide: BorderSide.none,
-      //       ),
-      //       enabledBorder: const OutlineInputBorder(
-      //         borderSide: BorderSide.none,
-      //       ),
-      //       focusedBorder: const OutlineInputBorder(
-      //         borderSide: BorderSide.none,
-      //       ),
-      //     ),
-      //   ),
-      // ),
+ 
       appBar: DebouncedSearchAppBar(
-        title: '',
+        title: S.of(context).articles,
         onDebounceChange: (value) {
           ref.read(articleParamsProvider.notifier).state =
               ref.read(articleParamsProvider).copyWith(query: value, page: 1);
@@ -70,7 +42,6 @@ class ArticlesScreen extends ConsumerWidget {
         separatorBuilder: (context, index) => const SizedBox(height: 18),
         emptyWidget: Center(child: Text(S.of(context).noArticlesAvailable)),
         noMoreDataWidget: Center(child: Text(S.of(context).noMoreArticles)),
-        // scrollController: ref.watch(articleProvider).scrollController,
       ),
     );
   }

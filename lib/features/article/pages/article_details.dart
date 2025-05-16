@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../components/images/cached_image.dart';
@@ -53,18 +54,12 @@ class ArticleDetailsScreen extends ConsumerWidget {
                 Text(
                   article.content,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontSize: 15,
-                        height: 1.6,
+                        fontSize: 18,
                       ),
                 ),
                 const SizedBox(height: 10),
-                Text(
-                  article.promptContent,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontSize: 14.5,
-                        height: 1.6,
-                      ),
-                ),
+                HtmlWidget(article.promptContent),
+
                 const SizedBox(height: 20),
               ],
             ),

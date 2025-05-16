@@ -14,9 +14,9 @@ class Article {
     required this.promptTypeId,
     required this.promptCategoryId,
     required this.status,
-    required this.category,
-    required this.tags,
-    required this.type,
+    this.category,
+    this.tags,
+    this.type,
   });
 
   factory Article.fromJson(Map<String, dynamic> json) {
@@ -30,9 +30,12 @@ class Article {
       promptTypeId: json['prompt_type_id'],
       promptCategoryId: json['prompt_category_id'],
       status: json['status'],
-      category: Category.fromJson(json['category']),
-      tags: (json['tags'] as List).map((e) => Tag.fromJson(e)).toList(),
-      type: TypeModel.fromJson(json['type']),
+      category:
+          json['category'] != null ? Category.fromJson(json['category']) : null,
+      tags: json['tags'] != null
+          ? (json['tags'] as List).map((e) => Tag.fromJson(e)).toList()
+          : null,
+      type: json['type'] != null ? TypeModel.fromJson(json['type']) : null,
     );
   }
   final int id;
@@ -44,7 +47,7 @@ class Article {
   final int promptTypeId;
   final int promptCategoryId;
   final String status;
-  final Category category;
-  final List<Tag> tags;
-  final TypeModel type;
+  final Category? category;
+  final List<Tag>? tags;
+  final TypeModel? type;
 }

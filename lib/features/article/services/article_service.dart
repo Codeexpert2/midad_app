@@ -40,7 +40,7 @@ class ArticleService {
       final response = await apiClient.get('/articles/$articleId');
       final data = response.data;
 
-      final article = Article.fromJson(data['data']);
+      final article = Article.fromJson(data);
 
       return article;
     } on DioException catch (e) {
