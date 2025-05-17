@@ -4,7 +4,6 @@ import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/features/auth/pages/login_screen.dart';
 import 'package:midad/features/auth/pages/password_reset_screen.dart';
 import 'package:midad/features/auth/pages/register_screen.dart';
-import 'package:midad/features/example/screens/user_list_screen.dart';
 import 'package:midad/features/help/pages/help_screen.dart';
 import 'package:midad/features/home/pages/home.dart';
 import 'package:midad/features/journal/pages/journal_details_page.dart';
@@ -28,8 +27,8 @@ import '../../features/category/pages/category_screen.dart';
 import '../../features/news/models/news_model.dart';
 import '../../features/news/pages/latest_news.dart';
 import '../../features/news/pages/news_details.dart';
-import '../../features/videoGallery/pages/video_gallery.dart';
-import '../../features/videoGallery/pages/youtube_player_screen.dart';
+import '../../features/video_gallery/pages/video_gallery.dart';
+import '../../features/video_gallery/pages/youtube_player_screen.dart';
 
 List<RouteBase> routes = <RouteBase>[
   GoRoute(
@@ -115,18 +114,6 @@ List<RouteBase> routes = <RouteBase>[
             child: HomeScreen(),
           );
         },
-        routes: [
-          GoRoute(
-            name: 'paginated_list_notifier',
-            path: 'paginated_list_notifier',
-            parentNavigatorKey: shellNavigatorKey,
-            pageBuilder: (context, state) {
-              return const NoTransitionPage(
-                child: UserListScreen(),
-              );
-            },
-          ),
-        ],
       ),
       GoRoute(
         name: AppRoutes.journal.name,

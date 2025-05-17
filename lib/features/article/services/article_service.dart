@@ -17,7 +17,7 @@ class ArticleService {
         'search': params.query,
         'page': params.page,
         'per_page': AppConfigs.perPage,
-        if (params.filters != null) ...params.filters!,
+        if (params.filters != null) ...params.filters ?? {},
       };
 
       final response = await _apiClient.get(

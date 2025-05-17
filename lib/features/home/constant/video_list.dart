@@ -1,4 +1,4 @@
-import '../../videoGallery/models/video_model.dart';
+import '../../video_gallery/models/video_model.dart';
 
 final List<Video> videoList = [
   Video(

@@ -12,7 +12,8 @@ final homeArticlesNotifierProvider =
 class HomeArticlesNotifier extends AsyncNotifier<List<Article>> {
   @override
   Future<List<Article>> build() async {
-    final articleService = ref.watch(articleServiceProvider);
+    final articleService = ref.read(articleServiceProvider);
+    // TODO use pagintion
     return await articleService.getArticles(const PaginationParams(limit: 10));
   }
 }

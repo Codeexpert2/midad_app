@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:midad/components/loading/loading_widget.dart';
 import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
@@ -64,7 +65,7 @@ class HomeScreen extends ConsumerWidget {
                 data: (articles) => ArticleListWidget(
                   articleList: articles,
                 ),
-                loading: () => const Center(child: CircularProgressIndicator()),
+                loading: LoadingWidget.new,
                 error: (err, stack) => const Center(child: Text('Error')),
               ),
               const SizedBox(height: 14),

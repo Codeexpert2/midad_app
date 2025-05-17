@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../videoGallery/models/video_model.dart';
-import '../../videoGallery/widgets/video_item_widget.dart';
+import '../../video_gallery/models/video_model.dart';
+import '../../video_gallery/widgets/video_item_widget.dart';
 import '../constant/video_list.dart';
 
 class VideoListWidget extends StatelessWidget {
