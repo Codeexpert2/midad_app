@@ -34,7 +34,9 @@ enum AppRoutes {
   videoGallery('/video-gallery', 'videoGallery'),
   journal('/journal', 'journal'),
   journalDetails('/journal/details/:journalId', 'journalDetails'),
-  categoryDetails('/category-details', 'categoryDetails');
+  categoryDetails('/category-details', 'categoryDetails'),
+  types('/types', 'types'),
+  typeDetails('/type-details', 'typeDetails');
 
   final String path;
   final String name;

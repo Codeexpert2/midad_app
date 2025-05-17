@@ -27,6 +27,8 @@ import '../../features/category/pages/category_screen.dart';
 import '../../features/news/models/news_model.dart';
 import '../../features/news/pages/latest_news.dart';
 import '../../features/news/pages/news_details.dart';
+import '../../features/type/pages/type_details_screen.dart';
+import '../../features/type/pages/types_screen.dart';
 import '../../features/video_gallery/pages/video_gallery.dart';
 import '../../features/video_gallery/pages/youtube_player_screen.dart';
 
@@ -229,15 +231,32 @@ List<RouteBase> routes = <RouteBase>[
     builder: (_, __) => const CategoryScreen(),
   ),
   GoRoute(
-  name: AppRoutes.categoryDetails.name,
+    name: AppRoutes.categoryDetails.name,
     path: AppRoutes.categoryDetails.path,
-  builder: (context, state) {
-    final categoryId = int.parse(state.uri.queryParameters['categoryId']!);
-    final categoryName = state.uri.queryParameters['categoryName']!;
-    return CategoryDetailsScreen(
-      categoryId: categoryId,
-      categoryName: categoryName,
-    );
-  },
-),
+    builder: (context, state) {
+      final categoryId = int.parse(state.uri.queryParameters['categoryId']!);
+      final categoryName = state.uri.queryParameters['categoryName']!;
+      return CategoryDetailsScreen(
+        categoryId: categoryId,
+        categoryName: categoryName,
+      );
+    },
+  ),
+  GoRoute(
+    name: AppRoutes.types.name,
+    path: AppRoutes.types.path,
+    builder: (_, __) => const TypesScreen(),
+  ),
+  GoRoute(
+    name: AppRoutes.typeDetails.name,
+    path: AppRoutes.typeDetails.path,
+    builder: (context, state) {
+      final typeId = int.parse(state.uri.queryParameters['typeId']!);
+      final typeName = state.uri.queryParameters['typeName']!;
+      return TypeDetailsScreen(
+        typeId: typeId,
+        typeName: typeName,
+      );
+    },
+  ),
 ];

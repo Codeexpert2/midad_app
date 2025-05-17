@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 
 import '../../article/models/article_model.dart';
-import '../../article/models/type_model.dart';
 import '../../category/models/category_model.dart';
+import '../../type/models/type_model.dart';
 
 List<Article> youthList(BuildContext context) {
   final localizations = S.of(context);
@@ -22,7 +22,7 @@ List<Article> youthList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
     Article(
       title: localizations.supportingUniversityEducation,
@@ -36,7 +36,7 @@ List<Article> youthList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
     Article(
       title: localizations.devotingToEducation,
@@ -50,7 +50,7 @@ List<Article> youthList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
     Article(
       title: localizations.qualifyingYouth,
@@ -64,7 +64,7 @@ List<Article> youthList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
   ];
 
@@ -87,7 +87,7 @@ List<Article> childrenList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
     Article(
       title: localizations.schoolSponsorship,
@@ -101,7 +101,7 @@ List<Article> childrenList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
     Article(
       title: localizations.developingQualityEducation,
@@ -115,7 +115,7 @@ List<Article> childrenList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
     Article(
       title: localizations.infrastructureSupport,
@@ -129,7 +129,7 @@ List<Article> childrenList(BuildContext context) {
       status: '',
       category: Category(id: 1, name: '', status: ''),
       tags: [],
-      type: TypeModel(id: 1, name: ''),
+      type: TypeModel(id: 1, name: '', status: ''),
     ),
   ];
 
@@ -149,7 +149,7 @@ final List<Article> organizationInterestsList = [
     status: '',
     category: Category(id: 1, name: '', status: ''),
     tags: [],
-    type: TypeModel(id: 1, name: ''),
+    type: TypeModel(id: 1, name: '', status: ''),
   ),
   Article(
     title: 'education and community participation',
@@ -163,6 +163,6 @@ final List<Article> organizationInterestsList = [
     status: '',
     category: Category(id: 1, name: '', status: ''),
     tags: [],
-    type: TypeModel(id: 1, name: ''),
+    type: TypeModel(id: 1, name: '', status: ''),
   ),
 ];

@@ -103,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Supporting university education"),
         "timeOutErrorMessage":
             MessageLookupByLibrary.simpleMessage("Time Out Error Message"),
+        "type": MessageLookupByLibrary.simpleMessage("Type"),
+        "types": MessageLookupByLibrary.simpleMessage("Types"),
         "unauthorizedMessage":
             MessageLookupByLibrary.simpleMessage("Unauthorized Message"),
         "unknownErrorMessage":

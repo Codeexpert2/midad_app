@@ -2780,6 +2780,26 @@ class S {
       args: [],
     );
   }
+
+  /// `الأنواع`
+  String get types {
+    return Intl.message(
+      'الأنواع',
+      name: 'types',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `النوع`
+  String get type {
+    return Intl.message(
+      'النوع',
+      name: 'type',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

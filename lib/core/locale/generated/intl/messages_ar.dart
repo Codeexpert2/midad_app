@@ -424,6 +424,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "title": MessageLookupByLibrary.simpleMessage("العنوان"),
         "titleRequired": MessageLookupByLibrary.simpleMessage("العنوان مطلوب"),
         "titleShort": MessageLookupByLibrary.simpleMessage("العنوان قصير"),
+        "type": MessageLookupByLibrary.simpleMessage("النوع"),
+        "types": MessageLookupByLibrary.simpleMessage("الأنواع"),
         "unauthorised": MessageLookupByLibrary.simpleMessage("غير مصرح به"),
         "unauthorized": MessageLookupByLibrary.simpleMessage("غير مصرح"),
         "unauthorizedMessage": MessageLookupByLibrary.simpleMessage("غير مصرح"),

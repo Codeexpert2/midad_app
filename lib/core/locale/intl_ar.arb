@@ -270,5 +270,7 @@
   "journals": "المجلات",
   "detailsJournal": "تفاصيل المجلة",
   "noTitle": "بدون عنوان",
-  "noDescription": "لا يوجد وصف"
+  "noDescription": "لا يوجد وصف",
+  "types": "الأنواع",
+  "type": "النوع"
 }

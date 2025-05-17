@@ -50,6 +50,14 @@ class MainDrawer extends ConsumerWidget {
                 context.pushNamed(AppRoutes.search.name);
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.list),
+              title: Text(S.of(context).type),
+              onTap: () {
+                context.pop();
+                context.pushNamed(AppRoutes.types.name);
+              },
+            ),
             const AppDivider(),
             const YouthMenu(),
             const ChildrenMenu(),

@@ -54,5 +54,7 @@
   "detailsJournal": "Details Journal",
   "noTitle": "No Title",
   "noDescription": "No Description",
-  "error": "Error"
+  "error": "Error",
+  "types": "Types",
+  "type": "Type"
 }
