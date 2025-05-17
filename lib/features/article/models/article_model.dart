@@ -1,6 +1,6 @@
 import '../../category/models/category_model.dart';
 
-import 'tag_model.dart';
+import '../../tag/models/tag_model.dart';
 import '../../type/models/type_model.dart';
 
 class Article {

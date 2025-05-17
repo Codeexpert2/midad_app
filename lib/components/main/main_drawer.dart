@@ -33,14 +33,6 @@ class MainDrawer extends ConsumerWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.category),
-              title: Text(S.of(context).category),
-              onTap: () {
-                context.pop();
-                context.pushNamed(AppRoutes.category.name);
-              },
-            ),
-            ListTile(
               leading: const Icon(Icons.search),
               title: Text(
                 S.of(context).search,
@@ -51,11 +43,27 @@ class MainDrawer extends ConsumerWidget {
               },
             ),
             ListTile(
+              leading: const Icon(Icons.category),
+              title: Text(S.of(context).category),
+              onTap: () {
+                context.pop();
+                context.pushNamed(AppRoutes.category.name);
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.list),
               title: Text(S.of(context).type),
               onTap: () {
                 context.pop();
                 context.pushNamed(AppRoutes.types.name);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.tag),
+              title: Text(S.of(context).tag),
+              onTap: () {
+                context.pop();
+                context.pushNamed(AppRoutes.tags.name);
               },
             ),
             const AppDivider(),

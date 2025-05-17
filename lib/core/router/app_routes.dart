@@ -36,7 +36,9 @@ enum AppRoutes {
   journalDetails('/journal/details/:journalId', 'journalDetails'),
   categoryDetails('/category-details', 'categoryDetails'),
   types('/types', 'types'),
-  typeDetails('/type-details', 'typeDetails');
+  typeDetails('/type-details', 'typeDetails'),
+  tags('/tags', 'tags'),
+  tagDetails('/tag-details', 'tagDetails');
 
   final String path;
   final String name;

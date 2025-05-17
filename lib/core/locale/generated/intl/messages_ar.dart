@@ -415,6 +415,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "ندعم الطلاب والمدارس والجامعات بموارد تصنع الفرق."),
         "supportingUniversityEducation":
             MessageLookupByLibrary.simpleMessage("دعم التعليم الجامعي"),
+        "tag": MessageLookupByLibrary.simpleMessage("مجال"),
+        "tags": MessageLookupByLibrary.simpleMessage("مجالات"),
         "techSupport": MessageLookupByLibrary.simpleMessage("الدعم الفني"),
         "termsConditions":
             MessageLookupByLibrary.simpleMessage("سياسة الاستخدام"),

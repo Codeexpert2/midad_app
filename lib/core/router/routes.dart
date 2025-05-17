@@ -27,6 +27,8 @@ import '../../features/category/pages/category_screen.dart';
 import '../../features/news/models/news_model.dart';
 import '../../features/news/pages/latest_news.dart';
 import '../../features/news/pages/news_details.dart';
+import '../../features/tag/pages/tag_details_screen.dart';
+import '../../features/tag/pages/tags_screen.dart';
 import '../../features/type/pages/type_details_screen.dart';
 import '../../features/type/pages/types_screen.dart';
 import '../../features/video_gallery/pages/video_gallery.dart';
@@ -256,6 +258,23 @@ List<RouteBase> routes = <RouteBase>[
       return TypeDetailsScreen(
         typeId: typeId,
         typeName: typeName,
+      );
+    },
+  ),
+  GoRoute(
+    name: AppRoutes.tags.name,
+    path: AppRoutes.tags.path,
+    builder: (_, __) => const TagsScreen(),
+  ),
+  GoRoute(
+    name: AppRoutes.tagDetails.name,
+    path: AppRoutes.tagDetails.path,
+    builder: (context, state) {
+      final tagId = int.parse(state.uri.queryParameters['tagId']!);
+      final tagName = state.uri.queryParameters['tagName']!;
+      return TagDetailsScreen(
+        tagId: tagId,
+        tagName: tagName,
       );
     },
   ),

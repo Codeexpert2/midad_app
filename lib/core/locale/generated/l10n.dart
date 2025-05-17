@@ -2800,6 +2800,26 @@ class S {
       args: [],
     );
   }
+
+  /// `مجالات`
+  String get tags {
+    return Intl.message(
+      'مجالات',
+      name: 'tags',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجال`
+  String get tag {
+    return Intl.message(
+      'مجال',
+      name: 'tag',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
