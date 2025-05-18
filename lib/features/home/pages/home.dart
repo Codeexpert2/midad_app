@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:midad/components/loading/loading_widget.dart';
 import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
 
 import '../../../components/images/image_slider.dart';
+import '../../article/providers/article_provider.dart';
 import '../../video_gallery/providers/video_provider.dart';
 import '../constant/news_list.dart';
 import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
-import '../providers/home_article_provider.dart';
 import '../providers/home_provider.dart';
 import '../widgets/article_list_widget.dart';
 import '../widgets/latest_news_widget.dart';
@@ -27,10 +26,8 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     Future.microtask(() {
-      ref.read(homeProvider).loadInitialVideos();
+      ref.read(homeProvider).loadInitial();
     });
-
-    final homeArticles = ref.watch(homeArticlesNotifierProvider);
 
     return Scaffold(
       appBar: MainAppBar(
@@ -66,13 +63,7 @@ class HomeScreen extends ConsumerWidget {
                 },
               ),
               const SizedBox(height: 12),
-              homeArticles.when(
-                data: (articles) => ArticleListWidget(
-                  articleList: articles,
-                ),
-                loading: LoadingWidget.new,
-                error: (err, stack) => const Center(child: Text('Error')),
-              ),
+              ArticleListWidget(provider: articlesProvider),
               const SizedBox(height: 14),
               SectionHeader(
                 title: S.of(context).latestNews,
@@ -111,6 +102,7 @@ class HomeScreen extends ConsumerWidget {
           ),
         ),
       ),
+
       // body: ListView.builder(
       //   itemCount: 5,
       //   itemBuilder: (context, index) {

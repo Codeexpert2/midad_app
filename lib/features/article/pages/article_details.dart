@@ -9,7 +9,7 @@ import '../../../components/loading/loading_widget.dart';
 import '../../../components/main/main_appbar.dart';
 import '../../../core/extensions/extensions.dart';
 import '../../../core/locale/generated/l10n.dart';
-import '../providers/article_details_provider.dart';
+import '../providers/article_provider.dart';
 
 class ArticleDetailsScreen extends ConsumerWidget {
   const ArticleDetailsScreen({super.key, required this.articleId});
@@ -40,7 +40,29 @@ class ArticleDetailsScreen extends ConsumerWidget {
                         ),
                   ),
                 ),
-                const SizedBox(height: 30.0),
+                const SizedBox(height: 15),
+                Row(
+                  children: [
+                    /// Author
+                    const Icon(Icons.person, size: 18, color: Colors.grey),
+                    const SizedBox(width: 6),
+                    Text(
+                      article.user?.name ?? S.of(context).unknown,
+                      style: const TextStyle(color: Colors.grey),
+                    ),
+                    const Spacer(),
+
+                    /// Date
+                    const Icon(Icons.calendar_today,
+                        size: 18, color: Colors.grey),
+                    const SizedBox(width: 6),
+                    Text(
+                      _formatDate(article.createdAt),
+                      style: const TextStyle(color: Colors.grey),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
 
                 /// Image
                 ClipRRect(
@@ -62,13 +84,12 @@ class ArticleDetailsScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 10),
                 HtmlWidget(article.promptContent),
-
                 const SizedBox(height: 20),
               ],
             ),
           ),
         ),
-        loading: () => const LoadingWidget(),
+        loading: LoadingWidget.new,
         error: (err, stack) => ErrorIndicator(
           errorMessage: S.of(context).error,
           onRetry: () {
@@ -77,5 +98,10 @@ class ArticleDetailsScreen extends ConsumerWidget {
         ),
       ),
     );
+  }
+
+  String _formatDate(DateTime? date) {
+    if (date == null) return '';
+    return '${date.year}/${date.month}/${date.day}';
   }
 }

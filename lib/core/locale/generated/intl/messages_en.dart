@@ -109,6 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "types": MessageLookupByLibrary.simpleMessage("Types"),
         "unauthorizedMessage":
             MessageLookupByLibrary.simpleMessage("Unauthorized Message"),
+        "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
         "unknownErrorMessage":
             MessageLookupByLibrary.simpleMessage("Unknown Error Message"),
         "unprocessableContent":

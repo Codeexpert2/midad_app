@@ -9,7 +9,7 @@ import '../../../core/locale/generated/l10n.dart';
 import '../../../core/pagination/models/pagination_params.dart';
 import '../../../core/pagination/paginated_list_widget.dart';
 import '../../article/models/article_model.dart';
-import '../../article/providers/article_list_notifier.dart';
+import '../../article/providers/article_provider.dart';
 import '../../article/widgets/article_item_widget.dart';
 
 class CategoryDetailsScreen extends ConsumerWidget {
@@ -26,7 +26,7 @@ class CategoryDetailsScreen extends ConsumerWidget {
      WidgetsBinding.instance.addPostFrameCallback((_) {
     ref.read(articleParamsProvider.notifier).state =
         PaginationParams(filters: {'category': categoryId.toString()});
-    ref.read(articleListProvider.notifier).refresh();
+    ref.read(articlesProvider.notifier).refresh();
   });
     return Scaffold(
       appBar: DebouncedSearchAppBar(
@@ -39,11 +39,11 @@ class CategoryDetailsScreen extends ConsumerWidget {
             filters: {'category': categoryId.toString()},
           );
 
-          ref.read(articleListProvider.notifier).refresh();
+          ref.read(articlesProvider.notifier).refresh();
         },
       ),
       body: PaginatedListWidget<Article>(
-        provider: articleListProvider,
+        provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,
           width: context.width * 0.9,

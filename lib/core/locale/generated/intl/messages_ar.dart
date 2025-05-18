@@ -431,6 +431,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unauthorised": MessageLookupByLibrary.simpleMessage("غير مصرح به"),
         "unauthorized": MessageLookupByLibrary.simpleMessage("غير مصرح"),
         "unauthorizedMessage": MessageLookupByLibrary.simpleMessage("غير مصرح"),
+        "unknown": MessageLookupByLibrary.simpleMessage("مجهول"),
         "unknownError":
             MessageLookupByLibrary.simpleMessage("حدث خطأ غير معروف!"),
         "unknownErrorMessage":

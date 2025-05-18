@@ -2,7 +2,8 @@ import 'package:dio/dio.dart';
 
 import '../../../configs/app_configs.dart';
 import '../../../core/client/client.dart';
-import '../../../core/log/app_log.dart';
+import '../../../core/errors/error_handler.dart';
+import '../../../core/pagination/models/paginated_response.dart';
 import '../../../core/pagination/models/pagination_params.dart';
 import '../models/article_model.dart';
 
@@ -11,7 +12,8 @@ class ArticleService {
 
   final ApiClient _apiClient;
 
-  Future<List<Article>> getArticles(PaginationParams params) async {
+  Future<PaginatedResponse<Article>> getArticles(
+      PaginationParams params) async {
     try {
       final queryParameters = {
         'search': params.query,
@@ -24,30 +26,25 @@ class ArticleService {
         '/articles',
         queryParameters: queryParameters,
       );
-      final data = response.data;
 
-      final articles = (data['data'] as List)
-          .map((e) => Article.fromJson(e as Map<String, dynamic>))
-          .toList();
-
-      return articles;
+      return PaginatedResponse.fromJson(
+        response.data,
+        Article.fromJson,
+      );
     } on DioException catch (e) {
-      AppLog.error('e: $e');
-      rethrow;
+      throw ErrorHandler.handle(e).message;
     }
   }
 
-  Future<Article> getArticleDetails(int articleId) async {
+  Future<Article> getArticleById(int articleId) async {
     try {
-      final response = await _apiClient.get('/articles/$articleId');
-      final data = response.data;
+      final response = await _apiClient.get(
+        '/articles/$articleId',
+      );
 
-      final article = Article.fromJson(data);
-
-      return article;
+      return Article.fromJson(response.data);
     } on DioException catch (e) {
-      AppLog.error('e: $e');
-      rethrow;
+      throw ErrorHandler.handle(e).message;
     }
   }
 }

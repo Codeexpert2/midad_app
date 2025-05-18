@@ -21,7 +21,7 @@ import 'package:midad/features/statics/privacy_policy.dart';
 import 'package:midad/features/statics/terms_conditions.dart';
 
 import '../../features/article/pages/article_details.dart';
-import '../../features/article/pages/articles.dart';
+import '../../features/article/pages/articles_screen.dart';
 import '../../features/category/pages/category_details_screen.dart';
 import '../../features/category/pages/category_screen.dart';
 import '../../features/news/models/news_model.dart';

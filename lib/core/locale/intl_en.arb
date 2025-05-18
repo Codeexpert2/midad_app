@@ -58,5 +58,6 @@
   "types": "Types",
   "type": "Type",
   "tags": "Tags",
-  "tag": "Tag"
+  "tag": "Tag",
+  "unknown": "Unknown"
 }

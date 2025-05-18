@@ -2820,6 +2820,16 @@ class S {
       args: [],
     );
   }
+
+  /// `مجهول`
+  String get unknown {
+    return Intl.message(
+      'مجهول',
+      name: 'unknown',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
