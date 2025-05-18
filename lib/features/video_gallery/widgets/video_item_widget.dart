@@ -15,11 +15,13 @@ class VideoItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String videoId = YoutubePlayer.convertUrlToId(video.url) ?? '';
+    
     return InkWell(
       onTap: () {
         context.pushNamed(
           AppRoutes.youtubePlayer.name,
-          queryParameters: {'id': video.id},
+          queryParameters: {'id': videoId },
         );
       },
       child: Column(
@@ -28,14 +30,14 @@ class VideoItemWidget extends StatelessWidget {
           AspectRatio(
             aspectRatio: 16 / 9,
             child: CachedImage(
-              imageUrl: YoutubePlayer.getThumbnail(videoId: video.id!),
+              imageUrl: YoutubePlayer.getThumbnail(videoId: videoId),
             ),
           ),
           const SizedBox(height: 6),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              video.title!,
+              video.title,
               style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,

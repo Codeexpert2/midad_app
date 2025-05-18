@@ -6,6 +6,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:midad/core/extensions/extensions.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 
+import '../../../components/main/main_appbar.dart';
 import '../../home/providers/home_provider.dart';
 
 class YoutubePlayerScreen extends ConsumerWidget {
@@ -25,9 +26,8 @@ class YoutubePlayerScreen extends ConsumerWidget {
       player: YoutubePlayer(controller: youtubeNotifier.videoController!),
       builder: (context, player) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text(S.of(context).videoPlayer),
-            elevation: 2,
+          appBar: MainAppBar(
+            title: S.of(context).videoPlayer,
           ),
           body: OrientationBuilder(
             builder: (context, orientation) {
