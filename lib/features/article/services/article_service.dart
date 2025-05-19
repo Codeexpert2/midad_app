@@ -4,7 +4,6 @@ import '../../../configs/app_configs.dart';
 import '../../../core/client/client.dart';
 import '../../../core/errors/error_handler.dart';
 import '../../../core/pagination/models/paginated_response.dart';
-import '../../../core/pagination/models/pagination_params.dart';
 import '../models/article_model.dart';
 
 class ArticleService {
@@ -12,14 +11,22 @@ class ArticleService {
 
   final ApiClient _apiClient;
 
-  Future<PaginatedResponse<Article>> getArticles(
-      PaginationParams params) async {
+  Future<PaginatedResponse<Article>> getArticles({
+    int page = 1,
+    int perPage = AppConfigs.perPage,
+    String? query,
+    String? type,
+    String? category,
+    List<String>? tag,
+  }) async {
     try {
       final queryParameters = {
-        'search': params.query,
-        'page': params.page,
-        'per_page': AppConfigs.perPage,
-        if (params.filters != null) ...params.filters ?? {},
+        'page': page,
+        'per_page': perPage,
+        'search': query,
+        'type': type,
+        'category': category,
+        'tag': tag, // from list to string
       };
 
       final response = await _apiClient.get(

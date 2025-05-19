@@ -20,13 +20,11 @@ class ArticlesScreen extends ConsumerWidget {
       appBar: DebouncedSearchAppBar(
         title: S.of(context).articles,
         onDebounceChange: (value) {
-          ref.read(articleParamsProvider.notifier).state =
-              ref.read(articleParamsProvider).copyWith(query: value, page: 1);
-
-          ref.read(articlesProvider.notifier).refresh();
+          ref.read(articleSearchProvider.notifier).state = value;
         },
       ),
       body: PaginatedListWidget<Article>(
+        key: Key(ref.watch(articleSearchProvider) ?? ''),
         provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,

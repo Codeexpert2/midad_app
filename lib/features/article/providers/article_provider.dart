@@ -8,7 +8,7 @@ import '../models/article_model.dart';
 import '../services/article_service.dart';
 
 final articleServiceProvider = Provider<ArticleService>((ref) {
-  final apiClient = ref.watch(networkServiceProvider);
+  final apiClient = ref.read(networkServiceProvider);
   return ArticleService(apiClient);
 });
 
@@ -16,25 +16,29 @@ final articleParamsProvider = StateProvider<PaginationParams>((ref) {
   return const PaginationParams();
 });
 
+final articleSearchProvider = StateProvider<String?>((ref) => null);
+final articleCategoryProvider = StateProvider<String?>((ref) => null);
+
 final articlesProvider = StateNotifierProvider.autoDispose<
     PaginatedListNotifier<Article>, PaginationState<Article>>(
   (ref) {
-    final articleService = ref.watch(articleServiceProvider);
-    final params = ref.watch(articleParamsProvider);
+    final articleService = ref.read(articleServiceProvider);
+    final query = ref.watch(articleSearchProvider);
 
     return PaginatedListNotifier<Article>(
       fetchData: (int page) async {
-        final res =
-            await articleService.getArticles(params.copyWith(page: page));
+        final res = await articleService.getArticles(
+          page: page,
+          query: query,
+        );
         return res.data ?? [];
       },
-      itemsPerPage: params.limit,
     );
   },
 );
 
 final articleDetailsProvider =
     FutureProvider.family<Article, int>((ref, id) async {
-  final service = ref.watch(articleServiceProvider);
+  final service = ref.read(articleServiceProvider);
   return await service.getArticleById(id);
 });
