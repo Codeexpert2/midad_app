@@ -9,6 +9,7 @@ import '../../../core/locale/generated/l10n.dart';
 import '../../../core/pagination/paginated_list_widget.dart';
 import '../models/article_model.dart';
 import '../providers/article_provider.dart';
+import '../widgets/article_filter_widget.dart';
 import '../widgets/article_item_widget.dart';
 
 class ArticlesScreen extends ConsumerWidget {
@@ -16,15 +17,24 @@ class ArticlesScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    ScrollController scrollController = ScrollController();
     return Scaffold(
       appBar: DebouncedSearchAppBar(
         title: S.of(context).articles,
         onDebounceChange: (value) {
           ref.read(articleSearchProvider.notifier).state = value;
+          ref.read(articlesProvider.notifier).refresh();
+        },
+        onFilterTap: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (_) => const ArticleFilterBottomSheet(),
+          );
         },
       ),
       body: PaginatedListWidget<Article>(
         key: Key(ref.watch(articleSearchProvider) ?? ''),
+        scrollController: scrollController,
         provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,

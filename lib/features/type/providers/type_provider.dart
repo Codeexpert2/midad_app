@@ -5,7 +5,7 @@ import '../models/type_model.dart';
 import '../services/type_service.dart';
 
 final typeServiceProvider = Provider<TypeService>((ref) {
-  final apiClient = ref.watch(networkServiceProvider);
+  final apiClient = ref.read(networkServiceProvider);
   return TypeService(apiClient);
 });
 
@@ -15,6 +15,6 @@ final typeSearchProvider = StateProvider<String?>(
 
 final typesProvider = FutureProvider<List<TypeModel>>((ref) async {
   final search = ref.watch(typeSearchProvider) ?? '';
-  final typeService = ref.watch(typeServiceProvider);
+  final typeService = ref.read(typeServiceProvider);
   return typeService.getTypes(search);
 });

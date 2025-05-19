@@ -1,30 +1,18 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../configs/app_configs.dart';
-import '../../../core/client/client.dart';
 import '../../../core/pagination/models/pagination_state.dart';
 import '../../../core/pagination/notifiers/paginated_list_notifier.dart';
-import '../models/video_model.dart';
-import '../services/video_service.dart';
+import '../../video_gallery/models/video_model.dart';
+import '../../video_gallery/providers/video_provider.dart';
 
-final videoServiceProvider = Provider<VideoService>((ref) {
-  final apiClient = ref.read(networkServiceProvider);
-  return VideoService(apiClient);
-});
-
-final videoSearchProvider = StateProvider<String?>(
-  (ref) => null,
-);
-
-final videoProvider = StateNotifierProvider.autoDispose<
+final homeVideoProvider = StateNotifierProvider.autoDispose<
     PaginatedListNotifier<Video>, PaginationState<Video>>(
   (ref) {
     final videoService = ref.read(videoServiceProvider);
-    final search = ref.watch(videoSearchProvider);
     return PaginatedListNotifier<Video>(
       fetchData: (int page) async {
         final res = await videoService.getVideos(
-          search: search,
           page: page,
         );
         return res.data ?? [];

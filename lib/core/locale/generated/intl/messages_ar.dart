@@ -71,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("الدرس"),
         "applanguage": MessageLookupByLibrary.simpleMessage("لغة التطبيق"),
         "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
+        "applyFilters": MessageLookupByLibrary.simpleMessage("تطبيق الفلاتر"),
         "articles": MessageLookupByLibrary.simpleMessage("المقالات"),
         "attachments": MessageLookupByLibrary.simpleMessage("ملفات مرفقة"),
         "audioTrimmer": MessageLookupByLibrary.simpleMessage("محرر الصوت"),
@@ -95,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفقد بريدك الإلكتروني"),
         "children": MessageLookupByLibrary.simpleMessage("برنامج الأطفال"),
         "clear": MessageLookupByLibrary.simpleMessage("مسح"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("مسح الكل"),
         "clipSavedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم حفظ المقطع بنجاح"),
         "communityParticipation":
@@ -186,6 +188,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الملف غير موجود."),
         "filesSelected":
             MessageLookupByLibrary.simpleMessage("تم اختيار الملفات:"),
+        "filterArticles":
+            MessageLookupByLibrary.simpleMessage("تصفية المقالات"),
         "forbidden": MessageLookupByLibrary.simpleMessage("ممنوع"),
         "forbiddenMessage":
             MessageLookupByLibrary.simpleMessage("ممنوع الوصول"),

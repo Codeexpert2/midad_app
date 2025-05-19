@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import '../../article/providers/article_provider.dart';
-import '../../video_gallery/providers/video_provider.dart';
+import 'home_articles_provider.dart';
+import 'home_videos_provider.dart';
 
 class HomeNotifier extends ChangeNotifier {
   HomeNotifier(this.ref);
@@ -15,8 +15,8 @@ class HomeNotifier extends ChangeNotifier {
   YoutubePlayerController? videoController;
 
   void loadInitial() {
-    ref.read(articlesProvider.notifier).loadNextPage();
-    ref.read(videoProvider.notifier).loadNextPage();
+    ref.read(homeArticlesProvider.notifier).loadNextPage();
+    ref.read(homeVideoProvider.notifier).loadNextPage();
   }
 
   void toggleDropDown() {

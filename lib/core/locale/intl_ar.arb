@@ -101,7 +101,6 @@
   "accessibilityIssue": "مشكلة في الوصول:",
   "brokenLink": "رابط معطوب:",
   "loading": "جاري التحميل...",
-  "all": "الكل",
   "unknownError": "حدث خطأ غير معروف!",
   "noContent": "لا يوجد محتوى",
   "badRequest": "طلب غير صحيح",
@@ -276,5 +275,9 @@
   "type": "النوع",
   "tags": "مجالات",
   "tag": "مجال",
-  "unknown": "مجهول"
+  "unknown": "مجهول",
+  "applyFilters": "تطبيق الفلاتر",
+  "clearAll": "مسح الكل",
+  "filterArticles": "تصفية المقالات",
+  "all": "الكل"
 }

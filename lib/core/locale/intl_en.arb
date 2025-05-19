@@ -60,5 +60,9 @@
   "type": "Type",
   "tags": "Tags",
   "tag": "Tag",
-  "unknown": "Unknown"
+  "unknown": "Unknown",
+  "applyFilters": "Apply Filters",
+  "clearAll": "Clear All",
+  "filterArticles": "Filter Articles",
+  "all": "All"
 }

@@ -8,12 +8,12 @@ import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
 
 import '../../../components/images/image_slider.dart';
-import '../../article/providers/article_provider.dart';
-import '../../video_gallery/providers/video_provider.dart';
 import '../constant/news_list.dart';
 import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
+import '../providers/home_articles_provider.dart';
 import '../providers/home_provider.dart';
+import '../providers/home_videos_provider.dart';
 import '../widgets/article_list_widget.dart';
 import '../widgets/latest_news_widget.dart';
 import '../widgets/partner_list_widget.dart';
@@ -63,7 +63,7 @@ class HomeScreen extends ConsumerWidget {
                 },
               ),
               const SizedBox(height: 12),
-              ArticleListWidget(provider: articlesProvider),
+              ArticleListWidget(provider: homeArticlesProvider),
               const SizedBox(height: 14),
               SectionHeader(
                 title: S.of(context).latestNews,
@@ -96,7 +96,7 @@ class HomeScreen extends ConsumerWidget {
                 },
               ),
               const SizedBox(height: 12),
-              VideoListWidget(provider: videoProvider),
+              VideoListWidget(provider: homeVideoProvider),
               const SizedBox(height: 12),
             ],
           ),

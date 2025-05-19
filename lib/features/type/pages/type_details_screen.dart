@@ -6,10 +6,10 @@ import 'package:midad/components/main/debounced_search_app_bar.dart';
 import 'package:midad/core/extensions/extensions.dart';
 
 import '../../../core/locale/generated/l10n.dart';
-import '../../../core/pagination/models/pagination_params.dart';
 import '../../../core/pagination/paginated_list_widget.dart';
 import '../../article/models/article_model.dart';
 import '../../article/providers/article_provider.dart';
+import '../../article/widgets/article_filter_widget.dart';
 import '../../article/widgets/article_item_widget.dart';
 
 class TypeDetailsScreen extends ConsumerWidget {
@@ -23,26 +23,27 @@ class TypeDetailsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-     WidgetsBinding.instance.addPostFrameCallback((_) {
-    ref.read(articleParamsProvider.notifier).state =
-        PaginationParams(filters: {'type': typeId.toString()});
-    ref.read(articlesProvider.notifier).refresh();
-  });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(articleTypeProvider.notifier).state = typeId.toString();
+      ref.read(articlesProvider.notifier).refresh();
+    });
     return Scaffold(
       appBar: DebouncedSearchAppBar(
         title: typeName,
         onDebounceChange: (value) {
-          ref.read(articleParamsProvider.notifier).state =
-              ref.read(articleParamsProvider).copyWith(
-            query: value,
-            page: 1,
-            filters: {'type': typeId.toString()},
-          );
-
+          ref.read(articleTypeProvider.notifier).state = typeId.toString();
+          ref.read(articleSearchProvider.notifier).state = value;
           ref.read(articlesProvider.notifier).refresh();
+        },
+        onFilterTap: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (_) => const ArticleFilterBottomSheet(),
+          );
         },
       ),
       body: PaginatedListWidget<Article>(
+        key: Key(ref.watch(articleSearchProvider) ?? ''),
         provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,

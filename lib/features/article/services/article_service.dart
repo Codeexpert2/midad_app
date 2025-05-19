@@ -26,7 +26,9 @@ class ArticleService {
         'search': query,
         'type': type,
         'category': category,
-        'tag': tag, // from list to string
+        if (tag != null && tag.isNotEmpty) ...{
+          for (int i = 0; i < tag.length; i++) 'tags[]': tag[i],
+        },
       };
 
       final response = await _apiClient.get(

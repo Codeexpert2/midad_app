@@ -1060,16 +1060,6 @@ class S {
     );
   }
 
-  /// `الكل`
-  String get all {
-    return Intl.message(
-      'الكل',
-      name: 'all',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `حدث خطأ غير معروف!`
   String get unknownError {
     return Intl.message(
@@ -2836,6 +2826,46 @@ class S {
     return Intl.message(
       'مجهول',
       name: 'unknown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تطبيق الفلاتر`
+  String get applyFilters {
+    return Intl.message(
+      'تطبيق الفلاتر',
+      name: 'applyFilters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مسح الكل`
+  String get clearAll {
+    return Intl.message(
+      'مسح الكل',
+      name: 'clearAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تصفية المقالات`
+  String get filterArticles {
+    return Intl.message(
+      'تصفية المقالات',
+      name: 'filterArticles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الكل`
+  String get all {
+    return Intl.message(
+      'الكل',
+      name: 'all',
       desc: '',
       args: [],
     );

@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../configs/app_configs.dart';
 import '../../../core/client/client.dart';
-import '../../../core/pagination/models/pagination_params.dart';
 import '../../../core/pagination/models/pagination_state.dart';
 import '../../../core/pagination/notifiers/paginated_list_notifier.dart';
 import '../models/article_model.dart';
@@ -12,27 +12,34 @@ final articleServiceProvider = Provider<ArticleService>((ref) {
   return ArticleService(apiClient);
 });
 
-final articleParamsProvider = StateProvider<PaginationParams>((ref) {
-  return const PaginationParams();
-});
-
-final articleSearchProvider = StateProvider<String?>((ref) => null);
-final articleCategoryProvider = StateProvider<String?>((ref) => null);
+final articleSearchProvider = StateProvider.autoDispose<String?>((ref) => null);
+final articleCategoryProvider =
+    StateProvider.autoDispose<String?>((ref) => null);
+final articleTypeProvider = StateProvider.autoDispose<String?>((ref) => null);
+final articleTagProvider =
+    StateProvider.autoDispose<List<String>?>((ref) => null);
 
 final articlesProvider = StateNotifierProvider.autoDispose<
     PaginatedListNotifier<Article>, PaginationState<Article>>(
   (ref) {
     final articleService = ref.read(articleServiceProvider);
     final query = ref.watch(articleSearchProvider);
+    final category = ref.watch(articleCategoryProvider);
+    final type = ref.watch(articleTypeProvider);
+    final tag = ref.watch(articleTagProvider);
 
     return PaginatedListNotifier<Article>(
       fetchData: (int page) async {
         final res = await articleService.getArticles(
           page: page,
           query: query,
+          category: category,
+          type: type,
+          tag: tag,
         );
         return res.data ?? [];
       },
+      itemsPerPage: AppConfigs.perPage,
     );
   },
 );

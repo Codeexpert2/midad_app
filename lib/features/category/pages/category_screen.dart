@@ -52,7 +52,7 @@ class CategoryScreen extends ConsumerWidget {
               },
             ),
           ),
-          loading: () => const LoadingWidget(),
+          loading: LoadingWidget.new,
           error: (e, _) => ErrorIndicator(
             errorMessage: S.of(context).error,
             onRetry: () {

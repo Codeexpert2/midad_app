@@ -24,12 +24,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "accessToUniversityEducation": MessageLookupByLibrary.simpleMessage(
             "Access to University Education"),
+        "all": MessageLookupByLibrary.simpleMessage("All"),
         "appName": MessageLookupByLibrary.simpleMessage("App Name"),
+        "applyFilters": MessageLookupByLibrary.simpleMessage("Apply Filters"),
         "articles": MessageLookupByLibrary.simpleMessage("Articles"),
         "badRequestMessage":
             MessageLookupByLibrary.simpleMessage("Bad Request Message"),
         "cacheError": MessageLookupByLibrary.simpleMessage("Cache Error"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Clear All"),
         "communityParticipation":
             MessageLookupByLibrary.simpleMessage("Community Participation"),
         "connectionErrorException":
@@ -47,6 +50,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "exploreRichCulturalAndAwarenessArticlesDesignedToBroadenHorizons":
             MessageLookupByLibrary.simpleMessage(
                 "Explore rich cultural and awareness articles designed to broaden horizons."),
+        "filterArticles":
+            MessageLookupByLibrary.simpleMessage("Filter Articles"),
         "forbiddenMessage":
             MessageLookupByLibrary.simpleMessage("Forbidden Message"),
         "formatException":
