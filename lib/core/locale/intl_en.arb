@@ -64,5 +64,7 @@
   "applyFilters": "Apply Filters",
   "clearAll": "Clear All",
   "filterArticles": "Filter Articles",
-  "all": "All"
+  "all": "All",
+  "author": "Author",
+  "publishDate": "Publish Date"
 }

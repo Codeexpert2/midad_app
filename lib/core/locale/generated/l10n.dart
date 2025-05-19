@@ -2870,6 +2870,26 @@ class S {
       args: [],
     );
   }
+
+  /// `الكاتب`
+  String get author {
+    return Intl.message(
+      'الكاتب',
+      name: 'author',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تاريخ النشر`
+  String get publishDate {
+    return Intl.message(
+      'تاريخ النشر',
+      name: 'publishDate',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

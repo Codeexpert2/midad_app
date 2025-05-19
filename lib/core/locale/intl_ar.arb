@@ -279,5 +279,7 @@
   "applyFilters": "تطبيق الفلاتر",
   "clearAll": "مسح الكل",
   "filterArticles": "تصفية المقالات",
-  "all": "الكل"
+  "all": "الكل",
+  "author": "الكاتب",
+  "publishDate": "تاريخ النشر"
 }
