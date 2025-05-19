@@ -271,5 +271,10 @@
   "detailsJournal": "تفاصيل المجلة",
   "noTitle": "بدون عنوان",
   "noDescription": "لا يوجد وصف",
-  "pdfViewer": "Pdf Viewer"
+  "pdfViewer": "Pdf Viewer",
+  "types": "الأنواع",
+  "type": "النوع",
+  "tags": "مجالات",
+  "tag": "مجال",
+  "unknown": "مجهول"
 }

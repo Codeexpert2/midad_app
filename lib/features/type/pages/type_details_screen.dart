@@ -12,31 +12,31 @@ import '../../article/models/article_model.dart';
 import '../../article/providers/article_provider.dart';
 import '../../article/widgets/article_item_widget.dart';
 
-class CategoryDetailsScreen extends ConsumerWidget {
-  const CategoryDetailsScreen({
+class TypeDetailsScreen extends ConsumerWidget {
+  const TypeDetailsScreen({
     super.key,
-    required this.categoryName,
-    required this.categoryId,
+    required this.typeName,
+    required this.typeId,
   });
-  final String categoryName;
-  final int categoryId;
+  final String typeName;
+  final int typeId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
      WidgetsBinding.instance.addPostFrameCallback((_) {
     ref.read(articleParamsProvider.notifier).state =
-        PaginationParams(filters: {'category': categoryId.toString()});
+        PaginationParams(filters: {'type': typeId.toString()});
     ref.read(articlesProvider.notifier).refresh();
   });
     return Scaffold(
       appBar: DebouncedSearchAppBar(
-        title: categoryName,
+        title: typeName,
         onDebounceChange: (value) {
           ref.read(articleParamsProvider.notifier).state =
               ref.read(articleParamsProvider).copyWith(
             query: value,
             page: 1,
-            filters: {'category': categoryId.toString()},
+            filters: {'type': typeId.toString()},
           );
 
           ref.read(articlesProvider.notifier).refresh();
@@ -50,8 +50,6 @@ class CategoryDetailsScreen extends ConsumerWidget {
           height: context.height * 0.3,
           imageHeight: context.height * 0.2,
         ),
-        loadTriggerThreshold: 0.8,
-        enablePullToRefresh: true,
         padding: const EdgeInsets.all(16.0),
         separatorBuilder: (context, index) => const SizedBox(height: 18),
         emptyWidget: Center(child: Text(S.of(context).noArticlesAvailable)),

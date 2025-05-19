@@ -12,33 +12,37 @@ import '../../article/models/article_model.dart';
 import '../../article/providers/article_provider.dart';
 import '../../article/widgets/article_item_widget.dart';
 
-class CategoryDetailsScreen extends ConsumerWidget {
-  const CategoryDetailsScreen({
+class TagDetailsScreen extends ConsumerWidget {
+  const TagDetailsScreen({
     super.key,
-    required this.categoryName,
-    required this.categoryId,
+    required this.tagName,
+    required this.tagId,
   });
-  final String categoryName;
-  final int categoryId;
+  final String tagName;
+  final int tagId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-     WidgetsBinding.instance.addPostFrameCallback((_) {
-    ref.read(articleParamsProvider.notifier).state =
-        PaginationParams(filters: {'category': categoryId.toString()});
-    ref.read(articlesProvider.notifier).refresh();
-  });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(articleParamsProvider.notifier).state = PaginationParams(
+        filters: {
+          'tags[]': [tagId],
+        },
+      );
+      ref.read(articlesProvider.notifier).refresh();
+    });
     return Scaffold(
       appBar: DebouncedSearchAppBar(
-        title: categoryName,
+        title: tagName,
         onDebounceChange: (value) {
           ref.read(articleParamsProvider.notifier).state =
               ref.read(articleParamsProvider).copyWith(
             query: value,
             page: 1,
-            filters: {'category': categoryId.toString()},
+            filters: {
+              'tags[]': [tagId],
+            },
           );
-
           ref.read(articlesProvider.notifier).refresh();
         },
       ),
@@ -50,8 +54,6 @@ class CategoryDetailsScreen extends ConsumerWidget {
           height: context.height * 0.3,
           imageHeight: context.height * 0.2,
         ),
-        loadTriggerThreshold: 0.8,
-        enablePullToRefresh: true,
         padding: const EdgeInsets.all(16.0),
         separatorBuilder: (context, index) => const SizedBox(height: 18),
         emptyWidget: Center(child: Text(S.of(context).noArticlesAvailable)),

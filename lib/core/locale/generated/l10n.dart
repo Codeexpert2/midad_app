@@ -1,6 +1,8 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -2786,6 +2788,51 @@ class S {
     return Intl.message(
       'Pdf Viewer',
       name: 'pdfViewer',
+  /// `الأنواع`
+  String get types {
+    return Intl.message(
+      'الأنواع',
+      name: 'types',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `النوع`
+  String get type {
+    return Intl.message(
+      'النوع',
+      name: 'type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجالات`
+  String get tags {
+    return Intl.message(
+      'مجالات',
+      name: 'tags',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجال`
+  String get tag {
+    return Intl.message(
+      'مجال',
+      name: 'tag',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجهول`
+  String get unknown {
+    return Intl.message(
+      'مجهول',
+      name: 'unknown',
       desc: '',
       args: [],
     );

@@ -55,5 +55,10 @@
   "noTitle": "No Title",
   "noDescription": "No Description",
   "error": "Error",
-  "pdfViewer": "Pdf Viewer"
+  "pdfViewer": "Pdf Viewer",
+  "types": "Types",
+  "type": "Type",
+  "tags": "Tags",
+  "tag": "Tag",
+  "unknown": "Unknown"
 }

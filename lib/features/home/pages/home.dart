@@ -8,11 +8,12 @@ import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
 
 import '../../../components/images/image_slider.dart';
+import '../../article/providers/article_provider.dart';
+import '../../video_gallery/providers/video_provider.dart';
 import '../constant/news_list.dart';
 import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
-import '../constant/video_list.dart';
-import '../providers/home_article_provider.dart';
+import '../providers/home_provider.dart';
 import '../widgets/article_list_widget.dart';
 import '../widgets/latest_news_widget.dart';
 import '../widgets/partner_list_widget.dart';
@@ -24,7 +25,9 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final homeArticles = ref.watch(homeArticlesNotifierProvider);
+    Future.microtask(() {
+      ref.read(homeProvider).loadInitial();
+    });
 
     return Scaffold(
       appBar: MainAppBar(
@@ -60,13 +63,7 @@ class HomeScreen extends ConsumerWidget {
                 },
               ),
               const SizedBox(height: 12),
-              homeArticles.when(
-                data: (articles) => ArticleListWidget(
-                  articleList: articles,
-                ),
-                loading: () => const Center(child: CircularProgressIndicator()),
-                error: (err, stack) => const Center(child: Text('Error')),
-              ),
+              ArticleListWidget(provider: articlesProvider),
               const SizedBox(height: 14),
               SectionHeader(
                 title: S.of(context).latestNews,
@@ -99,12 +96,13 @@ class HomeScreen extends ConsumerWidget {
                 },
               ),
               const SizedBox(height: 12),
-              VideoListWidget(videos: videoList),
+              VideoListWidget(provider: videoProvider),
               const SizedBox(height: 12),
             ],
           ),
         ),
       ),
+
       // body: ListView.builder(
       //   itemCount: 5,
       //   itemBuilder: (context, index) {

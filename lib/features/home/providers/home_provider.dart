@@ -3,10 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../article/providers/article_provider.dart';
+import '../../video_gallery/providers/video_provider.dart';
+
 class HomeNotifier extends ChangeNotifier {
+  HomeNotifier(this.ref);
+
+  final Ref ref;
   bool isExpanded = false;
 
   YoutubePlayerController? videoController;
+
+  void loadInitial() {
+    ref.read(articlesProvider.notifier).loadNextPage();
+    ref.read(videoProvider.notifier).loadNextPage();
+  }
 
   void toggleDropDown() {
     isExpanded = !isExpanded;
@@ -30,11 +41,11 @@ class HomeNotifier extends ChangeNotifier {
   }
 }
 
-final homeProvider = ChangeNotifierProvider((ref) => HomeNotifier());
+final homeProvider = ChangeNotifierProvider(HomeNotifier.new);
 
 final youtubePlayerProvider =
     ChangeNotifierProvider.autoDispose<HomeNotifier>((ref) {
-  final notifier = HomeNotifier();
+  final notifier = HomeNotifier(ref);
   ref.onDispose(notifier.disposeVideoController);
   return notifier;
 });

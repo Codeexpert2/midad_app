@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 
 import '../../../configs/app_configs.dart';
 import '../../../core/client/client.dart';
-import '../../../core/log/app_log.dart';
-import '../../../core/pagination/models/pagination_params.dart';
+import '../../../core/errors/error_handler.dart';
+import '../../../core/pagination/models/paginated_response.dart';
 import '../models/article_model.dart';
 
 class ArticleService {
@@ -11,43 +11,47 @@ class ArticleService {
 
   final ApiClient _apiClient;
 
-  Future<List<Article>> getArticles(PaginationParams params) async {
+  Future<PaginatedResponse<Article>> getArticles({
+    int page = 1,
+    int perPage = AppConfigs.perPage,
+    String? query,
+    String? type,
+    String? category,
+    List<String>? tag,
+  }) async {
     try {
       final queryParameters = {
-        'search': params.query,
-        'page': params.page,
-        'per_page': AppConfigs.perPage,
-        if (params.filters != null) ...params.filters!,
+        'page': page,
+        'per_page': perPage,
+        'search': query,
+        'type': type,
+        'category': category,
+        'tag': tag, // from list to string
       };
 
       final response = await _apiClient.get(
         '/articles',
         queryParameters: queryParameters,
       );
-      final data = response.data;
 
-      final articles = (data['data'] as List)
-          .map((e) => Article.fromJson(e as Map<String, dynamic>))
-          .toList();
-
-      return articles;
+      return PaginatedResponse.fromJson(
+        response.data,
+        Article.fromJson,
+      );
     } on DioException catch (e) {
-      AppLog.error('e: $e');
-      rethrow;
+      throw ErrorHandler.handle(e).message;
     }
   }
 
-  Future<Article> getArticleDetails(int articleId) async {
+  Future<Article> getArticleById(int articleId) async {
     try {
-      final response = await _apiClient.get('/articles/$articleId');
-      final data = response.data;
+      final response = await _apiClient.get(
+        '/articles/$articleId',
+      );
 
-      final article = Article.fromJson(data);
-
-      return article;
+      return Article.fromJson(response.data);
     } on DioException catch (e) {
-      AppLog.error('e: $e');
-      rethrow;
+      throw ErrorHandler.handle(e).message;
     }
   }
 }

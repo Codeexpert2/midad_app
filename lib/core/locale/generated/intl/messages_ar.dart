@@ -416,6 +416,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "ندعم الطلاب والمدارس والجامعات بموارد تصنع الفرق."),
         "supportingUniversityEducation":
             MessageLookupByLibrary.simpleMessage("دعم التعليم الجامعي"),
+        "tag": MessageLookupByLibrary.simpleMessage("مجال"),
+        "tags": MessageLookupByLibrary.simpleMessage("مجالات"),
         "techSupport": MessageLookupByLibrary.simpleMessage("الدعم الفني"),
         "termsConditions":
             MessageLookupByLibrary.simpleMessage("سياسة الاستخدام"),
@@ -425,9 +427,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "title": MessageLookupByLibrary.simpleMessage("العنوان"),
         "titleRequired": MessageLookupByLibrary.simpleMessage("العنوان مطلوب"),
         "titleShort": MessageLookupByLibrary.simpleMessage("العنوان قصير"),
+        "type": MessageLookupByLibrary.simpleMessage("النوع"),
+        "types": MessageLookupByLibrary.simpleMessage("الأنواع"),
         "unauthorised": MessageLookupByLibrary.simpleMessage("غير مصرح به"),
         "unauthorized": MessageLookupByLibrary.simpleMessage("غير مصرح"),
         "unauthorizedMessage": MessageLookupByLibrary.simpleMessage("غير مصرح"),
+        "unknown": MessageLookupByLibrary.simpleMessage("مجهول"),
         "unknownError":
             MessageLookupByLibrary.simpleMessage("حدث خطأ غير معروف!"),
         "unknownErrorMessage":

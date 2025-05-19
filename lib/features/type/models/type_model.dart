@@ -1,14 +1,14 @@
-class Category {
-  Category({
+class TypeModel {
+  TypeModel({
     required this.id,
     required this.name,
-    required this.status,
+    this.status,
     this.createdAt,
     this.updatedAt,
   });
 
-  factory Category.fromJson(Map<String, dynamic> json) {
-    return Category(
+  factory TypeModel.fromJson(Map<String, dynamic> json) {
+    return TypeModel(
       id: json['id'],
       name: json['name'],
       status: json['status'],
@@ -22,7 +22,7 @@ class Category {
   }
   int id;
   String name;
-  String status;
+  String? status;
   DateTime? createdAt;
   DateTime? updatedAt;
 

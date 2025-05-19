@@ -102,10 +102,15 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Support students, schools, and universities with resources that make a difference."),
         "supportingUniversityEducation": MessageLookupByLibrary.simpleMessage(
             "Supporting university education"),
+        "tag": MessageLookupByLibrary.simpleMessage("Tag"),
+        "tags": MessageLookupByLibrary.simpleMessage("Tags"),
         "timeOutErrorMessage":
             MessageLookupByLibrary.simpleMessage("Time Out Error Message"),
+        "type": MessageLookupByLibrary.simpleMessage("Type"),
+        "types": MessageLookupByLibrary.simpleMessage("Types"),
         "unauthorizedMessage":
             MessageLookupByLibrary.simpleMessage("Unauthorized Message"),
+        "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
         "unknownErrorMessage":
             MessageLookupByLibrary.simpleMessage("Unknown Error Message"),
         "unprocessableContent":
