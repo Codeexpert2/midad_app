@@ -72,6 +72,7 @@ dependencies:
   flutter_local_notifications: ^18.0.1
   shimmer: ^3.0.0
   device_preview: ^1.2.0
+  syncfusion_flutter_pdfviewer: ^27.0.0
 
 
 dev_dependencies:

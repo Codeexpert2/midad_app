@@ -2780,6 +2780,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Pdf Viewer`
+  String get pdfViewer {
+    return Intl.message(
+      'Pdf Viewer',
+      name: 'pdfViewer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

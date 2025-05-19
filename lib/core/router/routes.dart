@@ -9,6 +9,7 @@ import 'package:midad/features/help/pages/help_screen.dart';
 import 'package:midad/features/home/pages/home.dart';
 import 'package:midad/features/journal/pages/journal_details_page.dart';
 import 'package:midad/features/journal/pages/journal_page.dart';
+import 'package:midad/features/journal/widgets/pdf_viewer_page.dart';
 import 'package:midad/features/notification/notification_screen.dart';
 import 'package:midad/features/onboarding/onboarding_screen.dart';
 import 'package:midad/features/profile/pages/change_password_screen.dart';
@@ -241,6 +242,14 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.category.path,
     builder: (_, __) => const CategoryScreen(),
   ),
+  GoRoute(
+        path: AppRoutes.pdfViewer.path,
+        name: AppRoutes.pdfViewer.name,
+        builder: (context, state) {
+          final pdfPath = state.pathParameters['pdfPath'];
+          return PDFViewerPage(pdfPath: pdfPath ?? '');
+        },
+      ),
   GoRoute(
   name: AppRoutes.categoryDetails.name,
     path: AppRoutes.categoryDetails.path,

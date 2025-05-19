@@ -270,5 +270,6 @@
   "journals": "المجلات",
   "detailsJournal": "تفاصيل المجلة",
   "noTitle": "بدون عنوان",
-  "noDescription": "لا يوجد وصف"
+  "noDescription": "لا يوجد وصف",
+  "pdfViewer": "Pdf Viewer"
 }

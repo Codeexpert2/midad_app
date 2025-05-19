@@ -334,6 +334,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "كلمة المرور يجب أن تحتوي على حرف كبير واحد على الأقل"),
         "pauseDownloading":
             MessageLookupByLibrary.simpleMessage("إيقاف التحميل مؤقتًا"),
+        "pdfViewer": MessageLookupByLibrary.simpleMessage("Pdf Viewer"),
         "permissionNotReady":
             MessageLookupByLibrary.simpleMessage("الإذن غير جاهز."),
         "personalData": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
