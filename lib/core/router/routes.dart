@@ -242,7 +242,6 @@ List<RouteBase> routes = <RouteBase>[
         },
       ),
   GoRoute(
-  name: AppRoutes.categoryDetails.name,
     name: AppRoutes.categoryDetails.name,
     path: AppRoutes.categoryDetails.path,
     builder: (context, state) {

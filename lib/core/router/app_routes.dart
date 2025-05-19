@@ -35,7 +35,6 @@ enum AppRoutes {
   journal('/journal', 'journal'),
   journalDetails('/journal/details/:journalId', 'journalDetails'),
   pdfViewer('/pdf-viewer/:pdfPath', 'pdfViewer'),
-  categoryDetails('/category-details', 'categoryDetails');
   categoryDetails('/category-details', 'categoryDetails'),
   types('/types', 'types'),
   typeDetails('/type-details', 'typeDetails'),

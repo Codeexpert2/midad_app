@@ -1,8 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
-
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -2788,6 +2786,11 @@ class S {
     return Intl.message(
       'Pdf Viewer',
       name: 'pdfViewer',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `الأنواع`
   String get types {
     return Intl.message(
