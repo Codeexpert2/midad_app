@@ -2511,16 +2511,6 @@ class S {
     );
   }
 
-  /// `Home Screen`
-  String get homeScreen {
-    return Intl.message(
-      'Home Screen',
-      name: 'homeScreen',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `مساعدة`
   String get help {
     return Intl.message(
@@ -2771,16 +2761,6 @@ class S {
     );
   }
 
-  /// `Pdf Viewer`
-  String get pdfViewer {
-    return Intl.message(
-      'Pdf Viewer',
-      name: 'pdfViewer',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `الأنواع`
   String get types {
     return Intl.message(
@@ -2871,31 +2851,51 @@ class S {
     );
   }
 
-  /// `Pdf Opened Successfully`
+  /// `تم فتح ملف PDF بنجاح`
   String get pdfOpenedSuccessfully {
     return Intl.message(
-      'Pdf Opened Successfully',
+      'تم فتح ملف PDF بنجاح',
       name: 'pdfOpenedSuccessfully',
       desc: '',
       args: [],
     );
   }
 
-  /// `Downloading...`
+  /// `جاري التنزيل...`
   String get downloading {
     return Intl.message(
-      'Downloading...',
+      'جاري التنزيل...',
       name: 'downloading',
       desc: '',
       args: [],
     );
   }
 
-  /// `Download Failed`
+  /// `فشل في التنزيل`
   String get downloadFailed {
     return Intl.message(
-      'Download Failed',
+      'فشل في التنزيل',
       name: 'downloadFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عارض ملفات PDF`
+  String get pdfViewer {
+    return Intl.message(
+      'عارض ملفات PDF',
+      name: 'pdfViewer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الشاشة الرئيسية`
+  String get homeScreen {
+    return Intl.message(
+      'الشاشة الرئيسية',
+      name: 'homeScreen',
       desc: '',
       args: [],
     );

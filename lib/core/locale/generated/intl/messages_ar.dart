@@ -145,8 +145,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الدليل غير موجود."),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
         "downloadFailed":
-            MessageLookupByLibrary.simpleMessage("Download Failed"),
-        "downloading": MessageLookupByLibrary.simpleMessage("Downloading..."),
+            MessageLookupByLibrary.simpleMessage("فشل في التنزيل"),
+        "downloading": MessageLookupByLibrary.simpleMessage("جاري التنزيل..."),
         "downloadingCanceled":
             MessageLookupByLibrary.simpleMessage("تم إلغاء التحميل"),
         "downloadingFailed":
@@ -206,7 +206,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختيار صورة من الاستوديو"),
         "help": MessageLookupByLibrary.simpleMessage("مساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
-        "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
+        "homeScreen": MessageLookupByLibrary.simpleMessage("الشاشة الرئيسية"),
         "hour": m1,
         "hoursAgo": m2,
         "info": MessageLookupByLibrary.simpleMessage("معلومة"),
@@ -343,8 +343,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pauseDownloading":
             MessageLookupByLibrary.simpleMessage("إيقاف التحميل مؤقتًا"),
         "pdfOpenedSuccessfully":
-            MessageLookupByLibrary.simpleMessage("Pdf Opened Successfully"),
-        "pdfViewer": MessageLookupByLibrary.simpleMessage("Pdf Viewer"),
+            MessageLookupByLibrary.simpleMessage("تم فتح ملف PDF بنجاح"),
+        "pdfViewer": MessageLookupByLibrary.simpleMessage("عارض ملفات PDF"),
         "permissionNotReady":
             MessageLookupByLibrary.simpleMessage("الإذن غير جاهز."),
         "personalData": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),

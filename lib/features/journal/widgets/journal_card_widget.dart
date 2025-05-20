@@ -54,20 +54,6 @@ class JournalCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    // const SizedBox(height: 6),
-                    //  HtmlWidget(journal.body??''),
-
-                    // Text(
-                    //   journal.body != null && journal.body!.isNotEmpty
-                    //? '${journal.body!.substring(0, journal.body!.length > 60 ? 60 : journal.body!.length)}...'
-                    //       : S.of(context).noDescription,
-                    //   maxLines: 2,
-                    //   overflow: TextOverflow.ellipsis,
-                    //   style: const TextStyle(
-                    //     fontSize: 13,
-                    //     color: Colors.black54,
-                    //   ),
-                    // ),
                     const SizedBox(height: 10),
                   ],
                 ),
