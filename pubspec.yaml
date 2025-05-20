@@ -73,6 +73,7 @@ dependencies:
   shimmer: ^3.0.0
   device_preview: ^1.2.0
   syncfusion_flutter_pdfviewer: ^27.0.0
+  open_file: ^3.5.10
 
 
 dev_dependencies:

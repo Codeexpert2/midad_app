@@ -51,11 +51,7 @@ class JournalDetailsPage extends ConsumerWidget {
           onPressed: () {
             context.pushNamed(
               AppRoutes.pdfViewer.name,
-              pathParameters: {
-                  'pdfPath':
-                      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-                // 'pdfPath': journal.url ?? '',
-              },
+              extra: journal.url ?? '',
             );
           },
           child: const Icon(
@@ -68,3 +64,5 @@ class JournalDetailsPage extends ConsumerWidget {
   }
 }
 
+                  // 'pdfPath':
+                  //     'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',

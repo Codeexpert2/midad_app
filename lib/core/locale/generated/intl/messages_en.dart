@@ -44,6 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "devlopedBy": MessageLookupByLibrary.simpleMessage("Devloped By"),
         "devotingToEducation":
             MessageLookupByLibrary.simpleMessage("Devoting to Education"),
+        "downloadFailed":
+            MessageLookupByLibrary.simpleMessage("Download Failed"),
+        "downloading": MessageLookupByLibrary.simpleMessage("Downloading..."),
         "empowerEducation":
             MessageLookupByLibrary.simpleMessage("Empower Education"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
@@ -86,6 +89,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Not Found Message"),
         "organizationInterests":
             MessageLookupByLibrary.simpleMessage("Organization Interests"),
+        "pdfOpenedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Pdf Opened Successfully"),
         "pdfViewer": MessageLookupByLibrary.simpleMessage("Pdf Viewer"),
         "qualifyingYouth": MessageLookupByLibrary.simpleMessage(
             "Qualifying youth for the labor market"),

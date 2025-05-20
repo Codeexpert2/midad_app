@@ -64,5 +64,8 @@
   "applyFilters": "Apply Filters",
   "clearAll": "Clear All",
   "filterArticles": "Filter Articles",
-  "all": "All"
+  "all": "All",
+  "pdfOpenedSuccessfully": "Pdf Opened Successfully",
+  "downloading": "Downloading...",
+  "downloadFailed": "Download Failed"
 }

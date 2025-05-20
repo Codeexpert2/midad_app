@@ -143,6 +143,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "dirNotExist":
             MessageLookupByLibrary.simpleMessage("الدليل غير موجود."),
         "done": MessageLookupByLibrary.simpleMessage("تم"),
+        "downloadFailed":
+            MessageLookupByLibrary.simpleMessage("Download Failed"),
+        "downloading": MessageLookupByLibrary.simpleMessage("Downloading..."),
         "downloadingCanceled":
             MessageLookupByLibrary.simpleMessage("تم إلغاء التحميل"),
         "downloadingFailed":
@@ -338,6 +341,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "كلمة المرور يجب أن تحتوي على حرف كبير واحد على الأقل"),
         "pauseDownloading":
             MessageLookupByLibrary.simpleMessage("إيقاف التحميل مؤقتًا"),
+        "pdfOpenedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Pdf Opened Successfully"),
         "pdfViewer": MessageLookupByLibrary.simpleMessage("Pdf Viewer"),
         "permissionNotReady":
             MessageLookupByLibrary.simpleMessage("الإذن غير جاهز."),

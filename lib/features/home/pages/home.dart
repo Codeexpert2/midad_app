@@ -6,19 +6,15 @@ import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
+import 'package:midad/core/themes/app_colors.dart';
+import 'package:midad/features/home/widgets/home_page_card.dart';
 
 import '../../../components/images/image_slider.dart';
-import '../constant/news_list.dart';
 import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
-import '../providers/home_articles_provider.dart';
 import '../providers/home_provider.dart';
-import '../providers/home_videos_provider.dart';
-import '../widgets/article_list_widget.dart';
-import '../widgets/latest_news_widget.dart';
 import '../widgets/partner_list_widget.dart';
 import '../widgets/section_header_widget.dart';
-import '../widgets/video_list_widget.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -29,112 +25,61 @@ class HomeScreen extends ConsumerWidget {
       ref.read(homeProvider).loadInitial();
     });
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       appBar: MainAppBar(
         title: S.of(context).home,
         actions: [
           IconButton(
             icon: const Icon(Icons.settings_outlined),
-            onPressed: () => context.pushNamed(
-              AppRoutes.settings.name,
-            ),
+            onPressed: () => context.pushNamed(AppRoutes.settings.name),
           ),
         ],
       ),
       drawer: const MainDrawer(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(0.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
               ImageSlider(imageUrls: sliderImages),
               const SizedBox(height: 24),
-              SectionHeader(
+              HomePageCard(
                 title: S.of(context).articles,
-                isShowMore: true,
-                buttonText: S.of(context).showMoreArticle,
-                onButtonPressed: () {
-                  context.pushNamed(
-                    AppRoutes.articles.name,
-                  );
-                },
+                subtitle: 'استكشف مقالات متنوعة ومفيدة في مختلف المجالات',
+                icon: Icons.article_outlined,
+                color: isDark ? Colors.deepOrangeAccent : AppColors.primary500,
+                routeName: AppRoutes.articles.name,
               ),
-              const SizedBox(height: 12),
-              ArticleListWidget(provider: homeArticlesProvider),
-              const SizedBox(height: 14),
-              SectionHeader(
+              HomePageCard(
                 title: S.of(context).latestNews,
-                isShowMore: true,
-                buttonText: S.of(context).showMore,
-                onButtonPressed: () {
-                  context.pushNamed(
-                    AppRoutes.latestNews.name,
-                  );
-                },
+                subtitle: 'اطلع على آخر الأخبار والمستجدات من مصادر موثوقة',
+                icon: Icons.newspaper,
+                color: isDark ? Colors.deepOrange : AppColors.secondary700,
+                routeName: AppRoutes.latestNews.name,
               ),
-              const SizedBox(height: 12),
-              LatestNewsWidget(newsList: newsList),
-              const SizedBox(height: 14),
+              HomePageCard(
+                title: S.of(context).videoGallery,
+                subtitle: 'شاهد مجموعة مميزة من المقاطع التعليمية والترفيهية',
+                icon: Icons.video_library_outlined,
+                color: isDark ? Colors.orangeAccent : Colors.deepPurpleAccent,
+                routeName: AppRoutes.videoGallery.name,
+              ),
+              const SizedBox(height: 10),
               SectionHeader(
                 title: S.of(context).midadPartners,
                 isShowMore: false,
               ),
               const SizedBox(height: 12),
               PartnerListWidget(logos: partnerLogos),
-              const SizedBox(height: 14),
-              SectionHeader(
-                title: S.of(context).videoGallery,
-                isShowMore: true,
-                buttonText: S.of(context).showMore,
-                onButtonPressed: () {
-                  context.pushNamed(
-                    AppRoutes.videoGallery.name,
-                  );
-                },
-              ),
-              const SizedBox(height: 12),
-              VideoListWidget(provider: homeVideoProvider),
-              const SizedBox(height: 12),
+              const SizedBox(height: 20),
             ],
           ),
         ),
       ),
-
-      // body: ListView.builder(
-      //   itemCount: 5,
-      //   itemBuilder: (context, index) {
-      //     return Padding(
-      //       padding: const EdgeInsets.all(16),
-      //       child: Row(
-      //         children: [
-      // ShimmerWidget(
-      //             child: Container(
-      //               width: 50,
-      //               height: 50,
-      //               decoration: BoxDecoration(
-      //                 color: Colors.grey[300],
-      //                 borderRadius: BorderRadius.circular(8),
-      //               ),
-      //             ),
-      //           ),
-      //           const SizedBox(width: 16),
-      //           Expanded(
-      //             child: ShimmerWidget(
-      //               child: Container(
-      //                 width: double.infinity,
-      //                 height: 20,
-      //                 color: Colors.grey[300],
-      //               ),
-      //             ),
-      //           ),
-      //         ],
-      //       ),
-      //     );
-      //   },
-      // ),
     );
   }
 }

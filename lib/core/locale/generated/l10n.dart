@@ -2870,6 +2870,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Pdf Opened Successfully`
+  String get pdfOpenedSuccessfully {
+    return Intl.message(
+      'Pdf Opened Successfully',
+      name: 'pdfOpenedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Downloading...`
+  String get downloading {
+    return Intl.message(
+      'Downloading...',
+      name: 'downloading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download Failed`
+  String get downloadFailed {
+    return Intl.message(
+      'Download Failed',
+      name: 'downloadFailed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

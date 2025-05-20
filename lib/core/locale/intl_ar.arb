@@ -279,5 +279,8 @@
   "applyFilters": "تطبيق الفلاتر",
   "clearAll": "مسح الكل",
   "filterArticles": "تصفية المقالات",
-  "all": "الكل"
+  "all": "الكل",
+  "pdfOpenedSuccessfully": "Pdf Opened Successfully",
+  "downloading": "Downloading...",
+  "downloadFailed": "Download Failed"
 }
