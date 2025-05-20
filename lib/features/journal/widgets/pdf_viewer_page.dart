@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 import 'package:dio/dio.dart';
-import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
+import 'package:midad/components/files/pdf_viewer_widget.dart';
+import 'package:midad/components/loading/loading_widget.dart';
 import 'package:midad/configs/app_configs.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/log/app_log.dart';
@@ -33,11 +33,15 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
   @override
   void initState() {
     super.initState();
-    _downloadAndOpenPdf();
+    _downloadPdf();
   }
 
-  Future<void> _downloadAndOpenPdf() async {
+  Future<void> _downloadPdf() async {
     try {
+      setState(() {
+        isLoading = true;
+        errorMessage = null;
+      });
       final String fullUrl = normalizeUrl(widget.pdfUrl, AppConfigs.baseUrl);
       final String fileName = Uri.parse(fullUrl).pathSegments.last;
       AppLog.error('Checking for file: $fileName');
@@ -48,7 +52,6 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
 
       if (await file.exists()) {
         AppLog.success('PDF already downloaded: $filePath');
-        // await OpenFile.open(file.path);
         setState(() {
           pdfFile = file;
           isLoading = false;
@@ -62,7 +65,6 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
         file.path,
         options: Options(
           headers: {
-            'User-Agent': 'Mozilla/5.0',
             'Accept': 'application/pdf',
           },
         ),
@@ -70,8 +72,6 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
 
       if (response.statusCode == 200) {
         AppLog.success('PDF downloaded to: $filePath');
-        // await OpenFile.open(file.path);
-        // setState(() => isLoading = false);
         setState(() {
           pdfFile = file;
           isLoading = false;
@@ -95,66 +95,33 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
         title: Text(S.of(context).pdfViewer),
       ),
       body: Center(
-          child: isLoading
-              ? Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const CircularProgressIndicator(),
-                    const SizedBox(height: 16),
-                    Text(S.of(context).downloading),
-                  ],
-                )
-              : errorMessage != null
-                  ? Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          errorMessage!,
-                          style: const TextStyle(color: Colors.red),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 16),
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              isLoading = true;
-                              errorMessage = null;
-                            });
-                            _downloadAndOpenPdf();
-                          },
-                          child: Text(S.of(context).retry),
-                        ),
-                      ],
-                    )
-                  : PdfViewerWidget(pdfFile: pdfFile!)
-          // pdfFile: pdfFile!,
-          ),
-    );
-  }
-}
-
-class PdfViewerWidget extends StatelessWidget {
-  const PdfViewerWidget({super.key, required this.pdfFile});
-
-  final File pdfFile;
-
-  @override
-  Widget build(BuildContext context) {
-    return SfPdfViewer.file(
-      pdfFile,
-      canShowScrollHead: false,
-      canShowScrollStatus: false,
-      enableDoubleTapZooming: true,
-      enableTextSelection: true,
-      pageSpacing: 0,
-      onDocumentLoadFailed: (details) {
-        AppLog.error('PDF load failed: ${details.error}');
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('pdfLoadFailed'),
-          ),
-        );
-      },
+        child: isLoading
+            ? Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const LoadingWidget(),
+                  const SizedBox(height: 16),
+                  Text(S.of(context).downloading),
+                ],
+              )
+            : errorMessage != null
+                ? Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        errorMessage ?? S.of(context).unknownError,
+                        style: const TextStyle(color: Colors.red),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 16),
+                      ElevatedButton(
+                        onPressed: _downloadPdf,
+                        child: Text(S.of(context).retry),
+                      ),
+                    ],
+                  )
+                : PdfViewerWidget(pdfFile: pdfFile!),
+      ),
     );
   }
 }
