@@ -8,8 +8,9 @@ import 'package:midad/core/extensions/extensions.dart';
 import '../../../core/locale/generated/l10n.dart';
 import '../../../core/pagination/paginated_list_widget.dart';
 import '../../article/models/article_model.dart';
-import '../../article/providers/article_provider.dart';
+import '../../article/widgets/article_filter_widget.dart';
 import '../../article/widgets/article_item_widget.dart';
+import '../providers/tag_provider.dart';
 
 class TagDetailsScreen extends ConsumerWidget {
   const TagDetailsScreen({
@@ -23,26 +24,31 @@ class TagDetailsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(articleTagProvider.notifier).state = [tagId.toString()];
-      ref.read(articlesProvider.notifier).refresh();
+      ref.read(tagArticleTagProvider.notifier).state = [tagId.toString()];
+      ref.read(tagArticlesProvider.notifier).refresh();
     });
 
     return Scaffold(
       appBar: DebouncedSearchAppBar(
         title: tagName,
         onDebounceChange: (value) {
-          ref.read(articleSearchProvider.notifier).state = value;
-          ref.read(articlesProvider.notifier).refresh();
+          ref.read(tagArticleSearchProvider.notifier).state = value;
+          ref.read(tagArticlesProvider.notifier).refresh();
         },
-        // onFilterTap: () {
-        //   showModalBottomSheet(
-        //     context: context,
-        //     builder: (_) => const ArticleFilterBottomSheet(),
-        //   );
-        // },
+        onFilterTap: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (_) => ArticleFilterBottomSheet(
+              articlesProvider: tagArticlesProvider,
+              articleCategoryProvider: tagArticleCategoryProvider,
+              articleTypeProvider: tagArticleTypeProvider,
+              articleTagProvider: tagArticleTagProvider,
+            ),
+          );
+        },
       ),
       body: PaginatedListWidget<Article>(
-        provider: articlesProvider,
+        provider: tagArticlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,
           width: context.width * 0.9,

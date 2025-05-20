@@ -25,7 +25,7 @@ class CategoryDetailsScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ref.read(categoryArticleCategoryProvider.notifier).state =
-    categoryId.toString();
+          categoryId.toString();
       ref.read(categoryArticlesProvider.notifier).refresh();
     });
     return Scaffold(
