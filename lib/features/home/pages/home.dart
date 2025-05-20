@@ -12,7 +12,6 @@ import 'package:midad/features/home/widgets/home_page_card.dart';
 import '../../../components/images/image_slider.dart';
 import '../constant/partners_list.dart';
 import '../constant/slider_images.dart';
-import '../providers/home_provider.dart';
 import '../widgets/partner_list_widget.dart';
 import '../widgets/section_header_widget.dart';
 
@@ -21,10 +20,6 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    Future.microtask(() {
-      ref.read(homeProvider).loadInitial();
-    });
-
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
