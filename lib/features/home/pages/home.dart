@@ -9,11 +9,10 @@ import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/core/themes/app_colors.dart';
 import 'package:midad/features/home/widgets/home_page_card.dart';
 
-import '../../../components/images/image_slider.dart';
 import '../constant/partners_list.dart';
-import '../constant/slider_images.dart';
 import '../widgets/partner_list_widget.dart';
 import '../widgets/section_header_widget.dart';
+import '../widgets/slides_section.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -40,7 +39,7 @@ class HomeScreen extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
-              ImageSlider(imageUrls: sliderImages),
+              const SlidesSection(),
               const SizedBox(height: 24),
               HomePageCard(
                 title: S.of(context).articles,
@@ -64,10 +63,7 @@ class HomeScreen extends ConsumerWidget {
                 routeName: AppRoutes.videoGallery.name,
               ),
               const SizedBox(height: 10),
-              SectionHeader(
-                title: S.of(context).midadPartners,
-                isShowMore: false,
-              ),
+              SectionHeader(title: S.of(context).midadPartners),
               const SizedBox(height: 12),
               PartnerListWidget(logos: partnerLogos),
               const SizedBox(height: 20),
