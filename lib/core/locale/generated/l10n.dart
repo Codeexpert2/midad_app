@@ -1,8 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
-
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -2878,14 +2876,10 @@ class S {
     return Intl.message(
       'Pdf Opened Successfully',
       name: 'pdfOpenedSuccessfully',
-  /// `الكاتب`
-  String get author {
-    return Intl.message(
-      'الكاتب',
-      name: 'author',
       desc: '',
       args: [],
     );
+  }
 
   /// `Downloading...`
   String get downloading {
@@ -2900,10 +2894,27 @@ class S {
   /// `Download Failed`
   String get downloadFailed {
     return Intl.message(
+      'Download Failed',
       name: 'downloadFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الكاتب`
+  String get author {
+    return Intl.message(
+      'الكاتب',
+      name: 'author',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `تاريخ النشر`
   String get publishDate {
     return Intl.message(
+      'تاريخ النشر',
       name: 'publishDate',
       desc: '',
       args: [],
