@@ -1,6 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../configs/app_configs.dart';
 import '../../../core/client/client.dart';
 import '../../../core/pagination/models/pagination_state.dart';
 import '../../../core/pagination/notifiers/paginated_list_notifier.dart';
@@ -13,9 +12,12 @@ final articleServiceProvider = Provider<ArticleService>((ref) {
 });
 
 final articleSearchProvider = StateProvider.autoDispose<String?>((ref) => null);
+
 final articleCategoryProvider =
     StateProvider.autoDispose<String?>((ref) => null);
+
 final articleTypeProvider = StateProvider.autoDispose<String?>((ref) => null);
+
 final articleTagProvider =
     StateProvider.autoDispose<List<String>?>((ref) => null);
 
@@ -39,7 +41,6 @@ final articlesProvider = StateNotifierProvider.autoDispose<
         );
         return res.data ?? [];
       },
-      itemsPerPage: AppConfigs.perPage,
     );
   },
 );
