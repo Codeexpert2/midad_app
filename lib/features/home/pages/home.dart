@@ -9,7 +9,6 @@ import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/core/themes/app_colors.dart';
 import 'package:midad/features/home/widgets/home_page_card.dart';
 
-import '../constant/partners_list.dart';
 import '../widgets/partner_list_widget.dart';
 import '../widgets/section_header_widget.dart';
 import '../widgets/slides_section.dart';
@@ -65,7 +64,7 @@ class HomeScreen extends ConsumerWidget {
               const SizedBox(height: 10),
               SectionHeader(title: S.of(context).midadPartners),
               const SizedBox(height: 12),
-              PartnerListWidget(logos: partnerLogos),
+              const PartnerListWidget(),
               const SizedBox(height: 20),
             ],
           ),
