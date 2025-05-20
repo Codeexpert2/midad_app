@@ -9,7 +9,6 @@ import '../../../core/locale/generated/l10n.dart';
 import '../../../core/pagination/paginated_list_widget.dart';
 import '../../article/models/article_model.dart';
 import '../../article/providers/article_provider.dart';
-import '../../article/widgets/article_filter_widget.dart';
 import '../../article/widgets/article_item_widget.dart';
 
 class TypeDetailsScreen extends ConsumerWidget {
@@ -34,12 +33,12 @@ class TypeDetailsScreen extends ConsumerWidget {
           ref.read(articleSearchProvider.notifier).state = value;
           ref.read(articlesProvider.notifier).refresh();
         },
-        onFilterTap: () {
-          showModalBottomSheet(
-            context: context,
-            builder: (_) => const ArticleFilterBottomSheet(),
-          );
-        },
+        // onFilterTap: () {
+        //   showModalBottomSheet(
+        //     context: context,
+        //     builder: (_) => const ArticleFilterBottomSheet(),
+        //   );
+        // },
       ),
       body: PaginatedListWidget<Article>(
         provider: articlesProvider,

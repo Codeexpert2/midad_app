@@ -19,7 +19,8 @@ class SlidesSection extends ConsumerWidget {
     return slidesAsync.when(
       data: (slides) => ImageSlider(slides: slides),
       loading: () => const SlideShimmer(),
-      error: (e, _) => ErrorMessage(message: S.of(context).error),
+      error: (e, _) =>
+          Center(child: ErrorMessage(message: S.of(context).error)),
     );
   }
 }

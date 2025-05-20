@@ -18,6 +18,7 @@ class TypeService {
       final response = await _apiClient.get(
         '/types',
         queryParameters: queryParameters,
+        isCached : true,
       );
       final data = response.data;
 

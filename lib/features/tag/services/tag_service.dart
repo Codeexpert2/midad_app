@@ -18,6 +18,7 @@ class TagService {
       final response = await _apiClient.get(
         '/tags',
         queryParameters: queryParameters,
+        isCached : true,
       );
       final data = response.data;
 

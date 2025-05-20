@@ -8,9 +8,9 @@ import 'package:midad/core/extensions/extensions.dart';
 import '../../../core/locale/generated/l10n.dart';
 import '../../../core/pagination/paginated_list_widget.dart';
 import '../../article/models/article_model.dart';
-import '../../article/providers/article_provider.dart';
 import '../../article/widgets/article_filter_widget.dart';
 import '../../article/widgets/article_item_widget.dart';
+import '../providers/category_provider.dart';
 
 class CategoryDetailsScreen extends ConsumerWidget {
   const CategoryDetailsScreen({
@@ -24,25 +24,31 @@ class CategoryDetailsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(articleCategoryProvider.notifier).state = categoryId.toString();
-      ref.read(articlesProvider.notifier).refresh();
+      ref.read(categoryarticleCategoryProvider.notifier).state =
+    categoryId.toString();
+      ref.read(categoryArticlesProvider.notifier).refresh();
     });
     return Scaffold(
       appBar: DebouncedSearchAppBar(
         title: categoryName,
         onDebounceChange: (value) {
-          ref.read(articleSearchProvider.notifier).state = value;
-          ref.read(articlesProvider.notifier).refresh();
+          ref.read(categoryArticleSearchProvider.notifier).state = value;
+          ref.read(categoryArticlesProvider.notifier).refresh();
         },
         onFilterTap: () {
           showModalBottomSheet(
             context: context,
-            builder: (_) => const ArticleFilterBottomSheet(),
+            builder: (_) => ArticleFilterBottomSheet(
+              articlesProvider: categoryArticlesProvider,
+              articleCategoryProvider: categoryarticleCategoryProvider,
+              articleTypeProvider: categoryArticleTypeProvider,
+              articleTagProvider: categoryArticleTagProvider,
+            ),
           );
         },
       ),
       body: PaginatedListWidget<Article>(
-        provider: articlesProvider,
+        provider: categoryArticlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,
           width: context.width * 0.9,

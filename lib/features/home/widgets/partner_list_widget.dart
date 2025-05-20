@@ -32,7 +32,8 @@ class PartnerListWidget extends ConsumerWidget {
         ),
       ),
       loading: () => const PartnerShimmerWidget(),
-      error: (e, _) => ErrorMessage(message: S.of(context).error),
+      error: (e, _) =>
+          Center(child: ErrorMessage(message: S.of(context).error)),
     );
   }
 }

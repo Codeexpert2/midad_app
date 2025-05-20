@@ -27,7 +27,12 @@ class ArticlesScreen extends ConsumerWidget {
         onFilterTap: () {
           showModalBottomSheet(
             context: context,
-            builder: (_) => const ArticleFilterBottomSheet(),
+            builder: (_) => ArticleFilterBottomSheet(
+              articlesProvider: articlesProvider,
+              articleCategoryProvider: articleCategoryProvider,
+              articleTypeProvider: articleTypeProvider,
+              articleTagProvider: articleTagProvider,
+            ),
           );
         },
       ),

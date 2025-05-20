@@ -3,16 +3,33 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:midad/core/extensions/extensions.dart';
+
 import '../../../components/errors/error_message.dart';
 import '../../../components/loading/loading_widget.dart';
 import '../../../core/locale/generated/l10n.dart';
-import '../../article/providers/article_provider.dart';
+import '../../../core/pagination/models/pagination_state.dart';
+import '../../../core/pagination/notifiers/paginated_list_notifier.dart';
+import '../../../core/themes/app_colors.dart';
 import '../../category/providers/category_provider.dart';
 import '../../tag/providers/tag_provider.dart';
 import '../../type/providers/type_provider.dart';
+import '../models/article_model.dart';
 
 class ArticleFilterBottomSheet extends ConsumerWidget {
-  const ArticleFilterBottomSheet({super.key});
+  const ArticleFilterBottomSheet({
+    super.key,
+    required this.articleCategoryProvider,
+    required this.articleTypeProvider,
+    required this.articleTagProvider,
+    required this.articlesProvider,
+  });
+
+  final AutoDisposeStateProvider<String?> articleCategoryProvider;
+  final AutoDisposeStateProvider<String?> articleTypeProvider;
+  final AutoDisposeStateProvider<List<String>?> articleTagProvider;
+  final AutoDisposeStateNotifierProvider<PaginatedListNotifier<Article>,
+      PaginationState<Article>> articlesProvider;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -32,9 +49,9 @@ class ArticleFilterBottomSheet extends ConsumerWidget {
           children: [
             Text(
               S.of(context).filterArticles,
-              style: Theme.of(context).textTheme.titleLarge,
+              style: context.textTheme.titleLarge,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 22),
 
             /// Category
             categoriesAsync.when(
@@ -64,7 +81,7 @@ class ArticleFilterBottomSheet extends ConsumerWidget {
               error: (e, _) =>
                   Center(child: ErrorMessage(message: S.of(context).error)),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 15),
 
             /// Type
             typesAsync.when(
@@ -92,7 +109,7 @@ class ArticleFilterBottomSheet extends ConsumerWidget {
               error: (e, _) =>
                   Center(child: ErrorMessage(message: S.of(context).error)),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 15),
 
             /// Tag
             tagsAsync.when(
@@ -112,7 +129,7 @@ class ArticleFilterBottomSheet extends ConsumerWidget {
                           label: Text(
                             tag.name,
                             style: TextStyle(
-                              color: isSelected ? Colors.white : null,
+                              color: isSelected ? AppColors.white : null,
                             ),
                           ),
                           shape: const StadiumBorder(
@@ -154,11 +171,17 @@ class ArticleFilterBottomSheet extends ConsumerWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primary200,
+                    ),
                     onPressed: () {
                       ref.read(articlesProvider.notifier).refresh();
                       context.pop(context);
                     },
-                    child: Text(S.of(context).applyFilters),
+                    child: Text(
+                      S.of(context).applyFilters,
+                      style: const TextStyle(color: AppColors.white),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 12),

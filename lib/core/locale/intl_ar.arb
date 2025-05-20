@@ -278,11 +278,11 @@
   "clearAll": "مسح الكل",
   "filterArticles": "تصفية المقالات",
   "all": "الكل",
-"pdfOpenedSuccessfully": "تم فتح ملف PDF بنجاح",
-"downloading": "جاري التنزيل...",
-"downloadFailed": "فشل في التنزيل",
-"pdfViewer": "عارض ملفات PDF",
-"homeScreen": "الشاشة الرئيسية",
-  "author": "الكاتب", 
+  "pdfOpenedSuccessfully": "تم فتح ملف PDF بنجاح",
+  "downloading": "جاري التنزيل...",
+  "downloadFailed": "فشل في التنزيل",
+  "pdfViewer": "عارض ملفات PDF",
+  "homeScreen": "الشاشة الرئيسية",
+  "author": "الكاتب",
   "publishDate": "تاريخ النشر"
 }
