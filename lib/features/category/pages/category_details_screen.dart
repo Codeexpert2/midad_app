@@ -31,8 +31,6 @@ class CategoryDetailsScreen extends ConsumerWidget {
       appBar: DebouncedSearchAppBar(
         title: categoryName,
         onDebounceChange: (value) {
-          ref.read(articleCategoryProvider.notifier).state =
-              categoryId.toString();
           ref.read(articleSearchProvider.notifier).state = value;
           ref.read(articlesProvider.notifier).refresh();
         },
@@ -44,7 +42,6 @@ class CategoryDetailsScreen extends ConsumerWidget {
         },
       ),
       body: PaginatedListWidget<Article>(
-        key: Key(ref.watch(articleSearchProvider) ?? ''),
         provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,
@@ -52,8 +49,6 @@ class CategoryDetailsScreen extends ConsumerWidget {
           height: context.height * 0.3,
           imageHeight: context.height * 0.2,
         ),
-        loadTriggerThreshold: 0.8,
-        enablePullToRefresh: true,
         padding: const EdgeInsets.all(16.0),
         separatorBuilder: (context, index) => const SizedBox(height: 18),
         emptyWidget: Center(child: Text(S.of(context).noArticlesAvailable)),

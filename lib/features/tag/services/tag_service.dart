@@ -9,7 +9,7 @@ class TagService {
 
   final ApiClient _apiClient;
 
-  Future<List<Tag>> getTags(String search) async {
+  Future<List<Tag>> getTags(String? search) async {
     try {
       final queryParameters = {
         'search': search,

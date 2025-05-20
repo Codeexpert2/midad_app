@@ -9,7 +9,7 @@ class TypeService {
 
   final ApiClient _apiClient;
 
-  Future<List<TypeModel>> getTypes(String search) async {
+  Future<List<TypeModel>> getTypes(String? search) async {
     try {
       final queryParameters = {
         'search': search,

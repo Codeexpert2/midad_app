@@ -9,12 +9,10 @@ final typeServiceProvider = Provider<TypeService>((ref) {
   return TypeService(apiClient);
 });
 
-final typeSearchProvider = StateProvider<String?>(
-  (ref) => null,
-);
+final typeSearchProvider = StateProvider.autoDispose<String?>((ref) => null);
 
-final typesProvider = FutureProvider<List<TypeModel>>((ref) async {
-  final search = ref.watch(typeSearchProvider) ?? '';
+final typesProvider = FutureProvider.autoDispose<List<TypeModel>>((ref) async {
+  final search = ref.watch(typeSearchProvider);
   final typeService = ref.read(typeServiceProvider);
-  return typeService.getTypes(search);
+  return await typeService.getTypes(search);
 });

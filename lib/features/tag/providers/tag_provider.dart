@@ -9,12 +9,10 @@ final tagServiceProvider = Provider<TagService>((ref) {
   return TagService(apiClient);
 });
 
-final tagSearchProvider = StateProvider<String?>(
-  (ref) => null,
-);
+final tagSearchProvider = StateProvider.autoDispose<String?>((ref) => null);
 
-final tagsProvider = FutureProvider<List<Tag>>((ref) async {
-  final search = ref.watch(tagSearchProvider) ?? '';
+final tagsProvider = FutureProvider.autoDispose<List<Tag>>((ref) async {
+  final search = ref.watch(tagSearchProvider);
   final tagService = ref.read(tagServiceProvider);
-  return tagService.getTags(search);
+  return await tagService.getTags(search);
 });

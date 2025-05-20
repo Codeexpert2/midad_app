@@ -31,7 +31,6 @@ class TypeDetailsScreen extends ConsumerWidget {
       appBar: DebouncedSearchAppBar(
         title: typeName,
         onDebounceChange: (value) {
-          ref.read(articleTypeProvider.notifier).state = typeId.toString();
           ref.read(articleSearchProvider.notifier).state = value;
           ref.read(articlesProvider.notifier).refresh();
         },
@@ -43,7 +42,6 @@ class TypeDetailsScreen extends ConsumerWidget {
         },
       ),
       body: PaginatedListWidget<Article>(
-        key: Key(ref.watch(articleSearchProvider) ?? ''),
         provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,
