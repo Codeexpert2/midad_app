@@ -24,7 +24,7 @@ class CategoryDetailsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(categoryarticleCategoryProvider.notifier).state =
+      ref.read(categoryArticleCategoryProvider.notifier).state =
     categoryId.toString();
       ref.read(categoryArticlesProvider.notifier).refresh();
     });
@@ -40,7 +40,7 @@ class CategoryDetailsScreen extends ConsumerWidget {
             context: context,
             builder: (_) => ArticleFilterBottomSheet(
               articlesProvider: categoryArticlesProvider,
-              articleCategoryProvider: categoryarticleCategoryProvider,
+              articleCategoryProvider: categoryArticleCategoryProvider,
               articleTypeProvider: categoryArticleTypeProvider,
               articleTagProvider: categoryArticleTagProvider,
             ),

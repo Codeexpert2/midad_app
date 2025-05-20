@@ -27,7 +27,7 @@ final categoriesProvider =
 final categoryArticleSearchProvider =
     StateProvider.autoDispose<String?>((ref) => null);
 
-final categoryarticleCategoryProvider =
+final categoryArticleCategoryProvider =
     StateProvider.autoDispose<String?>((ref) => null);
 
 final categoryArticleTypeProvider =
@@ -41,7 +41,7 @@ final categoryArticlesProvider =  StateNotifierProvider.autoDispose<
   (ref) {
   final articleService = ref.read(articleServiceProvider);
   final query = ref.watch(categoryArticleSearchProvider);
-  final category = ref.watch(categoryarticleCategoryProvider);
+  final category = ref.watch(categoryArticleCategoryProvider);
   final type = ref.watch(categoryArticleTypeProvider);
   final tag = ref.watch(categoryArticleTagProvider);
   return PaginatedListNotifier<Article>(
