@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import 'home_articles_provider.dart';
-import 'home_videos_provider.dart';
-
 class HomeNotifier extends ChangeNotifier {
   HomeNotifier(this.ref);
 
@@ -13,11 +10,6 @@ class HomeNotifier extends ChangeNotifier {
   bool isExpanded = false;
 
   YoutubePlayerController? videoController;
-
-  void loadInitial() {
-    ref.read(homeArticlesProvider.notifier).loadNextPage();
-    ref.read(homeVideoProvider.notifier).loadNextPage();
-  }
 
   void toggleDropDown() {
     isExpanded = !isExpanded;

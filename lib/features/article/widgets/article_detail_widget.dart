@@ -6,7 +6,6 @@ class ArticleDetailWidget extends StatelessWidget {
   const ArticleDetailWidget({
     super.key,
     required this.icon,
-    required this.label,
     required this.value,
     this.iconColor = AppColors.primary200,
     this.textColor = AppColors.gray400,
@@ -14,7 +13,6 @@ class ArticleDetailWidget extends StatelessWidget {
   });
 
   final IconData icon;
-  final String label;
   final String value;
   final Color iconColor;
   final Color textColor;
@@ -22,35 +20,27 @@ class ArticleDetailWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(icon, size: 18, color: iconColor),
-        const SizedBox(width: 6),
-        Text(
-          '$label : ',
-          style: TextStyle(
-            color: textColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        onTap != null
-            ? TextButton(
-                onPressed: onTap,
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                  minimumSize: Size.zero,
-                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                ),
-                child: Text(
-                  value,
-                  style: TextStyle(color: textColor),
-                ),
-              )
-            : Text(
+    return SizedBox(
+      width: 90,
+      height: 90,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Column(
+          children: [
+            Icon(icon, size: 28, color: iconColor),
+            const SizedBox(height: 8),
+            Expanded(
+              child: Text(
                 value,
                 style: TextStyle(color: textColor),
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
-      ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
