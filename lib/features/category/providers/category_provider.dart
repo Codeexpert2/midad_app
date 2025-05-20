@@ -9,12 +9,12 @@ final categoryServiceProvider = Provider<CategoryService>((ref) {
   return CategoryService(apiClient);
 });
 
-final categorySearchProvider = StateProvider<String?>(
-  (ref) => null,
-);
+final categorySearchProvider =
+    StateProvider.autoDispose<String?>((ref) => null);
 
-final categoriesProvider = FutureProvider<List<Category>>((ref) async {
-  final search = ref.watch(categorySearchProvider) ?? '';
+final categoriesProvider =
+    FutureProvider.autoDispose<List<Category>>((ref) async {
+  final search = ref.watch(categorySearchProvider);
   final categoryService = ref.read(categoryServiceProvider);
-  return categoryService.getCategories(search);
+  return await categoryService.getCategories(search);
 });

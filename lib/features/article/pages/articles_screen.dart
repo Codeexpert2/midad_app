@@ -17,7 +17,6 @@ class ArticlesScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ScrollController scrollController = ScrollController();
     return Scaffold(
       appBar: DebouncedSearchAppBar(
         title: S.of(context).articles,
@@ -34,7 +33,6 @@ class ArticlesScreen extends ConsumerWidget {
       ),
       body: PaginatedListWidget<Article>(
         key: Key(ref.watch(articleSearchProvider) ?? ''),
-        scrollController: scrollController,
         provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,

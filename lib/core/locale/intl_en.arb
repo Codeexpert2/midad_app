@@ -67,5 +67,7 @@
   "all": "All",
   "pdfOpenedSuccessfully": "Pdf Opened Successfully",
   "downloading": "Downloading...",
-  "downloadFailed": "Download Failed"
+  "downloadFailed": "Download Failed",
+  "author": "Author",
+  "publishDate": "Publish Date"
 }

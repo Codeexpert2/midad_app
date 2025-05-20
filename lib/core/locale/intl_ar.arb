@@ -282,5 +282,7 @@
   "all": "الكل",
   "pdfOpenedSuccessfully": "Pdf Opened Successfully",
   "downloading": "Downloading...",
-  "downloadFailed": "Download Failed"
+  "downloadFailed": "Download Failed",
+  "author": "الكاتب",
+  "publishDate": "تاريخ النشر"
 }

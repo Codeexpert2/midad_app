@@ -3,91 +3,160 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:midad/features/category/models/category_model.dart';
+
 import '../../../components/errors/error_indicator.dart';
 import '../../../components/images/cached_image.dart';
 import '../../../components/loading/loading_widget.dart';
-import '../../../components/main/main_appbar.dart';
 import '../../../core/extensions/extensions.dart';
 import '../../../core/locale/generated/l10n.dart';
+import '../../../core/router/app_routes.dart';
+import '../../../core/themes/app_colors.dart';
+import '../../tag/models/tag_model.dart';
+import '../../type/models/type_model.dart';
 import '../providers/article_provider.dart';
+import '../providers/article_scroll_provider.dart';
+import '../widgets/article_detail_widget.dart';
+import '../widgets/tag_chip_widget.dart';
 
 class ArticleDetailsScreen extends ConsumerWidget {
-  const ArticleDetailsScreen({super.key, required this.articleId});
+  ArticleDetailsScreen({super.key, required this.articleId});
   final int articleId;
+
+  final List<Tag> tagList = [
+    Tag(id: 1, name: 'رياضيات'),
+    Tag(id: 2, name: 'تعليم'),
+    Tag(id: 3, name: 'بيئة')
+  ];
+  final type = TypeModel(
+    id: 1,
+    name: 'مقال',
+  );
+  final category = Category(id: 1, name: 'الصحة النفسية', status: 'active');
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final scrollController = ref.watch(scrollControllerProvider);
+    final scrollRatio = ref.watch(scrollRatioProvider);
     final articleAsync = ref.watch(articleDetailsProvider(articleId));
 
+    final maxHeight = context.height * 0.3;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(maxScrollHeightProvider.notifier).state =
+          maxHeight - kToolbarHeight;
+    });
+
     return Scaffold(
-      appBar: const MainAppBar(title: ''),
       body: articleAsync.when(
-        data: (article) => SingleChildScrollView(
+        data: (article) => CustomScrollView(
+          controller: scrollController,
           physics: const BouncingScrollPhysics(),
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                /// Title
-                Center(
-                  child: Text(
-                    article.title,
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22,
-                        ),
+          slivers: [
+            SliverAppBar(
+              pinned: true,
+              expandedHeight: maxHeight,
+              flexibleSpace: FlexibleSpaceBar(
+                titlePadding: const EdgeInsets.only(left: 16, bottom: 16),
+                centerTitle: true,
+                title: Text(
+                  article.title,
+                  textAlign: TextAlign.center,
+                  style: context.textTheme.titleMedium?.copyWith(
+                    color: Color.lerp(
+                      AppColors.white,
+                      context.textTheme.titleMedium?.color ?? AppColors.gray900,
+                      scrollRatio,
+                    ),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
                   ),
                 ),
-                const SizedBox(height: 15),
-                Row(
+                collapseMode: CollapseMode.parallax,
+                background: Stack(
+                  fit: StackFit.expand,
                   children: [
-                    /// Author
-                    const Icon(Icons.person, size: 18, color: Colors.grey),
-                    const SizedBox(width: 6),
-                    Text(
-                      article.user?.name ?? S.of(context).unknown,
-                      style: const TextStyle(color: Colors.grey),
-                    ),
-                    const Spacer(),
-
-                    /// Date
-                    const Icon(Icons.calendar_today,
-                        size: 18, color: Colors.grey),
-                    const SizedBox(width: 6),
-                    Text(
-                      _formatDate(article.createdAt),
-                      style: const TextStyle(color: Colors.grey),
+                    CachedImage(imageUrl: article.image),
+                    Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Colors.transparent, AppColors.gray800],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 20),
-
-                /// Image
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: CachedImage(
-                    imageUrl: article.image,
-                    height: context.height * 0.28,
-                    width: double.infinity,
-                  ),
-                ),
-                const SizedBox(height: 25.0),
-
-                /// Description
-                Text(
-                  article.content,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontSize: 18,
-                      ),
-                ),
-                const SizedBox(height: 10),
-                HtmlWidget(article.promptContent),
-                const SizedBox(height: 20),
-              ],
+              ),
             ),
-          ),
+            SliverPadding(
+              padding: const EdgeInsets.all(20.0),
+              sliver: SliverList(
+                delegate: SliverChildListDelegate.fixed([
+                  const SizedBox(height: 10),
+                  ArticleDetailWidget(
+                    icon: Icons.person,
+                    label: S.of(context).author,
+                    value: article.user?.name ?? 'مجهول',
+                  ),
+                  const SizedBox(height: 20),
+                  ArticleDetailWidget(
+                    icon: Icons.calendar_today,
+                    label: S.of(context).publishDate,
+                    value: _formatDate(article.createdAt),
+                  ),
+                  const SizedBox(height: 20),
+                  ArticleDetailWidget(
+                    icon: Icons.category,
+                    label: S.of(context).category,
+                    value: article.category?.name ?? category.name,
+                    onTap: () {
+                      context.pushNamed(
+                        AppRoutes.categoryDetails.name,
+                        queryParameters: {
+                          'categoryId':
+                              // article.category?.id.toString()
+                              category.id.toString(),
+                          'categoryName':
+                              // article.category?.name
+                              category.name,
+                        },
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 20),
+                  ArticleDetailWidget(
+                    icon: Icons.list,
+                    label: S.of(context).type,
+                    value: article.type?.name ?? type.name,
+                    onTap: () {
+                      context.pushNamed(
+                        AppRoutes.typeDetails.name,
+                        queryParameters: {
+                          'typeId':
+                              // article.type?.id.toString(),
+                              type.id.toString(),
+                          'typeName':
+                              // article.type?.name,
+                              type.name,
+                        },
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 22),
+                  Text(
+                    article.content,
+                    style: context.textTheme.bodyMedium?.copyWith(fontSize: 18),
+                  ),
+                  const SizedBox(height: 10),
+                  HtmlWidget(article.promptContent),
+                  const SizedBox(height: 20),
+                  TagChipWidget(tags: article.tags ?? tagList),
+                  const SizedBox(height: 20),
+                ]),
+              ),
+            ),
+          ],
         ),
         loading: LoadingWidget.new,
         error: (err, stack) => ErrorIndicator(

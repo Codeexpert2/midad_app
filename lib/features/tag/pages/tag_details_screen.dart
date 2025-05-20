@@ -32,7 +32,6 @@ class TagDetailsScreen extends ConsumerWidget {
       appBar: DebouncedSearchAppBar(
         title: tagName,
         onDebounceChange: (value) {
-          ref.read(articleTagProvider.notifier).state = [tagId.toString()];
           ref.read(articleSearchProvider.notifier).state = value;
           ref.read(articlesProvider.notifier).refresh();
         },
@@ -44,7 +43,6 @@ class TagDetailsScreen extends ConsumerWidget {
         },
       ),
       body: PaginatedListWidget<Article>(
-        key: Key(ref.watch(articleSearchProvider) ?? ''),
         provider: articlesProvider,
         itemBuilder: (context, article) => ArticleItemWidget(
           article: article,

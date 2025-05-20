@@ -75,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "articles": MessageLookupByLibrary.simpleMessage("المقالات"),
         "attachments": MessageLookupByLibrary.simpleMessage("ملفات مرفقة"),
         "audioTrimmer": MessageLookupByLibrary.simpleMessage("محرر الصوت"),
+        "author": MessageLookupByLibrary.simpleMessage("الكاتب"),
         "backToLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "badRequest": MessageLookupByLibrary.simpleMessage("طلب غير صحيح"),
         "badRequestMessage":
@@ -353,6 +354,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "playlist": MessageLookupByLibrary.simpleMessage("قائمة التشغيل"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "publishDate": MessageLookupByLibrary.simpleMessage("تاريخ النشر"),
         "qualifyingYouth":
             MessageLookupByLibrary.simpleMessage("التأهيل لسوق العمل"),
         "rateLesson": MessageLookupByLibrary.simpleMessage("تقييم الدرس"),

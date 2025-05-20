@@ -9,7 +9,7 @@ class CategoryService {
 
   final ApiClient _apiClient;
 
-  Future<List<Category>> getCategories(String search) async {
+  Future<List<Category>> getCategories(String? search) async {
     try {
       final queryParameters = {
         'search': search,

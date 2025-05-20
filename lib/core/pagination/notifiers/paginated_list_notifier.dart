@@ -1,5 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:midad/configs/app_configs.dart';
+
 import '../models/pagination_state.dart';
 import '../models/pagination_status.dart';
 
@@ -10,7 +12,7 @@ typedef FetchDataCallback<T> = Future<List<T>> Function(int page);
 class PaginatedListNotifier<T> extends StateNotifier<PaginationState<T>> {
   PaginatedListNotifier({
     required this.fetchData,
-    this.itemsPerPage = 20,
+    this.itemsPerPage = AppConfigs.perPage,
   }) : super(PaginationState<T>());
   final FetchDataCallback<T> fetchData;
   final int itemsPerPage;

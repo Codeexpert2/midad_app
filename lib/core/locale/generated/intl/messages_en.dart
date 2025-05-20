@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("App Name"),
         "applyFilters": MessageLookupByLibrary.simpleMessage("Apply Filters"),
         "articles": MessageLookupByLibrary.simpleMessage("Articles"),
+        "author": MessageLookupByLibrary.simpleMessage("Author"),
         "badRequestMessage":
             MessageLookupByLibrary.simpleMessage("Bad Request Message"),
         "cacheError": MessageLookupByLibrary.simpleMessage("Cache Error"),
@@ -92,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pdfOpenedSuccessfully":
             MessageLookupByLibrary.simpleMessage("Pdf Opened Successfully"),
         "pdfViewer": MessageLookupByLibrary.simpleMessage("Pdf Viewer"),
+        "publishDate": MessageLookupByLibrary.simpleMessage("Publish Date"),
         "qualifyingYouth": MessageLookupByLibrary.simpleMessage(
             "Qualifying youth for the labor market"),
         "requestCanceled":
