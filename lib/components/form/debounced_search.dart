@@ -19,6 +19,7 @@ class DebouncedSearch extends ConsumerStatefulWidget {
 }
 
 class _DebouncedSearchState extends ConsumerState<DebouncedSearch> {
+  final TextEditingController _controller = TextEditingController();
   Timer? _debounce;
 
   void _onSearchChanged(String query) {
@@ -28,9 +29,15 @@ class _DebouncedSearchState extends ConsumerState<DebouncedSearch> {
     });
   }
 
+  void _clearSearch() {
+    _controller.clear();
+    widget.onDebounceChange('');
+  }
+
   @override
   void dispose() {
     _debounce?.cancel();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -40,9 +47,16 @@ class _DebouncedSearchState extends ConsumerState<DebouncedSearch> {
       padding: const EdgeInsets.symmetric(horizontal: 16) +
           const EdgeInsets.only(bottom: 8),
       child: TextField(
+        controller: _controller,
         decoration: InputDecoration(
           hintText: S.of(context).search,
           prefixIcon: const Icon(Icons.search),
+          suffixIcon: _controller.text.isNotEmpty
+              ? IconButton(
+                  icon: const Icon(Icons.clear),
+                  onPressed: _clearSearch,
+                )
+              : null,
           border: const OutlineInputBorder(),
         ),
         onChanged: _onSearchChanged,
