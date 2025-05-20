@@ -34,7 +34,7 @@ enum AppRoutes {
   videoGallery('/video-gallery', 'videoGallery'),
   journal('/journal', 'journal'),
   journalDetails('/journal/details/:journalId', 'journalDetails'),
-  pdfViewer('/pdf-viewer/:pdfPath', 'pdfViewer'),
+  pdfViewer('/pdf-viewer/:pdfUrl', 'pdfViewer'),
   categoryDetails('/category-details', 'categoryDetails'),
   types('/types', 'types'),
   typeDetails('/type-details', 'typeDetails'),

@@ -48,15 +48,15 @@ class JournalDetailsPage extends ConsumerWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            context.pushNamed(
-              AppRoutes.pdfViewer.name,
-              extra: journal.url ?? '',
-            );
-          },
           child: const Icon(
             Icons.picture_as_pdf,
             color: AppColors.white,
+          ),
+          onPressed: () => context.pushNamed(
+            AppRoutes.pdfViewer.name,
+            pathParameters: {
+              'pdfUrl': journal.url ?? '',
+            },
           ),
         ),
       ),

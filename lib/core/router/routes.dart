@@ -229,17 +229,18 @@ List<RouteBase> routes = <RouteBase>[
     },
   ),
   GoRoute(
+    name: AppRoutes.pdfViewer.name,
+    path: AppRoutes.pdfViewer.path,
+    builder: (context, state) {
+      final pdfUrl = state.pathParameters['pdfUrl'] ?? '';
+
+      return PDFViewerPage(pdfUrl: pdfUrl);
+    },
+  ),
+  GoRoute(
     name: AppRoutes.category.name,
     path: AppRoutes.category.path,
     builder: (_, __) => const CategoryScreen(),
-  ),
-  GoRoute(
-    name: 'pdfViewer',
-    path: '/pdf-viewer',
-    builder: (context, state) {
-      final pdfPath = state.extra as String;
-      return PDFViewerPage(pdfPath: pdfPath);
-    },
   ),
   GoRoute(
     name: AppRoutes.categoryDetails.name,
