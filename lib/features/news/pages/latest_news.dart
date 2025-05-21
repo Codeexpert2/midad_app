@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:midad/core/extensions/extensions.dart';
 import 'package:midad/core/pagination/paginated_list_widget.dart';
 
 import '../../../components/main/main_appbar.dart';
@@ -23,12 +22,7 @@ class LatestNewsScreen extends ConsumerWidget {
       ),
       body: PaginatedListWidget<News>(
         provider: newsListProvider,
-        itemBuilder: (context, news) => LatestNewsItemWidget(
-          news: news,
-          width: context.width * 0.9,
-          height: context.height * 0.28,
-          imageHeight: context.height * 0.28,
-        ),
+        itemBuilder: (context, news) => LatestNewsItemWidget(news: news),
         loadTriggerThreshold: 0.8,
         enablePullToRefresh: true,
         padding: const EdgeInsets.all(16.0),

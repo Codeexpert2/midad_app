@@ -37,13 +37,9 @@ class NewsDetailsScreen extends ConsumerWidget {
               const SizedBox(height: 30.0),
 
               /// Image
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: CachedImage(
-                  imageUrl: news.imageUrl,
-                  height: context.height * 0.28,
-                  width: double.infinity,
-                ),
+              AspectRatio(
+                aspectRatio: 1 / 1,
+                child: CachedImage(imageUrl: news.imageUrl),
               ),
               const SizedBox(height: 25.0),
 
