@@ -5,28 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Almadina Global (Debug)",
+            "name": "Midad (Debug)",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main.dart",
-            "args": [
-                "--flavor",
-                "almadinaGlobal", // Changed to match camelCase convention
-                "--dart-define=flavor=almadinaGlobal", // Added for runtime flavor detection
-                // "--release"
-            ]
         },
         {
-            "name": "School (Debug)",
+            "name": "Midad (Release)",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main_prod.dart",
             "args": [
-                "--flavor",
-                "school",
-                "--dart-define=flavor=school",
-                // "--release"
+                "--release"
             ]
-        },
+        }
+
     ],
 }
