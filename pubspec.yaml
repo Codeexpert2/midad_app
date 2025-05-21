@@ -75,7 +75,6 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^27.0.0
   open_file: ^3.5.10
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -88,7 +87,6 @@ dev_dependencies:
   flutter_launcher_icons: ^0.14.3
   intl_utils: ^2.8.7
 
-
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
@@ -99,8 +97,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
     - assets/icons/
+    - assets/images/
 
   fonts:
     - family: Cairo
@@ -111,13 +109,6 @@ flutter:
           weight: 400
         - asset: assets/fonts/Cairo-Light.ttf
           weight: 300
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: assets/fonts/TrajanPro.ttf
-  #       - asset: assets/fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-
-  # https://fonts.google.com/noto/specimen/Noto+Sans+Arabic
 
 flutter_assets:
   assets_path: assets/

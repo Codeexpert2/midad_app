@@ -1,4 +1,3 @@
-
 import 'package:flutter/foundation.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -17,16 +16,13 @@ final routerProvider = Provider<GoRouter>((ref) {
     routes: routes,
     navigatorKey: rootNavigatorKey,
     debugLogDiagnostics: kDebugMode,
-    initialLocation: AppRoutes.splash.path,
+    initialLocation: AppRoutes.onboarding.path,
     errorBuilder: (context, state) => const NotFoundScreen(),
     observers: [
       GoRouterObserver(),
     ],
     redirect: (context, state) {
       final currentPath = state.uri.path;
-
-      // Always allow splash screen
-      if (currentPath == AppRoutes.splash.path) return null;
 
       final storage = locator<StorageService>();
       final isOnboardingCompleted = storage.readBool(onboardingKey);
