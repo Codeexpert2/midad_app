@@ -4,7 +4,7 @@ import 'package:midad/components/images/cached_image.dart';
 
 import '../models/project_model.dart';
 
-class ProjectCard extends StatefulWidget {
+class ProjectCard extends StatelessWidget {
   const ProjectCard({
     super.key,
     required this.project,
@@ -15,102 +15,83 @@ class ProjectCard extends StatefulWidget {
   final VoidCallback onTap;
 
   @override
-  State<ProjectCard> createState() => _ProjectCardState();
-}
-
-class _ProjectCardState extends State<ProjectCard> {
-  bool _showDescription = false;
-
-  void _toggleDescription() {
-    setState(() {
-      _showDescription = !_showDescription;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return GestureDetector(
-      onTap: widget.onTap,
-      onVerticalDragEnd: (details) {
-        if (details.primaryVelocity != null) {
-          _toggleDescription();
-        }
-      },
+      onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(16),
           child: Stack(
             children: [
               CachedImage(
-                imageUrl: widget.project.imageUrl,
+                imageUrl: project.imageUrl,
                 height: 220,
-                width: 260,
+                width: screenWidth, // عرض الشاشة الكامل
               ),
-              if (!_showDescription)
-                Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Container(
-                    height: 70,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Colors.black.withOpacity(0.8),
-                          Colors.transparent,
-                        ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                      ),
-                    ),
-                    alignment: Alignment.bottomLeft,
-                    padding: const EdgeInsets.all(12),
-                    child: Text(
-                      widget.project.title,
+              Container(
+                height: 220,
+                width: screenWidth,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.black.withOpacity(0.7),
+                      Colors.black.withOpacity(0.3),
+                      Colors.transparent,
+                    ],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 16,
+                left: 16,
+                right: 16,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      project.title,
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 20,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 4,
+                            color: Colors.black87,
+                            offset: Offset(1, 1),
+                          ),
+                        ],
                       ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
-                  ),
-                ),
-              if (_showDescription)
-                AnimatedOpacity(
-                  opacity: _showDescription ? 1.0 : 0.0,
-                  duration: const Duration(milliseconds: 300),
-                  child: Container(
-                    height: 220,
-                    width: 260,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Colors.black.withOpacity(0.85),
-                          Colors.black.withOpacity(0.3),
+                    const SizedBox(height: 8),
+                    Text(
+                      project.description,
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 15,
+                        height: 1.4,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 3,
+                            color: Colors.black54,
+                            offset: Offset(1, 1),
+                          ),
                         ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
                       ),
+                      maxLines: 4,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    padding: const EdgeInsets.all(16),
-                    child: Center(
-                      child: Text(
-                        widget.project.description,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          height: 1.4,
-                        ),
-                        textAlign: TextAlign.center,
-                        maxLines: 6,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ),
+                  ],
                 ),
+              ),
             ],
           ),
         ),

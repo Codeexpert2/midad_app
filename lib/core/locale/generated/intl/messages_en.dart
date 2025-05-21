@@ -25,12 +25,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "accessToUniversityEducation": MessageLookupByLibrary.simpleMessage(
             "Access to University Education"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
+        "allProjects": MessageLookupByLibrary.simpleMessage("All Projects"),
         "appName": MessageLookupByLibrary.simpleMessage("App Name"),
         "applyFilters": MessageLookupByLibrary.simpleMessage("Apply Filters"),
         "articles": MessageLookupByLibrary.simpleMessage("Articles"),
         "author": MessageLookupByLibrary.simpleMessage("Author"),
         "badRequestMessage":
             MessageLookupByLibrary.simpleMessage("Bad Request Message"),
+        "blog": MessageLookupByLibrary.simpleMessage("Blog"),
+        "browseTheBlogAndEducationalArticles":
+            MessageLookupByLibrary.simpleMessage(
+                "Browse the blog and educational articles"),
         "cacheError": MessageLookupByLibrary.simpleMessage("Cache Error"),
         "children": MessageLookupByLibrary.simpleMessage("Children"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Clear All"),
@@ -48,6 +53,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "downloadFailed":
             MessageLookupByLibrary.simpleMessage("Download Failed"),
         "downloading": MessageLookupByLibrary.simpleMessage("Downloading..."),
+        "easilyExploreEducationalJournals":
+            MessageLookupByLibrary.simpleMessage(
+                "Easily explore educational journals"),
         "empowerEducation":
             MessageLookupByLibrary.simpleMessage("Empower Education"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
@@ -111,6 +119,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "showMore": MessageLookupByLibrary.simpleMessage("Show More"),
         "showMoreArticle":
             MessageLookupByLibrary.simpleMessage("Show More Article"),
+        "stayUpdatedWithTheLatestNewsFromReliableSources":
+            MessageLookupByLibrary.simpleMessage(
+                "Stay updated with the latest news from reliable sources"),
         "supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA":
             MessageLookupByLibrary.simpleMessage(
                 "Support students, schools, and universities with resources that make a difference."),
@@ -131,6 +142,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Unprocessable Content"),
         "videoGallery": MessageLookupByLibrary.simpleMessage("Video Gallery"),
         "videoPlayer": MessageLookupByLibrary.simpleMessage("Video Player"),
+        "watchAVarietyOfEducationalAndEntertainingVideos":
+            MessageLookupByLibrary.simpleMessage(
+                "Watch a variety of educational and entertaining videos"),
         "youth": MessageLookupByLibrary.simpleMessage("Youth")
       };
 }

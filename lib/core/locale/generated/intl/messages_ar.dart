@@ -66,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "تمت الإضافة إلى قائمة المفضلة بنجاح."),
         "adjustSpeed": MessageLookupByLibrary.simpleMessage("ضبط السرعة"),
         "all": MessageLookupByLibrary.simpleMessage("الكل"),
+        "allProjects": MessageLookupByLibrary.simpleMessage("All Projects"),
         "alreadyRegisteredQuestion":
             MessageLookupByLibrary.simpleMessage("هل قمت بالتسجيل سابقًا؟"),
         "appName": MessageLookupByLibrary.simpleMessage("الدرس"),
@@ -80,10 +81,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "badRequest": MessageLookupByLibrary.simpleMessage("طلب غير صحيح"),
         "badRequestMessage":
             MessageLookupByLibrary.simpleMessage("طلب غير صالح"),
+        "blog": MessageLookupByLibrary.simpleMessage("Blog"),
         "bookmarkList":
             MessageLookupByLibrary.simpleMessage("القوائم المرجعية"),
         "bookmarks": MessageLookupByLibrary.simpleMessage("المحفوظات"),
         "brokenLink": MessageLookupByLibrary.simpleMessage("رابط معطوب:"),
+        "browseTheBlogAndEducationalArticles":
+            MessageLookupByLibrary.simpleMessage(
+                "Browse the blog and educational articles"),
         "cacheError":
             MessageLookupByLibrary.simpleMessage("خطأ في التخزين المؤقت"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
@@ -152,6 +157,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "downloadingFailed":
             MessageLookupByLibrary.simpleMessage("فشل التحميل"),
         "downloads": MessageLookupByLibrary.simpleMessage("التنزيلات"),
+        "easilyExploreEducationalJournals":
+            MessageLookupByLibrary.simpleMessage(
+                "Easily explore educational journals"),
         "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailOrPhoneNumber":
@@ -420,6 +428,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("حدث خطأ من مزود الخدمة"),
         "startDownloading":
             MessageLookupByLibrary.simpleMessage("ابدأ التحميل"),
+        "stayUpdatedWithTheLatestNewsFromReliableSources":
+            MessageLookupByLibrary.simpleMessage(
+                "Stay updated with the latest news from reliable sources"),
         "strong": MessageLookupByLibrary.simpleMessage("قوي"),
         "studio": MessageLookupByLibrary.simpleMessage("الاستوديو"),
         "submit": MessageLookupByLibrary.simpleMessage("أرسل"),
@@ -465,6 +476,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "videoGallery": MessageLookupByLibrary.simpleMessage("معرض الفيديو"),
         "videoPlayer": MessageLookupByLibrary.simpleMessage("عارض الفيديو"),
         "warning": MessageLookupByLibrary.simpleMessage("تحذير"),
+        "watchAVarietyOfEducationalAndEntertainingVideos":
+            MessageLookupByLibrary.simpleMessage(
+                "Watch a variety of educational and entertaining videos"),
         "weak": MessageLookupByLibrary.simpleMessage("ضعيف"),
         "weeksAgo": m7,
         "welcomeBack":

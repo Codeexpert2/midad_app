@@ -2940,6 +2940,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Easily explore educational journals`
+  String get easilyExploreEducationalJournals {
+    return Intl.message(
+      'Easily explore educational journals',
+      name: 'easilyExploreEducationalJournals',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Watch a variety of educational and entertaining videos`
+  String get watchAVarietyOfEducationalAndEntertainingVideos {
+    return Intl.message(
+      'Watch a variety of educational and entertaining videos',
+      name: 'watchAVarietyOfEducationalAndEntertainingVideos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay updated with the latest news from reliable sources`
+  String get stayUpdatedWithTheLatestNewsFromReliableSources {
+    return Intl.message(
+      'Stay updated with the latest news from reliable sources',
+      name: 'stayUpdatedWithTheLatestNewsFromReliableSources',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Browse the blog and educational articles`
+  String get browseTheBlogAndEducationalArticles {
+    return Intl.message(
+      'Browse the blog and educational articles',
+      name: 'browseTheBlogAndEducationalArticles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blog`
+  String get blog {
+    return Intl.message(
+      'Blog',
+      name: 'blog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Projects`
+  String get allProjects {
+    return Intl.message(
+      'All Projects',
+      name: 'allProjects',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
