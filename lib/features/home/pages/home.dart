@@ -4,13 +4,15 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
+import 'package:midad/components/main/section_header.dart';
+import 'package:midad/core/constants/images.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/core/themes/app_colors.dart';
 import 'package:midad/features/home/widgets/home_page_card.dart';
+import 'package:midad/features/projects/pages/project_list.dart';
 
 import '../widgets/partner_list_widget.dart';
-import '../widgets/section_header_widget.dart';
 import '../widgets/slides_section.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -39,6 +41,13 @@ class HomeScreen extends ConsumerWidget {
             children: [
               const SizedBox(height: 10),
               const SlidesSection(),
+              const SizedBox(height: 24),
+              SectionHeader(
+                title: S.of(context).projects,
+                buttonText: S.of(context).seeAll,
+                svgIconPath: AppImages.seeAll,
+              ),
+              const ProjectList(),
               const SizedBox(height: 24),
               HomePageCard(
                 title: S.of(context).articles,
@@ -69,7 +78,12 @@ class HomeScreen extends ConsumerWidget {
                 routeName: AppRoutes.journal.name,
               ),
               const SizedBox(height: 10),
-              SectionHeader(title: S.of(context).midadPartners),
+              SectionHeader(
+                title: S.of(context).midadPartners,
+                buttonText: S.of(context).seeAll,
+                svgIconPath: AppImages.seeAll,
+              ),
+              // SectionHeader(title: S.of(context).midadPartners),
               const SizedBox(height: 12),
               const PartnerListWidget(),
               const SizedBox(height: 20),

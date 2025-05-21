@@ -69,5 +69,7 @@
   "downloading": "Downloading...",
   "downloadFailed": "Download Failed",
   "author": "Author",
-  "publishDate": "Publish Date"
+  "publishDate": "Publish Date",
+  "projects": "Projects",
+  "seeAll": "See All"
 }

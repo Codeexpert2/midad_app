@@ -284,5 +284,7 @@
   "pdfViewer": "عارض ملفات PDF",
   "homeScreen": "الشاشة الرئيسية",
   "author": "الكاتب",
-  "publishDate": "تاريخ النشر"
+  "publishDate": "تاريخ النشر",
+  "projects": "Projects",
+  "seeAll": "See All"
 }

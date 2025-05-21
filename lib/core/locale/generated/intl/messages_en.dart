@@ -93,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pdfOpenedSuccessfully":
             MessageLookupByLibrary.simpleMessage("Pdf Opened Successfully"),
         "pdfViewer": MessageLookupByLibrary.simpleMessage("Pdf Viewer"),
+        "projects": MessageLookupByLibrary.simpleMessage("Projects"),
         "publishDate": MessageLookupByLibrary.simpleMessage("Publish Date"),
         "qualifyingYouth": MessageLookupByLibrary.simpleMessage(
             "Qualifying youth for the labor market"),
@@ -101,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "schoolSponsorship":
             MessageLookupByLibrary.simpleMessage("School Sponsorship"),
         "searchArticle": MessageLookupByLibrary.simpleMessage("Search article"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "select": MessageLookupByLibrary.simpleMessage("Select"),
         "serverErrorMessage":
             MessageLookupByLibrary.simpleMessage("Server Error Message"),

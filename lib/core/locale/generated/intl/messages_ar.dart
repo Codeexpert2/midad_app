@@ -354,6 +354,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "playlist": MessageLookupByLibrary.simpleMessage("قائمة التشغيل"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "projects": MessageLookupByLibrary.simpleMessage("Projects"),
         "publishDate": MessageLookupByLibrary.simpleMessage("تاريخ النشر"),
         "qualifyingYouth":
             MessageLookupByLibrary.simpleMessage("التأهيل لسوق العمل"),
@@ -395,6 +396,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("ابحث هنا"),
         "searchArticle": MessageLookupByLibrary.simpleMessage("ابحث عن مقالة"),
         "secondsAgo": m6,
+        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "seeMore": MessageLookupByLibrary.simpleMessage("أظهر المزيد"),
         "select": MessageLookupByLibrary.simpleMessage("اختر"),
         "selectRatingStar":
