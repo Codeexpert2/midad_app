@@ -52,7 +52,9 @@ class HomeScreen extends ConsumerWidget {
                 title: S.of(context).blog,
                 subtitle: S.of(context).browseTheBlogAndEducationalArticles,
                 icon: Icons.article_outlined,
-                color: isDark ? Colors.deepOrangeAccent : AppColors.primary500,
+                color: isDark
+                    ? Colors.deepOrangeAccent.shade100
+                    : AppColors.primary500,
                 routeName: AppRoutes.articles.name,
               ),
               HomePageCard(
@@ -61,7 +63,9 @@ class HomeScreen extends ConsumerWidget {
                     .of(context)
                     .stayUpdatedWithTheLatestNewsFromReliableSources,
                 icon: Icons.newspaper,
-                color: isDark ? Colors.deepOrange : AppColors.secondary700,
+                color: isDark
+                    ? Colors.tealAccent.shade200
+                    : AppColors.secondary700,
                 routeName: AppRoutes.latestNews.name,
               ),
               HomePageCard(
@@ -70,14 +74,18 @@ class HomeScreen extends ConsumerWidget {
                     .of(context)
                     .watchAVarietyOfEducationalAndEntertainingVideos,
                 icon: Icons.video_library_outlined,
-                color: isDark ? Colors.orangeAccent : Colors.deepPurpleAccent,
+                color: isDark
+                    ? Colors.amberAccent.shade200
+                    : Colors.deepPurpleAccent,
                 routeName: AppRoutes.videoGallery.name,
               ),
               HomePageCard(
                 title: S.of(context).journals,
                 subtitle: S.of(context).easilyExploreEducationalJournals,
                 icon: Icons.menu_book,
-                color: isDark ? Colors.orangeAccent : Colors.orangeAccent,
+                color: isDark
+                    ? Colors.lightGreenAccent.shade200
+                    : Colors.orangeAccent,
                 routeName: AppRoutes.journal.name,
               ),
               const SizedBox(height: 20),

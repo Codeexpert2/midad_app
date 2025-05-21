@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:midad/core/constants/images.dart';
+import 'package:midad/core/extensions/context_ext.dart';
 
 class Logo extends StatelessWidget {
   const Logo({super.key, this.width});
@@ -10,7 +11,7 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      AppImages.imagesMidadLogo,
+      context.isDark ? AppImages.imagesMidadLogoG : AppImages.imagesMidadLogo,
       width: width,
     );
   }

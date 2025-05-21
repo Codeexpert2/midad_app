@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:midad/core/constants/images.dart';
+import 'package:midad/core/extensions/context_ext.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MainAppBar({
@@ -17,29 +18,36 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize =>
       Size.fromHeight(bottom == null ? kToolbarHeight : kToolbarHeight * 2);
-
   @override
-  Widget build(BuildContext context) => AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        surfaceTintColor: Theme.of(context).scaffoldBackgroundColor,
-        centerTitle: true,
-        title: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(AppImages.imagesMidadLogo, height: 50, width: 50),
-            const SizedBox(width: 8),
-            Text(
-              title,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+  Widget build(BuildContext context) {
+    return AppBar(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      surfaceTintColor: Theme.of(context).scaffoldBackgroundColor,
+      centerTitle: true,
+      title: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            context.isDark
+                ? AppImages.imagesMidadLogoG
+                : AppImages.imagesMidadLogo,
+            height: 50,
+            width: 50,
+          ),
+          const SizedBox(width: 8),
+          Text(
+            title,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
             ),
-          ],
-        ),
-        iconTheme: IconThemeData(
-          color: Theme.of(context).colorScheme.onSurface,
-        ),
-        actions: actions,
-        bottom: bottom,
-      );
+          ),
+        ],
+      ),
+      iconTheme: IconThemeData(
+        color: Theme.of(context).colorScheme.onSurface,
+      ),
+      actions: actions,
+      bottom: bottom,
+    );
+  }
 }
