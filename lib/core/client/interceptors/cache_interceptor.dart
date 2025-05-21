@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
 
 /* 

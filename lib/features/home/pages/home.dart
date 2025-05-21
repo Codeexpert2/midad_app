@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/components/main/main_appbar.dart';
 import 'package:midad/components/main/main_drawer.dart';
+import 'package:midad/core/extensions/context_ext.dart';
 import 'package:midad/core/locale/generated/l10n.dart';
 import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/core/themes/app_colors.dart';
@@ -19,8 +20,6 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
     return Scaffold(
       appBar: MainAppBar(
         title: '',
@@ -52,7 +51,7 @@ class HomeScreen extends ConsumerWidget {
                 title: S.of(context).blog,
                 subtitle: S.of(context).browseTheBlogAndEducationalArticles,
                 icon: Icons.article_outlined,
-                color: isDark
+                color: context.isDark
                     ? Colors.deepOrangeAccent.shade100
                     : AppColors.primary500,
                 routeName: AppRoutes.articles.name,
@@ -63,7 +62,7 @@ class HomeScreen extends ConsumerWidget {
                     .of(context)
                     .stayUpdatedWithTheLatestNewsFromReliableSources,
                 icon: Icons.newspaper,
-                color: isDark
+                color: context.isDark
                     ? Colors.tealAccent.shade200
                     : AppColors.secondary700,
                 routeName: AppRoutes.latestNews.name,
@@ -74,7 +73,7 @@ class HomeScreen extends ConsumerWidget {
                     .of(context)
                     .watchAVarietyOfEducationalAndEntertainingVideos,
                 icon: Icons.video_library_outlined,
-                color: isDark
+                color: context.isDark
                     ? Colors.amberAccent.shade200
                     : Colors.deepPurpleAccent,
                 routeName: AppRoutes.videoGallery.name,
@@ -83,7 +82,7 @@ class HomeScreen extends ConsumerWidget {
                 title: S.of(context).journals,
                 subtitle: S.of(context).easilyExploreEducationalJournals,
                 icon: Icons.menu_book,
-                color: isDark
+                color: context.isDark
                     ? Colors.lightGreenAccent.shade200
                     : Colors.orangeAccent,
                 routeName: AppRoutes.journal.name,

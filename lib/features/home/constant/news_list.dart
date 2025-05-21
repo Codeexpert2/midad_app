@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import '../../news/models/news_model.dart';
 
 final List<News> newsList = [

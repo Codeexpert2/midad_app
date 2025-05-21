@@ -9,6 +9,8 @@
 //   return NotificationRepository(notificationBox);
 // });
 
+// ignore_for_file: lines_longer_than_80_chars
+
 // // Stream provider to watch changes in notifications ordered by date
 // final notificationsProvider = StreamProvider<List<NotificationModel>>((ref) {
 //   final repository = ref.watch(notificationRepositoryProvider);

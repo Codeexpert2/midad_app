@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import '../models/project_model.dart';
 
 const List<ProjectModel> dummyProjects = [
