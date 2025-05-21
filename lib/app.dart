@@ -21,7 +21,7 @@ class App extends ConsumerWidget {
     final locale = ref.watch(localeProvider);
     final themeMode = ref.watch(themeProvider);
 
-    // final storage = ref.watch(storageServiceProvider);
+    // final storage = locator<StorageService>();
     // storage.remove(onboardingKey);
 
     return MaterialApp.router(
@@ -40,9 +40,6 @@ class App extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      // supportedLocales: AppConfigs.supportedLocales.map(
-      //   (i) => Locale(i['locale'] as String),
-      // ),
       supportedLocales: S.delegate.supportedLocales,
       builder: (context, child) {
         return MediaQuery(

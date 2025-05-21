@@ -28,12 +28,6 @@ void main() async {
             child: const App(),
           ),
         ),
-        // ProviderScope(
-        //   observers: [
-        //     RiverpodObserver(),
-        //   ],
-        //   child: const App(),
-        // ),
       );
     },
     (error, stackTrace) {

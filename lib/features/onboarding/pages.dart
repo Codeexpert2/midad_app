@@ -7,13 +7,13 @@ import 'package:midad/features/onboarding/models/onboarding_model.dart';
 
 List<OnboardingPageData> pages(BuildContext context) {
   return [
-    OnboardingPageData(
-      title: S.of(context).empowerEducation,
-      description: S
-          .of(context)
-          .supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA,
-      imagePath: AppImages.imagesOnboarding,
-    ),
+    // OnboardingPageData(
+    //   title: S.of(context).empowerEducation,
+    //   description: S
+    //       .of(context)
+    //       .supportStudentsSchoolsAndUniversitiesWithResourcesThatMakeA,
+    //   imagePath: AppImages.imagesOnboarding,
+    // ),
     OnboardingPageData(
       title: S.of(context).inspireMinds,
       description: S

@@ -16,7 +16,6 @@ import 'package:midad/features/profile/pages/profile_screen.dart';
 import 'package:midad/features/root/root_screen.dart';
 import 'package:midad/features/search/search_screen.dart';
 import 'package:midad/features/settings/pages/settings_screen.dart';
-import 'package:midad/features/splash/splash_screen.dart';
 import 'package:midad/features/statics/about.dart';
 import 'package:midad/features/statics/privacy_policy.dart';
 import 'package:midad/features/statics/terms_conditions.dart';
@@ -36,11 +35,6 @@ import '../../features/video_gallery/pages/video_gallery.dart';
 import '../../features/video_gallery/pages/youtube_player_screen.dart';
 
 List<RouteBase> routes = <RouteBase>[
-  GoRoute(
-    path: AppRoutes.splash.path,
-    name: AppRoutes.splash.name,
-    builder: (_, __) => const SplashScreen(),
-  ),
   GoRoute(
     path: AppRoutes.onboarding.path,
     name: AppRoutes.onboarding.name,

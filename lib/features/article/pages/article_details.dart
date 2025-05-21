@@ -4,7 +4,6 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../components/errors/error_indicator.dart';
-import '../../../components/images/avatar_widget.dart';
 import '../../../components/images/cached_image.dart';
 import '../../../components/loading/loading_widget.dart';
 import '../../../core/extensions/extensions.dart';
@@ -15,6 +14,7 @@ import '../../../core/themes/app_colors.dart';
 import '../providers/article_provider.dart';
 import '../providers/article_scroll_provider.dart';
 import '../widgets/article_detail_widget.dart';
+import '../widgets/author_widget.dart';
 import '../widgets/tag_chip_widget.dart';
 
 class ArticleDetailsScreen extends ConsumerWidget {
@@ -81,20 +81,9 @@ class ArticleDetailsScreen extends ConsumerWidget {
               sliver: SliverList(
                 delegate: SliverChildListDelegate.fixed([
                   const SizedBox(height: 10),
-                  Row(
-                    children: [
-                      AvatarWidget(
-                        imageUrl: article.user?.image ?? '',
-                      ),
-                      const SizedBox(width: 10),
-                      Text(
-                        article.user?.name ?? S.of(context).unknown,
-                        style: const TextStyle(
-                          color: AppColors.gray400,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ],
+                  AuthorWidget(
+                    name: article.user?.name,
+                    imageUrl: article.user?.image ?? '',
                   ),
                   const SizedBox(height: 25),
                   Row(
@@ -140,7 +129,12 @@ class ArticleDetailsScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 10),
                   HtmlWidget(article.promptContent),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 22),
+                  Text(
+                    '${S.of(context).tags} : ',
+                    style: context.textTheme.bodyMedium?.copyWith(fontSize: 17),
+                  ),
+                  const SizedBox(height: 8),
                   TagChipWidget(tags: article.tags ?? []),
                   const SizedBox(height: 20),
                 ]),

@@ -2781,20 +2781,20 @@ class S {
     );
   }
 
-  /// `مجالات`
+  /// `الوسوم`
   String get tags {
     return Intl.message(
-      'مجالات',
+      'الوسوم',
       name: 'tags',
       desc: '',
       args: [],
     );
   }
 
-  /// `مجال`
+  /// `الوسم`
   String get tag {
     return Intl.message(
-      'مجال',
+      'الوسم',
       name: 'tag',
       desc: '',
       args: [],
