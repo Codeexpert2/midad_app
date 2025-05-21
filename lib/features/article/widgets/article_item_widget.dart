@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:midad/core/extensions/extensions.dart';
 import 'package:midad/core/themes/app_colors.dart';
 
 import '../../../components/images/cached_image.dart';
@@ -7,24 +8,15 @@ import '../../../core/router/app_routes.dart';
 import '../models/article_model.dart';
 
 class ArticleItemWidget extends StatelessWidget {
-  const ArticleItemWidget({
-    super.key,
-    required this.article,
-    required this.width,
-    this.height,
-    required this.imageHeight,
-  });
+  const ArticleItemWidget({super.key, required this.article});
 
   final Article article;
-  final double width;
-  final double? height;
-  final double imageHeight;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
-      height: height,
+      width: context.width * 0.9,
+      height: context.height * 0.3,
       child: GestureDetector(
         onTap: () {
           context.pushNamed(
@@ -48,8 +40,8 @@ class ArticleItemWidget extends StatelessWidget {
                 ),
                 child: CachedImage(
                   imageUrl: article.image,
-                  height: imageHeight,
-                  width: width,
+                  height: context.height * 0.2,
+                  width: context.width * 0.9,
                 ),
               ),
               const SizedBox(height: 8),

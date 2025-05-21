@@ -4,11 +4,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:midad/core/pagination/paginated_list_widget.dart';
 
-import '../../../components/main/main_appbar.dart';
+import '../../../components/main/debounced_search_app_bar.dart';
 import '../../../core/locale/generated/l10n.dart';
-import '../models/news_model.dart';
-import '../providers/latest_news_list_notifier.dart';
-import '../providers/latest_news_notifier.dart';
+import '../../article/models/article_model.dart';
+import '../providers/news_provider.dart';
 import '../widgets/latest_news_item_widget.dart';
 
 class LatestNewsScreen extends ConsumerWidget {
@@ -17,19 +16,22 @@ class LatestNewsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: MainAppBar(
+      appBar: DebouncedSearchAppBar(
         title: S.of(context).latestNews,
+        onDebounceChange: (value) {
+          ref.read(newsSearchProvider.notifier).state = value;
+          ref.read(newsProvider.notifier).refresh();
+        },
       ),
-      body: PaginatedListWidget<News>(
-        provider: newsListProvider,
-        itemBuilder: (context, news) => LatestNewsItemWidget(news: news),
-        loadTriggerThreshold: 0.8,
-        enablePullToRefresh: true,
+      body: PaginatedListWidget<Article>(
+        key: Key(ref.watch(newsSearchProvider) ?? ''),
+        provider: newsProvider,
+        itemBuilder: (context, article) =>
+            LatestNewsItemWidget(article: article),
         padding: const EdgeInsets.all(16.0),
         separatorBuilder: (context, index) => const SizedBox(height: 18),
         emptyWidget: Center(child: Text(S.of(context).noNewsAvailable)),
         noMoreDataWidget: Center(child: Text(S.of(context).noMoreNews)),
-        scrollController: ref.watch(latestNewsProvider).scrollController,
       ),
     );
   }

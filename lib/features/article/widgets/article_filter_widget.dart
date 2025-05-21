@@ -8,28 +8,14 @@ import 'package:midad/core/extensions/extensions.dart';
 import '../../../components/errors/error_message.dart';
 import '../../../components/loading/loading_widget.dart';
 import '../../../core/locale/generated/l10n.dart';
-import '../../../core/pagination/models/pagination_state.dart';
-import '../../../core/pagination/notifiers/paginated_list_notifier.dart';
 import '../../../core/themes/app_colors.dart';
 import '../../category/providers/category_provider.dart';
 import '../../tag/providers/tag_provider.dart';
 import '../../type/providers/type_provider.dart';
-import '../models/article_model.dart';
+import '../providers/article_provider.dart';
 
 class ArticleFilterBottomSheet extends ConsumerWidget {
-  const ArticleFilterBottomSheet({
-    super.key,
-    required this.articleCategoryProvider,
-    required this.articleTypeProvider,
-    required this.articleTagProvider,
-    required this.articlesProvider,
-  });
-
-  final AutoDisposeStateProvider<String?> articleCategoryProvider;
-  final AutoDisposeStateProvider<String?> articleTypeProvider;
-  final AutoDisposeStateProvider<List<String>?> articleTagProvider;
-  final AutoDisposeStateNotifierProvider<PaginatedListNotifier<Article>,
-      PaginationState<Article>> articlesProvider;
+  const ArticleFilterBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

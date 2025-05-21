@@ -5,6 +5,9 @@ class AppConfigs {
   static const String topic = 'general';
   static const Duration period = Duration(seconds: 1);
   static const int perPage = 10;
+
+  static const int newsTypeId = 2; // اعلان
+
   // Terms of Service link
   static const String termsOfServiceUrl =
       'https://your-terms-of-service-url.com';

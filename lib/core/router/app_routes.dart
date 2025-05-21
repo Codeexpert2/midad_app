@@ -30,7 +30,7 @@ enum AppRoutes {
   articleDetails('/article-details/:id', 'articleDetails'),
   articles('/articles', 'articles'),
   latestNews('/latest-news', 'latestNews'),
-  newsDetails('/news-details', 'newsDetails'),
+  newsDetails('/news-details/:id', 'newsDetails'),
   videoGallery('/video-gallery', 'videoGallery'),
   journal('/journal', 'journal'),
   journalDetails('/journal/details/:journalId', 'journalDetails'),

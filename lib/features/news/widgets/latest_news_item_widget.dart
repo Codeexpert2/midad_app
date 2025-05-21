@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../../../components/images/cached_image.dart';
 import '../../../core/router/app_routes.dart';
 import '../../../core/themes/app_colors.dart';
-import '../models/news_model.dart';
+import '../../article/models/article_model.dart';
 
 class LatestNewsItemWidget extends StatelessWidget {
   const LatestNewsItemWidget({
     super.key,
-    required this.news,
+    required this.article,
   });
-  final News news;
+  final Article article;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class LatestNewsItemWidget extends StatelessWidget {
       onTap: () {
         context.pushNamed(
           AppRoutes.newsDetails.name,
-          extra: news,
+          pathParameters: {'id': article.id.toString()},
         );
       },
       child: Card(
@@ -32,7 +32,7 @@ class LatestNewsItemWidget extends StatelessWidget {
             AspectRatio(
               aspectRatio: 1 / 1,
               child: CachedImage(
-                imageUrl: news.imageUrl,
+                imageUrl: article.image,
               ),
             ),
             Positioned(
@@ -43,15 +43,11 @@ class LatestNewsItemWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: AppColors.gray900.withOpacity(0.7),
-                  // borderRadius: const BorderRadius.only(
-                  //   bottomLeft: Radius.circular(12),
-                  //   bottomRight: Radius.circular(12),
-                  // ),
                 ),
                 child: Column(
                   children: [
                     Text(
-                      news.title,
+                      article.title,
                       style: const TextStyle(
                         color: AppColors.white,
                         fontSize: 14,
@@ -62,7 +58,7 @@ class LatestNewsItemWidget extends StatelessWidget {
                     ),
                     const SizedBox(height: 7),
                     Text(
-                      news.description,
+                      article.content,
                       style: const TextStyle(
                         fontSize: 12,
                         color: AppColors.white,

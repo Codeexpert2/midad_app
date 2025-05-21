@@ -24,7 +24,6 @@ import '../../features/article/pages/article_details.dart';
 import '../../features/article/pages/articles_screen.dart';
 import '../../features/category/pages/category_details_screen.dart';
 import '../../features/category/pages/category_screen.dart';
-import '../../features/news/models/news_model.dart';
 import '../../features/news/pages/latest_news.dart';
 import '../../features/news/pages/news_details.dart';
 import '../../features/tag/pages/tag_details_screen.dart';
@@ -205,8 +204,8 @@ List<RouteBase> routes = <RouteBase>[
     path: AppRoutes.newsDetails.path,
     name: AppRoutes.newsDetails.name,
     builder: (context, state) {
-      final news = state.extra as News;
-      return NewsDetailsScreen(news: news);
+      final articleId = int.parse(state.pathParameters['id']!);
+      return NewsDetailsScreen(articleId: articleId);
     },
   ),
   GoRoute(

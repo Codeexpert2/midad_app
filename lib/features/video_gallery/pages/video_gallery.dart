@@ -25,6 +25,7 @@ class VideoGalleryScreen extends ConsumerWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: PaginatedListWidget<Video>(
+          key: Key(ref.watch(videoSearchProvider) ?? ''),
           provider: videoProvider,
           itemBuilder: (context, video) => VideoItemWidget(video: video),
           padding: const EdgeInsets.all(16.0),
