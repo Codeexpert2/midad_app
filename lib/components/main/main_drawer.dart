@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:midad/components/main/logo.dart';
 import 'package:midad/core/router/app_routes.dart';
 
 import '../../core/locale/generated/l10n.dart';
@@ -22,6 +23,14 @@ class MainDrawer extends ConsumerWidget {
         child: ListView(
           children: <Widget>[
             const SizedBox(height: 12),
+            const DrawerHeader(
+              child: Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Logo(
+                  width: 60,
+                ),
+              ),
+            ),
             ListTile(
               leading: const Icon(Icons.home),
               title: Text(
