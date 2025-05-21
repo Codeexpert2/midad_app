@@ -26,7 +26,7 @@ class RootNotifier extends Notifier<int> {
         router.goNamed(AppRoutes.home.name);
         break;
       case 1:
-        router.pushNamed(AppRoutes.journal.name);
+        router.pushNamed(AppRoutes.category.name);
         break;
       case 2:
         router.pushNamed(AppRoutes.search.name, queryParameters: {
@@ -46,7 +46,7 @@ class RootNotifier extends Notifier<int> {
     final location = ref.watch(routerProvider).location;
     if (location.contains(AppRoutes.home.name)) {
       return 0;
-    } else if (location.contains(AppRoutes.journal.name)) {
+    } else if (location.contains(AppRoutes.category.name)) {
       return 1;
     } else if (location.contains(AppRoutes.search.name)) {
       return 2;

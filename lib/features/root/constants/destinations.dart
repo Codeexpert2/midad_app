@@ -7,9 +7,9 @@ const List<NavigationDestination> destinations = [
     label: 'Home',
   ),
   NavigationDestination(
-    icon: Icon(Icons.library_books_outlined),
-    selectedIcon: Icon(Icons.library_books),
-    label: 'Journals',
+    icon: Icon(Icons.category_outlined),
+    selectedIcon: Icon(Icons.category),
+    label: 'category',
   ),
   NavigationDestination(
     icon: Icon(Icons.search_outlined),
