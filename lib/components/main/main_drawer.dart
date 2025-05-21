@@ -5,9 +5,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:midad/core/router/app_routes.dart';
 
 import '../../core/locale/generated/l10n.dart';
-import '../../features/home/widgets/children_menu.dart';
-import '../../features/home/widgets/organization_interest_menu.dart';
-import '../../features/home/widgets/youth_menu.dart';
 
 import 'app_divider.dart';
 
@@ -66,10 +63,6 @@ class MainDrawer extends ConsumerWidget {
                 context.pushNamed(AppRoutes.tags.name);
               },
             ),
-            const AppDivider(),
-            const YouthMenu(),
-            const ChildrenMenu(),
-            const OrganizationInterestMenu(),
             const AppDivider(),
             ListTile(
               leading: const Icon(Icons.help_outline),
