@@ -10,6 +10,7 @@ class JournalCard extends StatelessWidget {
     required this.journal,
     required this.onTap,
   });
+
   final Journal journal;
   final VoidCallback onTap;
 
@@ -19,13 +20,13 @@ class JournalCard extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
       child: Card(
-        elevation: 4,
-        margin: const EdgeInsets.only(bottom: 12),
+        elevation: 2,
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
         child: Container(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Row(
             children: [
               Container(

@@ -61,6 +61,13 @@ class HomeScreen extends ConsumerWidget {
                 color: isDark ? Colors.orangeAccent : Colors.deepPurpleAccent,
                 routeName: AppRoutes.videoGallery.name,
               ),
+              HomePageCard(
+                title: S.of(context).journals,
+                subtitle: 'تصفح المجلات التعليمية بكل سهولة',
+                icon: Icons.menu_book,
+                color: isDark ? Colors.orangeAccent : Colors.orangeAccent,
+                routeName: AppRoutes.journal.name,
+              ),
               const SizedBox(height: 10),
               SectionHeader(title: S.of(context).midadPartners),
               const SizedBox(height: 12),
