@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:midad/components/images/cached_image.dart';
+import 'package:midad/core/themes/app_colors.dart';
 
 import '../models/project_model.dart';
 
@@ -8,18 +9,18 @@ class ProjectCard extends StatelessWidget {
   const ProjectCard({
     super.key,
     required this.project,
-    required this.onTap,
+    this.onTap,
   });
 
-  final ProjectModel project;
-  final VoidCallback onTap;
+  final Project project;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return GestureDetector(
-      onTap: onTap,
+      onTap: onTap?.call,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         child: ClipRRect(
@@ -27,9 +28,9 @@ class ProjectCard extends StatelessWidget {
           child: Stack(
             children: [
               CachedImage(
-                imageUrl: project.imageUrl,
+                imageUrl: project.image ?? '',
                 height: 220,
-                width: screenWidth, // عرض الشاشة الكامل
+                width: screenWidth,
               ),
               Container(
                 height: 220,
@@ -55,7 +56,7 @@ class ProjectCard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      project.title,
+                      project.title ?? '',
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -73,9 +74,9 @@ class ProjectCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      project.description,
+                      project.desc ?? '',
                       style: const TextStyle(
-                        color: Colors.white70,
+                        color: AppColors.white,
                         fontSize: 15,
                         height: 1.4,
                         shadows: [

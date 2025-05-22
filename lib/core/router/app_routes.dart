@@ -39,7 +39,9 @@ enum AppRoutes {
   types('/types', 'types'),
   typeDetails('/type-details', 'typeDetails'),
   tags('/tags', 'tags'),
-  tagDetails('/tag-details', 'tagDetails');
+  tagDetails('/tag-details', 'tagDetails'),
+  allProjects('/all-projects', 'allProjects');
+
 
 
   final String path;

@@ -2941,60 +2941,60 @@ class S {
     );
   }
 
-  /// `Easily explore educational journals`
+  /// `استكشف المجلات التعليمية بسهولة`
   String get easilyExploreEducationalJournals {
     return Intl.message(
-      'Easily explore educational journals',
+      'استكشف المجلات التعليمية بسهولة',
       name: 'easilyExploreEducationalJournals',
       desc: '',
       args: [],
     );
   }
 
-  /// `Watch a variety of educational and entertaining videos`
+  /// `شاهد مجموعة متنوعة من الفيديوهات التعليمية والترفيهية`
   String get watchAVarietyOfEducationalAndEntertainingVideos {
     return Intl.message(
-      'Watch a variety of educational and entertaining videos',
+      'شاهد مجموعة متنوعة من الفيديوهات التعليمية والترفيهية',
       name: 'watchAVarietyOfEducationalAndEntertainingVideos',
       desc: '',
       args: [],
     );
   }
 
-  /// `Stay updated with the latest news from reliable sources`
+  /// `ابقَ على اطلاع بآخر الأخبار من مصادر موثوقة`
   String get stayUpdatedWithTheLatestNewsFromReliableSources {
     return Intl.message(
-      'Stay updated with the latest news from reliable sources',
+      'ابقَ على اطلاع بآخر الأخبار من مصادر موثوقة',
       name: 'stayUpdatedWithTheLatestNewsFromReliableSources',
       desc: '',
       args: [],
     );
   }
 
-  /// `Browse the blog and educational articles`
+  /// `تصفح المدونة والمقالات التعليمية`
   String get browseTheBlogAndEducationalArticles {
     return Intl.message(
-      'Browse the blog and educational articles',
+      'تصفح المدونة والمقالات التعليمية',
       name: 'browseTheBlogAndEducationalArticles',
       desc: '',
       args: [],
     );
   }
 
-  /// `Blog`
+  /// `المدونة`
   String get blog {
     return Intl.message(
-      'Blog',
+      'المدونة',
       name: 'blog',
       desc: '',
       args: [],
     );
   }
 
-  /// `All Projects`
+  /// `جميع المشاريع`
   String get allProjects {
     return Intl.message(
-      'All Projects',
+      'جميع المشاريع',
       name: 'allProjects',
       desc: '',
       args: [],

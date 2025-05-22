@@ -13,6 +13,7 @@ import 'package:midad/features/notification/notification_screen.dart';
 import 'package:midad/features/onboarding/onboarding_screen.dart';
 import 'package:midad/features/profile/pages/change_password_screen.dart';
 import 'package:midad/features/profile/pages/profile_screen.dart';
+import 'package:midad/features/projects/pages/all_project_page.dart';
 import 'package:midad/features/root/root_screen.dart';
 import 'package:midad/features/search/search_screen.dart';
 import 'package:midad/features/settings/pages/settings_screen.dart';
@@ -268,6 +269,11 @@ List<RouteBase> routes = <RouteBase>[
     name: AppRoutes.tags.name,
     path: AppRoutes.tags.path,
     builder: (_, __) => const TagsScreen(),
+  ),
+  GoRoute(
+    name: AppRoutes.allProjects.name,
+    path: AppRoutes.allProjects.path,
+    builder: (_, __) => const AllProjectsPage(),
   ),
   GoRoute(
     name: AppRoutes.tagDetails.name,
