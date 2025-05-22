@@ -42,6 +42,23 @@ class ArticleDetailsScreen extends ConsumerWidget {
             SliverAppBar(
               pinned: true,
               expandedHeight: maxHeight,
+              leading: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  backgroundColor: Color.lerp(
+                    AppColors.white.withOpacity(0.8),
+                    Colors.transparent,
+                    scrollRatio,
+                  ),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: AppColors.gray900,
+                    ),
+                    onPressed: () => context.pop(),
+                  ),
+                ),
+              ),
               flexibleSpace: FlexibleSpaceBar(
                 titlePadding: const EdgeInsets.only(left: 16, bottom: 16),
                 centerTitle: true,
