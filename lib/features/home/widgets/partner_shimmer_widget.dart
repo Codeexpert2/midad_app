@@ -33,7 +33,7 @@ class PartnerShimmerWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 6),
+              const SizedBox(height: 8),
               Shimmer.fromColors(
                 baseColor: AppColors.gray300,
                 highlightColor: AppColors.gray100,

@@ -26,27 +26,17 @@ final categoriesProvider =
 final categoryArticleSearchProvider =
     StateProvider.autoDispose<String?>((ref) => null);
 
-final categoryArticleTypeProvider =
-    StateProvider.autoDispose<String?>((ref) => null);
-
-final categoryArticleTagProvider =
-    StateProvider.autoDispose<List<String>?>((ref) => null);
-
 final categoryArticlesProvider = StateNotifierProvider.autoDispose
     .family<PaginatedListNotifier<Article>, PaginationState<Article>, int>(
   (ref, categoryId) {
     final articleService = ref.read(articleServiceProvider);
     final query = ref.watch(categoryArticleSearchProvider);
-    final type = ref.watch(categoryArticleTypeProvider);
-    final tag = ref.watch(categoryArticleTagProvider);
     return PaginatedListNotifier<Article>(
       fetchData: (int page) async {
         final res = await articleService.getArticles(
           page: page,
-          category: categoryId.toString(),
           query: query,
-          type: type,
-          tag: tag,
+          category: categoryId.toString(),
         );
         return res.data ?? [];
       },

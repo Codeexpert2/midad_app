@@ -24,28 +24,18 @@ final typesProvider = FutureProvider.autoDispose<List<TypeModel>>((ref) async {
 final typeArticleSearchProvider =
     StateProvider.autoDispose<String?>((ref) => null);
 
-final typeArticleCategoryProvider =
-    StateProvider.autoDispose<String?>((ref) => null);
-
-final typeArticleTagProvider =
-    StateProvider.autoDispose<List<String>?>((ref) => null);
-
 final typeArticlesProvider = StateNotifierProvider.autoDispose
     .family<PaginatedListNotifier<Article>, PaginationState<Article>, int>(
   (ref, typeId) {
     final articleService = ref.read(articleServiceProvider);
     final query = ref.watch(typeArticleSearchProvider);
-    final category = ref.watch(typeArticleCategoryProvider);
-    final tag = ref.watch(typeArticleTagProvider);
 
     return PaginatedListNotifier<Article>(
       fetchData: (int page) async {
         final res = await articleService.getArticles(
           page: page,
-          category: category,
           query: query,
           type: typeId.toString(),
-          tag: tag,
         );
         return res.data ?? [];
       },
