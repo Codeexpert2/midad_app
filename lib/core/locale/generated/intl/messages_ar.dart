@@ -239,6 +239,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "listRemovedSuccess":
             MessageLookupByLibrary.simpleMessage("تمت إزالة القائمة بنجاح."),
         "loading": MessageLookupByLibrary.simpleMessage("جاري التحميل..."),
+        "locale": MessageLookupByLibrary.simpleMessage("اللغة"),
         "login": MessageLookupByLibrary.simpleMessage("سجل الدخول"),
         "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginFailed": MessageLookupByLibrary.simpleMessage(
@@ -321,6 +322,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "organizationInterests":
             MessageLookupByLibrary.simpleMessage("اهتمامات المؤسسة"),
         "other": MessageLookupByLibrary.simpleMessage("آخر"),
+        "ourProjects": MessageLookupByLibrary.simpleMessage("مشاريعنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور*"),
         "passwordChanged":
             MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور"),
@@ -362,7 +364,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "playlist": MessageLookupByLibrary.simpleMessage("قائمة التشغيل"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
-        "projects": MessageLookupByLibrary.simpleMessage("Projects"),
+        "projects": MessageLookupByLibrary.simpleMessage("المشاريع"),
         "publishDate": MessageLookupByLibrary.simpleMessage("تاريخ النشر"),
         "qualifyingYouth":
             MessageLookupByLibrary.simpleMessage("التأهيل لسوق العمل"),
@@ -404,7 +406,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("ابحث هنا"),
         "searchArticle": MessageLookupByLibrary.simpleMessage("ابحث عن مقالة"),
         "secondsAgo": m6,
-        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "seeMore": MessageLookupByLibrary.simpleMessage("أظهر المزيد"),
         "select": MessageLookupByLibrary.simpleMessage("اختر"),
         "selectRatingStar":
@@ -446,6 +448,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "termsConditions":
             MessageLookupByLibrary.simpleMessage("سياسة الاستخدام"),
         "test": MessageLookupByLibrary.simpleMessage("امتحان"),
+        "theme": MessageLookupByLibrary.simpleMessage("السمة"),
         "timeOutErrorMessage":
             MessageLookupByLibrary.simpleMessage("انتهت مهلة الاتصال"),
         "title": MessageLookupByLibrary.simpleMessage("العنوان"),

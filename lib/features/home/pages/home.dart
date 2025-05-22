@@ -40,7 +40,7 @@ class HomeScreen extends ConsumerWidget {
               const SizedBox(height: 10),
               const SlidesSection(),
               const SizedBox(height: 24),
-              SectionHeader(title: S.of(context).projects),
+              SectionHeader(title: S.of(context).ourProjects),
               const ProjectList(),
               const SizedBox(height: 15),
               SectionHeader(title: S.of(context).midadPartners),

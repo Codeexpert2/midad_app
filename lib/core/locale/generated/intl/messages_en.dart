@@ -79,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Join our journey to promote inclusive, innovative, and quality education for all."),
         "journals": MessageLookupByLibrary.simpleMessage("Journals"),
         "latestNews": MessageLookupByLibrary.simpleMessage("Latest News"),
+        "locale": MessageLookupByLibrary.simpleMessage("Locale"),
         "midadPartners": MessageLookupByLibrary.simpleMessage("MIDAD Partners"),
         "netWorkErrorMessage":
             MessageLookupByLibrary.simpleMessage("Network Error Message"),
@@ -98,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Not Found Message"),
         "organizationInterests":
             MessageLookupByLibrary.simpleMessage("Organization Interests"),
+        "ourProjects": MessageLookupByLibrary.simpleMessage("Our projects"),
         "pdfOpenedSuccessfully":
             MessageLookupByLibrary.simpleMessage("Pdf Opened Successfully"),
         "pdfViewer": MessageLookupByLibrary.simpleMessage("Pdf Viewer"),
@@ -114,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "select": MessageLookupByLibrary.simpleMessage("Select"),
         "serverErrorMessage":
             MessageLookupByLibrary.simpleMessage("Server Error Message"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "shapeTheFuture":
             MessageLookupByLibrary.simpleMessage("Shape the Future"),
         "showMore": MessageLookupByLibrary.simpleMessage("Show More"),
@@ -129,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Supporting university education"),
         "tag": MessageLookupByLibrary.simpleMessage("Tag"),
         "tags": MessageLookupByLibrary.simpleMessage("Tags"),
+        "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "timeOutErrorMessage":
             MessageLookupByLibrary.simpleMessage("Time Out Error Message"),
         "type": MessageLookupByLibrary.simpleMessage("Type"),

@@ -2921,26 +2921,6 @@ class S {
     );
   }
 
-  /// `Projects`
-  String get projects {
-    return Intl.message(
-      'Projects',
-      name: 'projects',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `See All`
-  String get seeAll {
-    return Intl.message(
-      'See All',
-      name: 'seeAll',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `استكشف المجلات التعليمية بسهولة`
   String get easilyExploreEducationalJournals {
     return Intl.message(
@@ -2996,6 +2976,56 @@ class S {
     return Intl.message(
       'جميع المشاريع',
       name: 'allProjects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المشاريع`
+  String get projects {
+    return Intl.message(
+      'المشاريع',
+      name: 'projects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عرض الكل`
+  String get seeAll {
+    return Intl.message(
+      'عرض الكل',
+      name: 'seeAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مشاريعنا`
+  String get ourProjects {
+    return Intl.message(
+      'مشاريعنا',
+      name: 'ourProjects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `السمة`
+  String get theme {
+    return Intl.message(
+      'السمة',
+      name: 'theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اللغة`
+  String get locale {
+    return Intl.message(
+      'اللغة',
+      name: 'locale',
       desc: '',
       args: [],
     );

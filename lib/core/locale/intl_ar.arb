@@ -285,13 +285,16 @@
   "homeScreen": "الشاشة الرئيسية",
   "author": "الكاتب",
   "publishDate": "تاريخ النشر",
-  "projects": "Projects",
-  "seeAll": "See All",
   "easilyExploreEducationalJournals": "استكشف المجلات التعليمية بسهولة",
   "watchAVarietyOfEducationalAndEntertainingVideos": "شاهد مجموعة متنوعة من الفيديوهات التعليمية والترفيهية",
   "stayUpdatedWithTheLatestNewsFromReliableSources": "ابقَ على اطلاع بآخر الأخبار من مصادر موثوقة",
   "browseTheBlogAndEducationalArticles": "تصفح المدونة والمقالات التعليمية",
   "blog": "المدونة",
-  "allProjects": "جميع المشاريع"
+  "allProjects": "جميع المشاريع", 
+  "projects": "المشاريع",
+  "seeAll": "عرض الكل",
+  "ourProjects": "مشاريعنا",
+  "theme": "السمة",
+  "locale": "اللغة"
 
 }
