@@ -22,7 +22,7 @@ class PartnerItemWidget extends StatelessWidget {
           width: context.width * 0.2,
           child: Text(
             partner.title,
-            maxLines: 1,
+            maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodySmall,

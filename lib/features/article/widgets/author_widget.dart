@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../components/images/avatar_widget.dart';
+import '../../../core/constants/images.dart';
 import '../../../core/locale/generated/l10n.dart';
 import '../../../core/themes/app_colors.dart';
 
@@ -18,7 +19,12 @@ class AuthorWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        AvatarWidget(imageUrl: imageUrl),
+        (imageUrl.isNotEmpty)
+            ? AvatarWidget(imageUrl: imageUrl)
+            : const CircleAvatar(
+                radius: 25, // optional
+                backgroundImage: AssetImage(AppImages.imagesProfilePlaceholder),
+              ),
         const SizedBox(width: 10),
         Text(
           name?.isNotEmpty == true ? name! : S.of(context).unknown,

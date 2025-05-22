@@ -18,7 +18,7 @@ class PartnerListWidget extends ConsumerWidget {
 
     return partnerAsync.when(
       data: (partners) => SizedBox(
-        height: 105,
+        height: 125,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.symmetric(horizontal: 12),
