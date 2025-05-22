@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:midad/core/extensions/extensions.dart';
-
 import '../../../components/errors/error_message.dart';
 import '../../../core/locale/generated/l10n.dart';
 import '../providers/partner_provider.dart';
@@ -20,7 +18,7 @@ class PartnerListWidget extends ConsumerWidget {
 
     return partnerAsync.when(
       data: (partners) => SizedBox(
-        height: context.height * 0.13,
+        height: 105,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.symmetric(horizontal: 12),
