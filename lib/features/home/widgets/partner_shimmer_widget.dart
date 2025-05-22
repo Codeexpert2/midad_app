@@ -24,13 +24,9 @@ class PartnerShimmerWidget extends StatelessWidget {
               Shimmer.fromColors(
                 baseColor: AppColors.gray300,
                 highlightColor: AppColors.gray100,
-                child: Container(
-                  width: context.width * 0.2,
-                  height: context.height * 0.07,
-                  decoration: BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.circular(50),
-                  ),
+                child: const CircleAvatar(
+                  backgroundColor: AppColors.white,
+                  radius: 40,
                 ),
               ),
               const SizedBox(height: 8),
