@@ -3,7 +3,6 @@ import 'pagination_request.dart';
 typedef JsonData = Map<String, dynamic>;
 
 class PaginationResponse<T> {
-
   PaginationResponse({
     this.totalCourses,
     this.totalPages,

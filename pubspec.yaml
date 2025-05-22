@@ -2,7 +2,7 @@ name: midad
 description: "Midad is a mobile application that provides a platform for users to connect and share their experiences. The app allows users to create profiles, post updates, and interact with others through comments and likes."
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.2+3
 
 environment:
   sdk: ^3.5.4
@@ -75,6 +75,9 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^27.0.0
   open_file: ^3.5.10
 
+  riverpod: any
+  webview_flutter_android: any
+  webview_flutter_wkwebview: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -7,8 +7,6 @@ import 'package:midad/core/router/app_routes.dart';
 
 import '../../core/locale/generated/l10n.dart';
 
-import 'app_divider.dart';
-
 class MainDrawer extends ConsumerWidget {
   const MainDrawer({super.key});
 
@@ -38,16 +36,16 @@ class MainDrawer extends ConsumerWidget {
                 context.goNamed(AppRoutes.home.name);
               },
             ),
-            ListTile(
-              leading: const Icon(Icons.search),
-              title: Text(
-                S.of(context).search,
-              ),
-              onTap: () {
-                context.pop();
-                context.pushNamed(AppRoutes.search.name);
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(Icons.search),
+            //   title: Text(
+            //     S.of(context).search,
+            //   ),
+            //   onTap: () {
+            //     context.pop();
+            //     context.pushNamed(AppRoutes.search.name);
+            //   },
+            // ),
             ListTile(
               leading: const Icon(Icons.category),
               title: Text(S.of(context).category),
@@ -72,18 +70,18 @@ class MainDrawer extends ConsumerWidget {
                 context.pushNamed(AppRoutes.tags.name);
               },
             ),
-            const AppDivider(),
-            ListTile(
-              leading: const Icon(Icons.help_outline),
-              title: Text(
-                S.of(context).help,
-              ),
-              onTap: () {
-                Navigator.pop(context);
-                context.pushNamed(AppRoutes.help.name);
-              },
-            ),
-            const AppDivider(),
+            // const AppDivider(),
+            // ListTile(
+            //   leading: const Icon(Icons.help_outline),
+            //   title: Text(
+            //     S.of(context).help,
+            //   ),
+            //   onTap: () {
+            //     Navigator.pop(context);
+            //     context.pushNamed(AppRoutes.help.name);
+            //   },
+            // ),
+            // const AppDivider(),
             // ListTile(
             //   leading: Icon(
             //     Icons.exit_to_app,

@@ -18,7 +18,7 @@ class CategoryService {
       final response = await _apiClient.get(
         '/categories',
         queryParameters: queryParameters,
-        isCached : true,
+        isCached: true,
       );
       final data = response.data;
 

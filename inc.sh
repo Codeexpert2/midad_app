@@ -29,3 +29,11 @@ mv pubspec_updated.yaml pubspec.yaml
 
 # Clean up temporary files
 rm pubspec_temp.yaml
+
+# https://dart.dev/tools/dart-fix
+dart fix --apply
+
+# https://dart.dev/tools/dart-format
+dart format .
+
+flutter clean

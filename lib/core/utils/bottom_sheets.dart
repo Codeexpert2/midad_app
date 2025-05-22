@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 /// Displays a modal bottom sheet with a list of customizable [children] widgets
 ///
-/// The [children] parameter is a list of [Widget] objects that will be 
+/// The [children] parameter is a list of [Widget] objects that will be
 /// displayed in the bottom sheet.
 ///
-/// The function returns a [Future] that completes with the result of 
+/// The function returns a [Future] that completes with the result of
 /// dismissing the bottom sheet.
 ///
 /// Example usage:

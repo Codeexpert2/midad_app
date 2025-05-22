@@ -20,7 +20,7 @@ final videoProvider = StateNotifierProvider.autoDispose<
   (ref) {
     final videoService = ref.read(videoServiceProvider);
     final search = ref.watch(videoSearchProvider);
-    
+
     return PaginatedListNotifier<Video>(
       fetchData: (int page) async {
         final res = await videoService.getVideos(

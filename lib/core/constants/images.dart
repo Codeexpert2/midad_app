@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
   AppImages._();
-  
+
   static const String fontsCairoBold = "assets/fonts/Cairo-Bold.ttf";
 
   static const String fontsCairoLight = "assets/fonts/Cairo-Light.ttf";
@@ -26,11 +26,13 @@ class AppImages {
 
   static const String imagesMidadSplash = "assets/images/midad_splash.png";
 
-  static const String imagesMidadSplashAndroid12 = "assets/images/midad_splash_android12.png";
+  static const String imagesMidadSplashAndroid12 =
+      "assets/images/midad_splash_android12.png";
 
   static const String imagesOnboarding1 = "assets/images/onboarding1.png";
 
   static const String imagesOnboarding2 = "assets/images/onboarding2.png";
 
-  static const String imagesProfilePlaceholder = "assets/images/profile_placeholder.png";
+  static const String imagesProfilePlaceholder =
+      "assets/images/profile_placeholder.png";
 }

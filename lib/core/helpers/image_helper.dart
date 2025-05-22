@@ -35,7 +35,6 @@ class ImageHelper {
     );
 */
 class SafeCachedNetworkImageProvider extends CachedNetworkImageProvider {
-
   const SafeCachedNetworkImageProvider(
     super.url, {
     this.fallbackImage,

@@ -4,7 +4,6 @@
 
 // import 'package:midad/components/loading/loading_widget.dart';
 
-
 // class NotificationsList extends ConsumerWidget {
 //   const NotificationsList({super.key});
 

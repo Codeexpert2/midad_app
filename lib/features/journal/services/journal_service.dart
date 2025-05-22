@@ -31,6 +31,7 @@ class JournalService {
       throw ErrorHandler.handle(e).message;
     }
   }
+
   Future<Journal> getJournalById(String id) async {
     try {
       final response = await _apiClient.get(

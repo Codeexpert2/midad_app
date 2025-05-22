@@ -1,5 +1,4 @@
 class OnboardingPageData {
-
   OnboardingPageData({
     required this.title,
     required this.description,

@@ -1,5 +1,4 @@
 class PaginationRequest {
-
   PaginationRequest({
     required this.page,
   });

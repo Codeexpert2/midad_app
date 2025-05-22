@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../models/type_model.dart';
 
-
 class TypeCard extends StatelessWidget {
   const TypeCard({
     super.key,
@@ -29,7 +28,7 @@ class TypeCard extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  type.name ,
+                  type.name,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(

@@ -42,8 +42,6 @@ enum AppRoutes {
   tagDetails('/tag-details', 'tagDetails'),
   allProjects('/all-projects', 'allProjects');
 
-
-
   final String path;
   final String name;
   // ignore: sort_constructors_first

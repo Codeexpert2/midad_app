@@ -14,7 +14,7 @@ extension ContextExtensionss on BuildContext {
     return TextScaler.linear(unitHeight);
   }
 
-  // Calculate the scaled text factor using the clamp function to ensure 
+  // Calculate the scaled text factor using the clamp function to ensure
   // it stays within a specified range.
   TextScaler get clampTextScaler {
     double unitHeight = isPhone ? 1 : width * 0.001;

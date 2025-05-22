@@ -28,7 +28,7 @@ class CategoryCard extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  category.name ,
+                  category.name,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(

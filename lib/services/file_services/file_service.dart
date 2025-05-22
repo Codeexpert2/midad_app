@@ -106,9 +106,6 @@ class FileService {
   // }
 }
 
-
-
-
 // /// A service class to handle file and directory operations.
 // class FileService {
 //   /// Creates an instance of [FileService] with a base directory.
@@ -173,7 +170,7 @@ class FileService {
 //     return '$baseDir$separator$dirName$separator$fileName';
 //   }
 
-//   /// Retrieves a file with the given [fileName] from the specified 
+//   /// Retrieves a file with the given [fileName] from the specified
 //   /// [dirName] directory.
 //   ///
 //   /// Returns the [File] object if it exists, otherwise returns `null`.

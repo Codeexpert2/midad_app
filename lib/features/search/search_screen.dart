@@ -18,7 +18,6 @@ class SearchScreen extends StatelessWidget {
     //   MaterialPageRoute(builder: (context) => SearchResultsScreen()),
     // );
     // });
-    
   }
 
   @override

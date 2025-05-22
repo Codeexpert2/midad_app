@@ -4,18 +4,18 @@ import 'dart:ui';
 /// A utility class for debouncing actions.
 ///
 /// Debouncing is a technique used to limit the rate at which a func is called.
-/// It ensures that the function is not called more frequently than a 
+/// It ensures that the function is not called more frequently than a
 /// specified interval.
 ///
-/// This class provides a [run] method to debounce an action and a [dispose] 
+/// This class provides a [run] method to debounce an action and a [dispose]
 /// method to cancel any ongoing debouncing.
 class Debouncer {
-
   /// Creates a new instance of [Debouncer].
   ///
-  /// The [milliseconds] parameter specifies the delay in milliseconds between 
+  /// The [milliseconds] parameter specifies the delay in milliseconds between
   /// each call to the debounced function.
   Debouncer({required this.milliseconds});
+
   /// The delay in milliseconds between each call to the debounced function.
   final int milliseconds;
 
@@ -24,9 +24,9 @@ class Debouncer {
 
   /// Debounces the given [action].
   ///
-  /// If the debouncer is already debouncing an action, it cancels the previous 
+  /// If the debouncer is already debouncing an action, it cancels the previous
   /// timer and starts a new one.
-  /// The [action] will be called after the specified [milliseconds] 
+  /// The [action] will be called after the specified [milliseconds]
   /// have passed since the last call to [run].
   void run(VoidCallback action) {
     _timer?.cancel();
@@ -35,7 +35,7 @@ class Debouncer {
 
   /// Cancels any ongoing debouncing.
   ///
-  /// If the debouncer is currently debouncing an action, it cancels the timer 
+  /// If the debouncer is currently debouncing an action, it cancels the timer
   /// and prevents the action from being called.
   void dispose() {
     _timer?.cancel();

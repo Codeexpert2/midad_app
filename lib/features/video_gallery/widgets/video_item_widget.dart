@@ -16,12 +16,12 @@ class VideoItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String videoId = YoutubePlayer.convertUrlToId(video.url) ?? '';
-    
+
     return InkWell(
       onTap: () {
         context.pushNamed(
           AppRoutes.youtubePlayer.name,
-          queryParameters: {'id': videoId },
+          queryParameters: {'id': videoId},
         );
       },
       child: Column(

@@ -43,8 +43,8 @@ enum StatusCode {
         serverError => S.current.serverErrorMessage,
         unknown => S.current.unknownErrorMessage,
         unprocessableContent => S.current.unprocessableContent,
-        cancel =>S.current.requestCanceled,
-        cacheError =>S.current.cacheError,
+        cancel => S.current.requestCanceled,
+        cacheError => S.current.cacheError,
         formatError => S.current.formatException,
         connectionError => S.current.connectionErrorException,
       };

@@ -3,7 +3,6 @@ import 'package:midad/core/errors/error_handler.dart';
 
 import '../models/project_model.dart';
 
-
 class ProjectService {
   ProjectService(this._apiClient);
   final ApiClient _apiClient;
