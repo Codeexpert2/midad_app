@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:midad/components/images/cached_image.dart';
+import 'package:midad/core/router/app_routes.dart';
 import 'package:midad/core/themes/app_colors.dart';
 
 import '../models/project_model.dart';
@@ -20,7 +21,14 @@ class ProjectCard extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return GestureDetector(
-      onTap: onTap?.call,
+      onTap: () {
+        if (project.url != null && project.url!.isNotEmpty) {
+          context.pushNamed(
+            AppRoutes.web.name,
+            queryParameters: {'url': project.url ?? ''},
+          );
+        }
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         child: ClipRRect(

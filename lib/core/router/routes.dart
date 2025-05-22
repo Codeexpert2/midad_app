@@ -92,11 +92,22 @@ List<RouteBase> routes = <RouteBase>[
     name: AppRoutes.help.name,
     builder: (_, __) => const HelpScreen(),
   ),
+  // GoRoute(
+  //   path: AppRoutes.web.path,
+  //   name: AppRoutes.web.name,
+  //   builder: (_, __) => const WebViewScreen(),
+  // ),
   GoRoute(
     path: AppRoutes.web.path,
     name: AppRoutes.web.name,
-    builder: (_, __) => const WebViewScreen(),
+    builder: (context, state) {
+      final url = state.uri.queryParameters['url'] ?? '';
+      return WebViewScreen(
+        url: url,
+      );
+    },
   ),
+
   ShellRoute(
     restorationScopeId: 'root',
     navigatorKey: shellNavigatorKey,
