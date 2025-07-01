@@ -110,5 +110,4 @@
   "git.confirmSync": false,
   "git.autofetch": true,
   "git.openRepositoryInParentFolders": "never",
-  "java.configuration.updateBuildConfiguration": "interactive"
 }
