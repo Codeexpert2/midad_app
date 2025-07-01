@@ -2,7 +2,7 @@ name: midad
 description: "Midad is a mobile application that provides a platform for users to connect and share their experiences. The app allows users to create profiles, post updates, and interact with others through comments and likes."
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.2+3
+version: 1.0.3+4
 
 environment:
   sdk: ^3.5.4
