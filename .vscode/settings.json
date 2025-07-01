@@ -1,5 +1,5 @@
 {
-  "dart.flutterSdkPath": ".fvm/versions/3.24.5",
+  "dart.flutterSdkPath": ".fvm/versions/3.29.3",
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
@@ -109,5 +109,5 @@
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "git.autofetch": true,
-  "git.openRepositoryInParentFolders": "never",
+  "git.openRepositoryInParentFolders": "never"
 }

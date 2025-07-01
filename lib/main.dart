@@ -20,7 +20,7 @@ void main() async {
 
       runApp(
         DevicePreview(
-          enabled: kDebugMode,
+          enabled: false,
           builder: (BuildContext context) => ProviderScope(
             observers: <ProviderObserver>[
               RiverpodObserver(),
