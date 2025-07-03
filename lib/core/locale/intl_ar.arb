@@ -1,6 +1,6 @@
 {
   "@@locale": "ar",
-  "appName": "الدرس",
+  "appName": "مداد",
   "profile": "الملف الشخصي",
   "termsConditions": "سياسة الاستخدام",
   "privacyPolicy": "سياسة الخصوصية",
@@ -290,11 +290,10 @@
   "stayUpdatedWithTheLatestNewsFromReliableSources": "ابقَ على اطلاع بآخر الأخبار من مصادر موثوقة",
   "browseTheBlogAndEducationalArticles": "تصفح المدونة والمقالات التعليمية",
   "blog": "المدونة",
-  "allProjects": "جميع المشاريع", 
+  "allProjects": "جميع المشاريع",
   "projects": "المشاريع",
   "seeAll": "عرض الكل",
   "ourProjects": "مشاريعنا",
   "theme": "السمة",
   "locale": "اللغة"
-
 }

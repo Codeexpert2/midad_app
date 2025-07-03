@@ -26,7 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Access to University Education"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
         "allProjects": MessageLookupByLibrary.simpleMessage("All Projects"),
-        "appName": MessageLookupByLibrary.simpleMessage("App Name"),
+        "appName": MessageLookupByLibrary.simpleMessage("Midad"),
         "applyFilters": MessageLookupByLibrary.simpleMessage("Apply Filters"),
         "articles": MessageLookupByLibrary.simpleMessage("Articles"),
         "author": MessageLookupByLibrary.simpleMessage("Author"),

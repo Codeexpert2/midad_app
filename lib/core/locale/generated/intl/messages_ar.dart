@@ -69,7 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allProjects": MessageLookupByLibrary.simpleMessage("جميع المشاريع"),
         "alreadyRegisteredQuestion":
             MessageLookupByLibrary.simpleMessage("هل قمت بالتسجيل سابقًا؟"),
-        "appName": MessageLookupByLibrary.simpleMessage("الدرس"),
+        "appName": MessageLookupByLibrary.simpleMessage("مداد"),
         "applanguage": MessageLookupByLibrary.simpleMessage("لغة التطبيق"),
         "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
         "applyFilters": MessageLookupByLibrary.simpleMessage("تطبيق الفلاتر"),

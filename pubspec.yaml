@@ -2,7 +2,7 @@ name: midad
 description: "Midad is a mobile application that provides a platform for users to connect and share their experiences. The app allows users to create profiles, post updates, and interact with others through comments and likes."
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.3+4
+version: 1.0.4+5
 
 environment:
   sdk: ^3.5.4
@@ -23,9 +23,8 @@ dependencies:
   intl: ^0.19.0
 
   # UI
-  flutter_svg: ^2.0.16
+  flutter_svg: ^2.2.0
   cupertino_icons: ^1.0.8
-  intl_phone_number_input: ^0.7.4
   flutter_widget_from_html: ^0.16.0
 
   # state management
@@ -35,14 +34,14 @@ dependencies:
 
   # Network
   dio: ^5.8.0+1
-  dio_cache_interceptor: ^3.5.0
+  dio_cache_interceptor: ^3.5.1
   dio_cache_interceptor_hive_store: ^3.2.2
   pretty_dio_logger: ^1.4.0
 
   # Image
   image_picker: ^1.1.2
   cached_network_image: ^3.4.1
-  carousel_slider: ^5.0.0
+  carousel_slider: ^5.1.1
 
   # Video
   youtube_player_flutter: ^9.1.1
@@ -51,7 +50,7 @@ dependencies:
   path_provider: ^2.1.5
 
   # Permissions
-  permission_handler: ^11.3.1
+  permission_handler: ^11.4.0
 
   # Storage
   get_storage: ^2.1.1
@@ -65,13 +64,12 @@ dependencies:
   connectivity_plus: ^6.1.4
 
   # firebase
-  firebase_core: ^3.15.0
-  firebase_messaging: ^15.2.8
-  firebase_analytics: ^11.5.1
-  firebase_crashlytics: ^4.3.8
+  firebase_core: ^3.15.1
+  firebase_messaging: ^15.2.9
+  firebase_analytics: ^11.5.2
+  firebase_crashlytics: ^4.3.9
   flutter_local_notifications: ^18.0.1
   shimmer: ^3.0.0
-  device_preview: ^1.2.0
   syncfusion_flutter_pdfviewer: ^27.0.0
   open_file: ^3.5.10
 
